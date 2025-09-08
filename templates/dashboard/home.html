@@ -1,0 +1,106 @@
+{% extends "dashboard_base.html" %}
+{% load i18n %}
+
+{% block sheri %}
+
+<div class="container py-4">
+
+  <!-- عنوان -->
+  <h4 class="mb-4 fw-bold text-primary">{% trans "Dashboard Overview" %}</h4>
+
+  <!-- الكروت -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-3">
+      <div class="card shadow-sm border-0 rounded-4 bg-primary text-white">
+        <div class="card-body text-center">
+          <i class="bi bi-people-fill fs-2"></i>
+          <h6 class="mt-2">{% trans "Patients" %}</h6>
+          <h2>{{ stats.patients_count }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card shadow-sm border-0 rounded-4 bg-success text-white">
+        <div class="card-body text-center">
+          <i class="bi bi-chat-dots-fill fs-2"></i>
+          <h6 class="mt-2">{% trans "Consultations" %}</h6>
+          <h2>{{ stats.consultations_count }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card shadow-sm border-0 rounded-4 bg-warning text-dark">
+        <div class="card-body text-center">
+          <i class="bi bi-hourglass-split fs-2"></i>
+          <h6 class="mt-2">{% trans "Open Consultations" %}</h6>
+          <h2>{{ stats.open_consultations }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card shadow-sm border-0 rounded-4 bg-info text-dark">
+        <div class="card-body text-center">
+          <i class="bi bi-lightning-fill fs-2"></i>
+          <h6 class="mt-2">{% trans "Shortcuts" %}</h6>
+          <h2>{{ stats.shortcuts_count }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- جدول آخر الاستشارات -->
+  <div class="card shadow-sm border-0 rounded-4">
+    <div class="card-body">
+      <h5 class="mb-3 text-primary">{% trans "Latest Consultations" %}</h5>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>{% trans "Patient" %}</th>
+              <th>{% trans "Title" %}</th>
+              <th>{% trans "Status" %}</th>
+              <th>{% trans "Created At" %}</th>
+              <th>{% trans "Actions" %}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for consult in latest_consultations %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>{{ consult.patient.name }}</td>
+              <td>{{ consult.title }}</td>
+              <td>
+                <span class="badge 
+                  {% if consult.status == 'open' %} bg-warning text-dark 
+                  {% elif consult.status == 'closed' %} bg-success 
+                  {% else %} bg-secondary {% endif %}">
+                  {{ consult.get_status_display }}
+                </span>
+              </td>
+              <td>{{ consult.created_at|date:"Y-m-d H:i" }}</td>
+              <td>
+                <a href="{% url 'consultation_list' %}?patient={{consult.patient.id}}" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-eye"></i> {% trans "View" %}
+                </a>
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="6" class="text-center text-muted">
+                {% trans "No consultations yet." %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock sheri %}

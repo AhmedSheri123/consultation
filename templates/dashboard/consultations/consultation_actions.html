@@ -1,0 +1,4 @@
+<a class="btn btn-sm btn-primary edit-btn" href="{% url 'ConsultationEdit' record.id %}" >تعديل</a>
+<a class="btn btn-sm btn-primary edit-btn" href="{% url 'consultation_pdf' record.share_id %}" target="_blank" >طباعة</a>
+<a class="btn btn-sm btn-primary edit-btn" href="{% url 'share_doc' record.share_id %}" >مشاركة</a>
+<button class="btn btn-sm btn-danger delete-btn" data-url="{% url 'consultation_delete_ajax' record.id %}">حذف</button>

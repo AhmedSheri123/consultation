@@ -1,0 +1,23 @@
+{% extends "dashboard_base.html" %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+{% block sheri %}
+<div class="container py-3">
+
+<h2>{{ consultation.title }}</h2>
+<p><b>المريض:</b> {{ consultation.patient.name }}</p>
+<p><b>الحالة:</b> {{ consultation.get_status_display }}</p>
+<div>{{ consultation.medical_case|safe }}</div>
+
+<a href="{% url 'consultation_pdf' consultation.pk %}" class="btn btn-secondary">تصدير PDF</a>
+<a href="mailto:?subject=استشارة&body={{ request.build_absolute_uri }}" class="btn btn-info">مشاركة</a>
+
+
+
+</div>
+
+
+
+
+{% endblock sheri %}

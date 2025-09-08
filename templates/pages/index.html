@@ -1,0 +1,614 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block meta %}
+<meta name="description" content="{% trans "A versatile software suite transforming businesses of all sizes by simplifying complex systems into efficient work environments." %}">
+{% endblock meta %}
+
+{% block sheri %}
+<!-- header -->
+<div class="px-4 py-5 text-center">
+  <div class="py-4 text-body-emphasis">
+    <h1 class="display-5 fw-bold container mb-4">
+      د.  كرناوي محمد   
+      <br>
+      <span class="text-primary">استشاري جراحة المسالك البولية</span>
+    </h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4">
+        خبرة واسعة في تشخيص وعلاج أمراض الجهاز البولي والاضطرابات المرتبطة بالكلى والبروستات، مع تقديم رعاية طبية متقدمة للرجال والنساء والأطفال.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="tel:{{ رقم_الهاتف }}" class="btn btn-primary btn-lg px-4">
+          اتصل الآن
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/{{ رقم_واتساب }}" target="_blank" class="btn btn-success btn-lg px-4">
+          احجز موعدك
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header -->
+
+<!-- Trusted medical partners -->
+<div class="container py-5 text-center">
+  <h2 class="py-4">{% trans "موثوق من قبل مؤسسات طبية رائدة" %}</h2>
+
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-4 align-items-center">
+    <div class="col">
+      <img src="{% static 'img/trusted/Saudi_Ministry_of_Health_Logo.svg.png' %}" loading="lazy" alt="وزارة الصحة" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">وزارة الصحة</p>
+    </div>
+    <div class="col">
+      <img src="{% static 'img/trusted/who-ar-c-h.png' %}" loading="lazy" alt="منظمة الصحة العالمية" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">منظمة الصحة العالمية</p>
+    </div>
+    <div class="col">
+      <img src="{% static 'img/trusted/AMA_logo.svg.png' %}" loading="lazy" alt="الجمعية الطبية الأمريكية" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">الجمعية الطبية الأمريكية</p>
+    </div>
+    <div class="col">
+      <img src="{% static 'img/trusted/Pfizer_(2021).svg.png' %}" loading="lazy" alt="Pfizer" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">Pfizer</p>
+    </div>
+    <div class="col">
+      <img src="{% static 'img/trusted/Siemens_Healthineers_logo.svg.png' %}" loading="lazy" alt="Siemens Healthineers" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">Siemens</p>
+    </div>
+    <div class="col">
+      <img src="{% static 'img/trusted/Hoffmann-La_Roche_logo.svg.png' %}" loading="lazy" alt="Roche" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">Roche</p>
+    </div>
+  </div>
+</div>
+<!-- End Trusted medical partners -->
+
+
+
+<!-- About Doctor -->
+<div class="py-5 px-2 px-md-4 bg-light" id="about">
+  <div class="container">
+    <h2 class="text-center py-4">{% trans "عن الدكتور" %}</h2>
+    <div class="row ">
+
+
+
+    <!-- صورة الدكتور مع معلومات باستخدام Bootstrap فقط -->
+    <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card shadow rounded-4 h-100 zoom-anim">
+            <img src="{% static 'img/developers/Krenawi-Muhammad.png' %}" 
+                class="card-img-top rounded-top-4" 
+                alt="صورة الدكتور" 
+                style="max-height: 350px; object-fit: cover;">
+
+            <div class="card-body bg-white rounded-bottom-4">
+                <h5 class="card-title fw-bold"><i class="fa-solid fa-user-doctor text-primary me-2"></i>{% trans "الدكتور كرناوي محمد" %}</h5>
+                <p class="card-text text-dark">
+                    {% trans "استشاري جراحة المسالك البولية وأمراض الذكورة والعقم، بخبرة تزيد عن 15 عاماً في تشخيص وعلاج أمراض الجهاز البولي والجراحة بالمنظار." %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+      <!-- نبذة تعريفية -->
+      <div class="col-md-8">
+        <div class="p-4 rounded-4 shadow-sm bg-white card zoom-anim mb-2">
+
+          <!-- المؤهلات -->
+          <h5 class="fw-bold mt-3 mb-2">{% trans "المؤهلات العلمية" %}</h5>
+          <ul class="mb-3 list-unstyled">
+            <li class="mb-2"><i class="fa-solid fa-graduation-cap text-primary me-2"></i> 
+              {% trans "بكالوريوس الطب والجراحة من جامعة دمشق" %}</li>
+            <li class="mb-2"><i class="fa-solid fa-graduation-cap text-primary me-2"></i> 
+              {% trans "ماجستير جراحة المسالك البولية – جامعة القاهرة" %}</li>
+            <li class="mb-2"><i class="fa-solid fa-graduation-cap text-primary me-2"></i> 
+              {% trans "زمالة الجراحة بالمنظار – ألمانيا" %}</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-4 shadow-sm bg-white card zoom-anim">
+          <!-- الخبرة العملية -->
+          <h5 class="fw-bold mt-3 mb-2">{% trans "الخبرة العملية" %}</h5>
+          <ul class="mb-3 list-unstyled">
+            <li class="mb-2"><i class="fa-solid fa-hospital-user text-success me-2"></i> 
+              {% trans "استشاري جراحة المسالك البولية في مستشفى السلام الدولي" %}</li>
+            <li class="mb-2"><i class="fa-solid fa-scalpel text-success me-2"></i> 
+              {% trans "أكثر من 2000 عملية ناجحة في جراحة الحصى بالمنظار" %}</li>
+            <li class="mb-2"><i class="fa-solid fa-user-doctor text-success me-2"></i> 
+              {% trans "خبرة في علاج العقم وأمراض الذكورة" %}</li>
+          </ul>
+
+          <!-- زر الحجز -->
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+            <a href="tel:+963980606953" class="btn btn-primary px-4 py-2">
+              {% trans "اتصال مباشر" %} <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://wa.me/963980606953" target="_blank" class="btn btn-success px-4 py-2">
+              {% trans "حجز عبر واتساب" %} <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end About Doctor -->
+
+
+
+
+<!-- Solutions -->
+<div class="container py-5" id="services">
+  <div class="bg-black p-4 p-md-5 rounded-4 text-center">
+    <h2 class="text-white">
+      الخدمات الطبية التي <span class="text-success">نقدمها لمرضانا</span>
+    </h2>
+
+    <ul class="p-0 py-4 row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-2 g-lg-3 text-white" style="list-style: none;">
+      
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-stethoscope fa-2x"></i>
+          <p>فحص وتشخيص أمراض المسالك البولية</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-x-ray fa-2x"></i>
+          <p>علاج حصى الكلى والمثانة</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-venus-mars fa-2x"></i>
+          <p>علاج تضخم والتهابات البروستات</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-baby fa-2x"></i>
+          <p>علاج مشاكل المسالك عند الأطفال</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-syringe fa-2x"></i>
+          <p>العمليات الجراحية بالمنظار</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-heart-pulse fa-2x"></i>
+          <p>علاج مشاكل العقم وضعف الخصوبة</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-droplet fa-2x"></i>
+          <p>علاج التهابات المثانة والمسالك</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-user-md fa-2x"></i>
+          <p>استشارات طبية متخصصة</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-hospital fa-2x"></i>
+          <p>متابعة ما بعد العمليات</p>
+        </button>
+      </li>
+
+      <li class="col">
+        <button class="btn btn-outline-light p-4 w-100 h-100">
+          <i class="fa-solid fa-calendar-check fa-2x"></i>
+          <p>حجز مواعيد الكتروني</p>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- End Solutions -->
+
+
+
+<!-- Services Features -->
+<div class="container py-5">
+  <h2 class="text-center py-4">مميزات خدماتنا الطبية</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3">
+    
+    <div class="col">
+      <div class="card border d-grid border-0 h-100">
+        <div class="bg-black p-5 text-start text-white rounded-4">
+          <i class="fa-solid fa-user-doctor fa-3x mb-2"></i>
+          <p class="text-success my-2">الخبرة</p>
+          <h3 class="py-3">استشاري متخصص</h3>
+          <p>خبرة طويلة في جراحة وعلاج أمراض المسالك البولية، لضمان رعاية دقيقة وفعّالة.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card border d-grid border-0 h-100">
+        <div class="bg-black p-5 text-start text-white rounded-4">
+          <i class="fa-solid fa-hospital-user fa-3x"></i>
+          <p class="text-success my-2">التشخيص</p>
+          <h3 class="py-3">تشخيص دقيق</h3>
+          <p>استخدام أحدث التقنيات الطبية لتشخيص أمراض الكلى والمثانة والبروستات بدقة عالية.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card border d-grid border-0 h-100">
+        <div class="bg-black p-5 text-start text-white rounded-4">
+          <i class="fa-solid fa-microscope fa-3x"></i>
+          <p class="text-success my-2">التقنيات</p>
+          <h3 class="py-3">أحدث الأجهزة</h3>
+          <p>اعتماد أجهزة حديثة وطرق علاج متطورة لتقليل الألم وتسريع التعافي.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card border d-grid border-0 h-100">
+        <div class="bg-black p-5 text-start text-white rounded-4">
+          <i class="fa-solid fa-hand-holding-medical fa-3x"></i>
+          <p class="text-success my-2">الرعاية</p>
+          <h3 class="py-3">متابعة دقيقة</h3>
+          <p>خطة علاجية متكاملة تشمل المتابعة المستمرة قبل وبعد العملية لضمان الشفاء التام.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card border d-grid border-0 h-100">
+        <div class="bg-black p-5 text-start text-white rounded-4">
+          <i class="fa-solid fa-user-shield fa-3x"></i>
+          <p class="text-success my-2">الخصوصية</p>
+          <h3 class="py-3">سرية تامة</h3>
+          <p>نلتزم بالحفاظ على سرية وخصوصية جميع بيانات المرضى الطبية.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card border d-grid border-0 h-100">
+        <div class="bg-black p-5 text-start text-white rounded-4">
+          <i class="fa-solid fa-headset fa-3x"></i>
+          <p class="text-success my-2">الدعم</p>
+          <h3 class="py-3">تواصل مستمر</h3>
+          <p>إمكانية التواصل المباشر عبر الهاتف أو الواتساب لحجز المواعيد والاستفسارات الطبية.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End Services Features -->
+
+
+<!-- Patient Reviews -->
+<div class="container py-5">
+  <h2 class="text-center py-4 border-top">آراء المرضى</h2>
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    
+    <!-- Review 1 -->
+    <div class="col zoom-anim">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+        data-bg="{% static 'img/reviews/background-diva-26694057.webp' %}">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="my-4 lh-1 fw-bold">
+            {% trans "الدكتور ساعدني كثيرًا في علاج حصى الكلى. العملية كانت ناجحة والمتابعة ممتازة." %}
+          </h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="{% static 'img/reviews/review-0.webp' %}" alt="reviewer 1" width="32" height="32"
+                class="rounded-circle border border-white" loading="lazy">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em">
+                <use xlink:href="#geo-fill"></use>
+              </svg>
+              <small>دمشق</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <small>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="col zoom-anim">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+        data-bg="{% static 'img/reviews/unsplash-photo-3.webp' %}">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="my-4 lh-1 fw-bold">
+            {% trans "تعامل راقٍ جدًا وشرح واضح للحالة. شعرت بالاطمئنان من أول زيارة." %}
+          </h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="{% static 'img/reviews/review-2.webp' %}" alt="reviewer 2" width="32" height="32"
+                class="rounded-circle border border-white" loading="lazy">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em">
+                <use xlink:href="#geo-fill"></use>
+              </svg>
+              <small>بيروت</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <small>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="col zoom-anim">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+        data-bg="{% static 'img/reviews/background-rccbtn-61760629.webp'%}">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="my-4 lh-1 fw-bold">
+            {% trans "الدكتور أنقذني من مشكلة في البروستات كنت أعاني منها منذ سنوات. شكراً له من القلب." %}
+          </h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="{% static 'img/reviews/review-3.webp' %}" alt="reviewer 3" width="32" height="32"
+                class="rounded-circle border border-white" loading="lazy">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em">
+                <use xlink:href="#geo-fill"></use>
+              </svg>
+              <small>عمان</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <small>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End Patient Reviews -->
+
+
+
+<!-- FAQ reviews -->
+<div class="py-5 px-2 px-md-4 glass-light-dark">
+    <h2 class="text-center py-4 ">{% trans "الأسئلة الشائعة" %}</h2>
+    <div class="accordion accordion-flush mx-auto" id="accordionFlushExample" style="max-width: 1080px;">
+        
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header">
+                <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    {% trans "ما هي الحالات التي يعالجها طبيب جراحة المسالك البولية؟" %}
+                </div>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    {% trans "يشمل التخصص علاج حصى الكلى، تضخم البروستاتا، التهابات الجهاز البولي، أورام الكلى والمثانة، إضافةً إلى مشكلات العقم واضطرابات الجهاز البولي عند الرجال والنساء." %}
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header">
+                <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    {% trans "متى يجب زيارة طبيب جراحة المسالك البولية؟" %}
+                </div>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    {% trans "ينصح بمراجعة الطبيب عند الشعور بألم مستمر في الكلى أو المثانة، صعوبة أو ألم أثناء التبول، وجود دم في البول، تكرار التهابات المسالك البولية أو مشاكل في الخصوبة." %}
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header">
+                <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    {% trans "هل جميع مشاكل المسالك البولية تحتاج إلى جراحة؟" %}
+                </div>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    {% trans "ليس بالضرورة، بعض الحالات تعالج بالأدوية أو الإجراءات البسيطة مثل المناظير، بينما بعض الأمراض تحتاج لتدخل جراحي متقدم بحسب التشخيص." %}
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header">
+                <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    {% trans "هل يمكن علاج حصى الكلى بدون جراحة؟" %}
+                </div>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    {% trans "في كثير من الحالات يمكن تفتيت الحصى باستخدام الموجات التصادمية أو المناظير بدون الحاجة إلى عملية جراحية مفتوحة." %}
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header">
+                <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    {% trans "هل تضخم البروستاتا يعني الإصابة بالسرطان؟" %}
+                </div>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    {% trans "تضخم البروستاتا الحميد هو أمر شائع مع التقدم بالعمر ولا يعني بالضرورة وجود سرطان، لكن من المهم مراجعة الطبيب للتأكد عبر الفحوصات اللازمة." %}
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header">
+                <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    {% trans "هل يمكن حجز موعد عبر الإنترنت؟" %}
+                </div>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    {% trans "نعم، يمكنكم حجز موعد بسهولة عبر الموقع الإلكتروني أو من خلال التواصل المباشر عبر الواتساب." %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="text-center my-4">
+        <a href="" class="">{% trans "عرض المزيد من الأسئلة" %}</a>
+    </div>
+</div>
+<!-- end -->
+
+
+
+
+
+
+
+<div id="contact-us" class=""></div>
+<!-- Contact Doctor -->
+<div class="bg-dark py-5">
+  <div class="container" style="max-width: 600px;">
+    <h2 class="text-center text-light py-4">
+      {% trans "تواصل مع الدكتور كرناوي محمد لحجز استشارة طبية أو الاستفسار عن العلاج" %}
+    </h2>
+
+    <form method="post" action="{% url 'Contact' %}" 
+          class="bg-light p-4 p-sm-5 rounded-4 shadow-sm needs-validation" 
+          novalidate>
+      {% csrf_token %}
+
+      <h5 class="mb-4 text-center fw-bold text-primary">{% trans "نموذج الاتصال" %}</h5>
+
+      <p class="text-dark mb-4">
+        {% trans "املأ النموذج أدناه وسيقوم فريق الدكتور بالتواصل معك لتحديد موعد الاستشارة أو الرد على استفساراتك الطبية." %}
+      </p>
+
+      <div class="mb-3">
+        <label for="fullName" class="form-label">
+          <i class="fa-solid fa-user"></i> {% trans "الاسم الكامل" %}
+        </label>
+        {{ form.full_name }}
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">
+          <i class="fa-solid fa-envelope"></i> {% trans "البريد الإلكتروني" %}
+        </label>
+        {{ form.email }}
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">
+          <i class="fa-solid fa-phone"></i> {% trans "رقم الهاتف" %}
+        </label>
+        {{ form.phone_number }}
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">
+          <i class="fa-solid fa-file-medical"></i> {% trans "الاستفسار أو وصف الحالة" %}
+        </label>
+        {{ form.project_description }}
+        <div class="form-text">
+          {% trans "اشرح باختصار طبيعة الاستشارة أو الأعراض التي تواجهها." %}
+        </div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" required id="privacyCheck">
+        <label class="form-check-label" for="privacyCheck">
+          {% trans "أوافق على سياسة الخصوصية عند إرسال هذا النموذج" %}
+        </label>
+        <div class="invalid-feedback">
+          {% trans "يجب الموافقة على سياسة الخصوصية قبل الإرسال." %}
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        {% trans "إرسال" %} <i class="fa-solid fa-paper-plane"></i>
+      </button>
+
+      <div class="d-grid gap-2 mt-3">
+        <a href="tel:+963980606953" class="btn btn-outline-primary">
+          <i class="fa-solid fa-phone"></i> {% trans "اتصال مباشر" %}
+        </a>
+        <a href="https://wa.me/963980606953" target="_blank" class="btn btn-success">
+          <i class="fa-brands fa-whatsapp"></i> {% trans "حجز عبر واتساب" %}
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
+<!-- End Contact Doctor -->
+
+
+
+{% endblock sheri %}

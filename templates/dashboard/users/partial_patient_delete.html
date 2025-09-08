@@ -1,0 +1,8 @@
+<form method="post">
+    {% csrf_token %}
+    <p>هل أنت متأكد من حذف المريض: <strong>{{ patient.name }}</strong>؟</p>
+    <div class="mt-3 text-end">
+        <button type="submit" class="btn btn-danger">حذف</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+    </div>
+</form>

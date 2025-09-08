@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>استشارة</title>
+<style>
+@page {
+    size: A4;
+    margin: 1cm;  /* يمكنك تقليل الهامش */
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    width: 100%;
+}
+
+/* الهيدر */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #0d6efd;
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header-text {
+    width: 70%;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.header-text p {
+    margin: 2px 0;
+}
+.header-logo {
+    text-align: center;
+}
+.header-logo img {
+    max-height: 80px;
+    display: block;
+    margin-bottom: 5px;
+}
+.header-logo p {
+    font-size: 10px;
+    margin: 0;
+}
+
+/* المحتوى */
+.content {
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.section-title {
+    background-color: #0d6efd;
+    color: white;
+    padding: 7px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.detail p {
+    flex: 1 1 45%;  /* كل فقرة تأخذ تقريبًا نصف العرض */
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* المحتوى الطبي */
+.medical-case {
+    border: 1px solid #ccc;
+    padding: 10px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* background-color: #f1f3f5; */
+}
+.medical-case p {
+    margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<!-- الهيدر -->
+<div class="header">
+    <div class="header-text">
+        <strong>{{clinic.name}}</strong>{{clinic.clinic_info}}
+        <p><strong>العنوان:</strong> {{clinic.address}}</p>
+        <p><strong>الهاتف:</strong> {{clinic.phone}} | <strong>Email:</strong> {{clinic.email}}</p>
+    </div>
+    <div class="header-logo">
+        {% if clinic.logo %}
+        <img src="{{ clinic.logo.url }}" alt="شعار العيادة">
+        {% endif %}
+        <p>{{clinic.website}}</p>
+    </div>
+</div>
+
+<!-- المحتوى الرئيسي -->
+<div class="content">
+    <!-- <div class="section-title">معلومات المريض</div> -->
+    <div class="detail" style="display: flex; flex-wrap: wrap; gap: 20px; padding: 10px 0px;">
+        <p><strong>اسم المريض:</strong> {{ consultation.patient.name }}</p>
+        <p><strong>الموضوع:</strong> {{ consultation.title }}</p>
+        <p><strong>الحالة:</strong> {{ consultation.get_status_display }}</p>
+        <p><strong>تاريخ الإنشاء:</strong> {{ consultation.created_at|date:"Y-m-d H:i" }}</p>
+    </div>
+
+
+    <!-- <div class="section-title">التفاصيل الطبية</div> -->
+    <div class="medical-case">
+        {{ consultation.medical_case|safe }}
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    ניתוח ערמונית בלייזר HoLEP, ניתוח ערמונית באידוי REZUM<br>
+    ניתוחי אבנים בלייזר
+</div>
+
+</body>
+</html>

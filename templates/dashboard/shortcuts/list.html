@@ -1,0 +1,109 @@
+{% extends "dashboard_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block sheri %}
+<div class="container py-3">
+    <h2>قائمة الاختصارات</h2>
+    <a href="{% url 'shortcut_create' %}" class="btn btn-success mb-3">إضافة Shortcut</a>
+
+    <div id="table-div">
+        {% include "dashboard/shortcuts/partial_table.html" %}
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-shortcut" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Shortcut</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css"> 
+
+<script>
+function loadForm(url, modalBody){
+    $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        success: function(data){
+            $(modalBody).html(data.html_form);
+            $(modalBody).closest('.modal').modal('show');
+
+            // تأكد أن الحقل موجود وأن DAL جاهز
+            if ($('#id_ico').length && typeof $.fn.djangoSelect2 === 'function') {
+                $('#id_ico').djangoSelect2({
+                    minimumInputLength: 0,
+                    templateResult: function(state){
+                        if(!state.id) return state.text;
+                        return $('<span><i class="fa '+state.id+'"></i> '+state.text+'</span>');
+                    },
+                    templateSelection: function(state){
+                        if(!state.id) return state.text;
+                        return $('<span><i class="fa '+state.id+'"></i> '+state.text+'</span>');
+                    },
+                    width: '100%',
+                    placeholder: 'Select Icon'
+                });
+
+                // افتح القائمة بعد تأخير قصير لضمان تهيئة DAL
+                setTimeout(function(){
+                    $('#id_ico').select2('open');
+                }, 100);
+            }
+        },
+        error: function(xhr, status, error){
+            console.error('Failed to load form:', status, error);
+        }
+    });
+}
+
+
+
+
+
+function saveForm(modalBody, tableDiv){
+    var form = $(modalBody).find('form');
+    $.ajax({
+        url: form.attr('action'),
+        data: form.serialize(),
+        type:'post',
+        dataType:'json',
+        success: function(data){
+            if(data.form_is_valid){
+                $(tableDiv).html(data.html_table);
+                $(modalBody).closest('.modal').modal('hide');
+            } else {
+                $(modalBody).html(data.html_form);
+            }
+        }
+    });
+    return false;
+}
+
+$(function(){
+    // إضافة
+    $('#add-btn').click(function(){
+        loadForm("{% url 'shortcut_create_ajax' %}", "#modal-body");
+    });
+
+    // تعديل/حذف
+    $('#table-div').on('click', '.edit-btn, .delete-btn', function(){
+        loadForm($(this).data('url'), "#modal-body");
+    });
+
+    // حفظ الفورم
+    $(document).on('submit', '#modal-body form', function(e){
+        e.preventDefault();
+        saveForm("#modal-body", "#table-div");
+    });
+});
+</script>
+{% endblock %}

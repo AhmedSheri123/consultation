@@ -1,0 +1,6 @@
+<form method="post" class="ajax-form" action="{% url 'consultation_delete_ajax' consultation.id %}">
+  {% csrf_token %}
+  <p>هل أنت متأكد أنك تريد حذف الاستشارة "{{ consultation.title }}"؟</p>
+  <button type="submit" class="btn btn-danger">حذف</button>
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+</form>

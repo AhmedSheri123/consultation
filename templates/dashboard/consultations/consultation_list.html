@@ -1,0 +1,119 @@
+{% extends "dashboard_base.html" %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+{% block sheri %}
+<div class="container py-3">
+    <h2 class="mb-4">قائمة الاستشارات</h2>
+
+    <a href="{% url 'ConsultationCreate' %}" class="btn btn-success mb-3" id="add-consultation-btn">إضافة استشارة</a>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">فلترة الاستشارات</button>
+
+    <div id="consultation-table">
+        {% include "dashboard/consultations/partial_consultation_table.html" %}
+    </div>
+</div>
+
+<!-- Modal الفلترة -->
+<div class="modal fade" id="filterModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">فلترة الاستشارات</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modal-body-filter">
+        {% include "dashboard/consultations/partial_consultation_filter.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal إضافة/تعديل -->
+<div class="modal fade" id="modal-consultation" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">استشارة</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modal-body-consultation"></div>
+    </div>
+  </div>
+</div>
+<script>
+
+
+var editor_licence = ""
+function loadForm(url, modalBody){
+    $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        success: function(data){
+            $(modalBody).html(data.html_form);
+            $(modalBody).closest('.modal').modal('show');
+
+            // إعادة تهيئة CKEditor 5 بعد تحميل الفورم ديناميكياً
+            if ($(modalBody).find('#id_medical_case').length){
+                ClassicEditor.create(document.querySelector('#id_medical_case'), {
+                                      licenseKey: null,
+                                    })
+                    .catch(error => { console.error(error); });
+            }
+        }
+    });
+}
+
+function saveForm(modalBody, tableDiv){
+    var form = $(modalBody).find('form');
+    $.ajax({
+        url: form.attr('action'),
+        data: form.serialize(),
+        type: 'post',
+        dataType: 'json',
+        success: function(data){
+            if(data.form_is_valid){
+                $(tableDiv).html(data.html_table);
+                $(modalBody).closest('.modal').modal('hide');
+            } else {
+                $(modalBody).html(data.html_form);
+            }
+        }
+    });
+    return false;
+}
+
+$(function(){
+    // إضافة
+    $('#add-consultation-btn').click(function(){
+        loadForm("{% url 'consultation_create_ajax' %}", "#modal-body-consultation");
+    });
+
+    // تعديل/حذف
+    $('#consultation-table').on('click', '.delete-btn', function(){
+        loadForm($(this).data('url'), "#modal-body-consultation");
+    });
+
+    // حفظ الفورم
+    $(document).on('submit', '#modal-body-consultation form', function(e){
+        e.preventDefault();
+        saveForm("#modal-body-consultation", "#consultation-table");
+    });
+
+    // فلترة AJAX
+    $('#modal-body-filter').on('submit', '#filter-form', function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "{% url 'consultation_list' %}",
+            data: $(this).serialize(),
+            type: 'get',
+            success: function(data){
+                $('#consultation-table').html(data.html_table);
+                $('#filterModal').modal('hide');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

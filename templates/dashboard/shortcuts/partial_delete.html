@@ -1,0 +1,6 @@
+<form method="post" action="{% url 'shortcut_delete_ajax' shortcut.pk %}">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ shortcut.code }}"?</p>
+    <button type="submit" class="btn btn-danger">Yes, delete</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+</form>

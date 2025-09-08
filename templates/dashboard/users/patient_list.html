@@ -1,0 +1,166 @@
+{% extends "dashboard_base.html" %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+{% block sheri %}
+<div class="container py-3">
+    <h2 class="mb-4">قائمة المرضى</h2>
+
+<!-- أزرار الإضافة والفلترة -->
+<button type="button" class="btn btn-success mb-3" id="add-patient-btn">
+    <i class="bi bi-person-plus-fill"></i> إضافة مريض جديد
+</button>
+
+<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
+    <i class="bi bi-funnel-fill"></i> فلترة المرضى
+</button>
+
+
+    <!-- جدول المرضى -->
+    <div id="patient-table">
+        {% include 'dashboard/users/partial_patient_table.html' %}
+    </div>
+</div>
+
+<!-- Modal إضافة مريض -->
+<div class="modal fade" id="modal-patient" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">إضافة مريض</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modal-body-patient"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal تعديل مريض -->
+<div class="modal fade" id="modal-edit-patient" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">تعديل مريض</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modal-body-edit-patient"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal حذف مريض -->
+<div class="modal fade" id="modal-delete-patient" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">حذف مريض</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modal-body-delete-patient"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal فلترة -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="filterModalLabel">فلترة المرضى</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body">
+        <form id="filter-form" class="row g-3 mb-3">
+            {{ filter.form|crispy }}
+            <div>
+                <button type="submit" class="btn btn-primary">تصفية</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- AJAX Scripts -->
+<script>
+function loadForm(url, modalBodyId, modalId){
+    $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        success: function(data){
+            $(modalBodyId).html(data.html_form);
+            $(modalBodyId + ' form').attr('action', url); // ضبط action الصحيح
+            $(modalId).modal('show');
+        }
+    });
+}
+
+function saveForm(modalBodyId){
+    var form = $(modalBodyId + ' form');
+    $.ajax({
+        url: form.attr('action'),
+        data: form.serialize(),
+        type: 'post',
+        dataType: 'json',
+        success: function(data){
+            if(data.form_is_valid){
+                $('#patient-table').html(data.html_table);
+                $(modalBodyId).closest('.modal').modal('hide');
+            } else {
+                $(modalBodyId).html(data.html_form);
+            }
+        }
+    });
+    return false;
+}
+
+$(function(){
+    // إضافة مريض
+    $('#add-patient-btn').click(function(){
+        loadForm("{% url 'patient_add_ajax' %}", '#modal-body-patient', '#modal-patient');
+    });
+
+    // تعديل مريض
+    $('#patient-table').on('click', '.edit-patient-btn', function(){
+        var url = $(this).data('url');
+        loadForm(url, '#modal-body-edit-patient', '#modal-edit-patient');
+    });
+
+    // حذف مريض
+    $('#patient-table').on('click', '.delete-patient-btn', function(){
+        var url = $(this).data('url');
+        loadForm(url, '#modal-body-delete-patient', '#modal-delete-patient');
+    });
+
+    // حفظ الفورم (إضافة / تعديل / حذف)
+    $(document).on('submit', '#modal-body-patient form, #modal-body-edit-patient form, #modal-body-delete-patient form', function(e){
+        e.preventDefault();
+        saveForm('#' + $(this).parent().attr('id'));
+    });
+
+
+    $('#filter-form').submit(function(e){
+        e.preventDefault();
+        var form = $(this);
+        $.ajax({
+            url: window.location.href, // نفس الصفحة
+            data: form.serialize(),
+            type: 'get',
+            success: function(data){
+                // تحديث الجدول فقط
+                var newTable = $(data).find('#patient-table').html();
+                $('#patient-table').html(newTable);
+                // إخفاء Modal بعد التحديث
+                $('#filterModal').modal('hide');
+            },
+            error: function(){
+                alert('حدث خطأ أثناء الفلترة.');
+            }
+        });
+    });
+});
+</script>
+
+{% endblock sheri %}

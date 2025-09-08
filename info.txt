@@ -1,0 +1,11 @@
+django-filter → للفلترة.
+
+django-import-export → للتصدير (Excel, CSV).
+
+reportlab / WeasyPrint → لتوليد PDF.
+
+django-rest-framework (DRF) → لو حابب API لموبايل أو React.
+
+django-crispy-forms → تحسين الواجهات.
+
+django-simple-history → لتتبع النشاط والتغييرات.

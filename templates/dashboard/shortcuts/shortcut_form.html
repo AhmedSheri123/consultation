@@ -1,0 +1,72 @@
+{% extends "dashboard_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block sheri %}
+<div class="container py-3">
+    <h2>{{ title }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.media }}  <!-- لتحميل JS و CSS الخاص بـ DAL -->
+        <div class="row">
+        <div class="col-md-6">
+            {{ form.title|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            {{ form.ico|as_crispy_field }}
+        </div>
+        </div>
+
+
+        <div class="mb-3">
+        {{ form.code|as_crispy_field }}
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">حفظ</button>
+        <a href="{% url 'shortcut_list' %}" class="btn btn-secondary mt-3">إلغاء</a>
+    </form>
+</div>
+
+
+<style>
+.select2-selection {
+    min-height: 38px; /* مثل form-control في bootstrap */
+    padding: 6px 12px;
+}
+.select2-selection span {
+    line-height: 1.2 !important;
+}
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const icoSelect = $('select[name="ico"]');  // jQuery لأن Select2 يعتمد عليها
+    const preview = $('<span>').css({'font-size':'24px','margin-left':'10px', 'display':'inline'});
+    icoSelect.parent().append(preview);
+
+    function updatePreview(selected) {
+        if(selected) {
+            preview.html(`<i class="${selected}"></i>`);
+        } else {
+            preview.html('');
+        }
+    }
+
+    // عرض أولي إذا هناك قيمة مسبقة
+    updatePreview(icoSelect.val());
+
+    // حدث عند تغيير الاختيار عبر Select2
+    icoSelect.on('select2:select', function(e) {
+        const selectedClass = e.params.data.id;  // id يحتوي على قيمة الخيار (class الأيقونة)
+        updatePreview(selectedClass);
+    });
+
+    // حدث عند إزالة الاختيار (إذا كان الحقل يمكن تفريغه)
+    icoSelect.on('select2:unselect', function(e) {
+        updatePreview('');
+    });
+});
+</script>
+
+
+{% endblock %}
