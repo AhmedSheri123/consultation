@@ -34,8 +34,8 @@ class Consultation(models.Model):
 
     def save(self, *args, **kwargs):
         # تنظيف المحتوى باستخدام BeautifulSoup
-        if self.content:
-            self.content = str(remove_watermark(self.content))
+        if self.medical_case:
+            self.medical_case = str(remove_watermark(self.medical_case))
 
         super().save(*args, **kwargs)
 

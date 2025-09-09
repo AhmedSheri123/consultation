@@ -14,7 +14,7 @@ class Shortcut(models.Model):
 
     def save(self, *args, **kwargs):
         # تنظيف المحتوى باستخدام BeautifulSoup
-        if self.content:
-            self.content = str(remove_watermark(self.content))
+        if self.code:
+            self.code = str(remove_watermark(self.code))
 
         super().save(*args, **kwargs)
