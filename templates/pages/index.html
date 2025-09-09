@@ -67,68 +67,94 @@
 </div>
 <!-- End Trusted medical partners -->
 
-
-
 <!-- About Doctor -->
 <div class="py-5 px-2 px-md-4 bg-light" id="about">
   <div class="container">
-    <h2 class="text-center py-4">{% trans "عن الدكتور" %}</h2>
-    <div class="row ">
+    <h2 class="text-center py-4 fw-bold text-primary">{% trans "عن الدكتور" %}</h2>
+    <div class="row g-4 align-items-stretch">
 
-
-
-    <!-- صورة الدكتور مع معلومات باستخدام Bootstrap فقط -->
-    <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card shadow rounded-4 h-100 zoom-anim">
+      <!-- صورة الدكتور -->
+      <div class="col-md-4">
+        <div class="card shadow-lg rounded-4 h-100 border-0 overflow-hidden zoom-anim">
+          <div class="position-relative">
             <img src="{% static 'img/developers/Krenawi-Muhammad.png' %}" 
-                class="card-img-top rounded-top-4" 
-                alt="صورة الدكتور" 
-                style="max-height: 350px; object-fit: cover;">
-
-            <div class="card-body bg-white rounded-bottom-4">
-                <h5 class="card-title fw-bold"><i class="fa-solid fa-user-doctor text-primary me-2"></i>{% trans "الدكتور كرناوي محمد" %}</h5>
-                <p class="card-text text-dark">
-                    {% trans "استشاري جراحة المسالك البولية وأمراض الذكورة والعقم، بخبرة تزيد عن 15 عاماً في تشخيص وعلاج أمراض الجهاز البولي والجراحة بالمنظار." %}
-                </p>
-            </div>
+                 class="card-img-top rounded-top-4" 
+                 alt="صورة الدكتور"
+                 style="max-height: 380px; object-fit: cover;">
+            <!-- شارة (badge) صغيرة على الصورة -->
+            <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2 shadow">
+              <i class="fa-solid fa-stethoscope me-1"></i> {% trans "خبرة +15 سنة" %}
+            </span>
+          </div>
+          <div class="card-body bg-white rounded-bottom-4 text-center">
+            <h5 class="card-title fw-bold text-dark">
+              <i class="fa-solid fa-user-doctor text-primary me-2"></i>{% trans "الدكتور كرناوي محمد" %}
+            </h5>
+            <p class="card-text text-muted small">
+              {% trans "استشاري جراحة المسالك البولية وأمراض الذكورة والعقم." %}
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
 
-      <!-- نبذة تعريفية -->
+      <!-- محتوى الدكتور -->
       <div class="col-md-8">
-        <div class="p-4 rounded-4 shadow-sm bg-white card zoom-anim mb-2">
-
-          <!-- المؤهلات -->
-          <h5 class="fw-bold mt-3 mb-2">{% trans "المؤهلات العلمية" %}</h5>
-          <ul class="mb-3 list-unstyled">
-            <li class="mb-2"><i class="fa-solid fa-graduation-cap text-primary me-2"></i> 
-              {% trans "بكالوريوس الطب والجراحة من جامعة دمشق" %}</li>
-            <li class="mb-2"><i class="fa-solid fa-graduation-cap text-primary me-2"></i> 
-              {% trans "ماجستير جراحة المسالك البولية – جامعة القاهرة" %}</li>
-            <li class="mb-2"><i class="fa-solid fa-graduation-cap text-primary me-2"></i> 
-              {% trans "زمالة الجراحة بالمنظار – ألمانيا" %}</li>
+        <!-- المؤهلات -->
+        <div class="p-4 rounded-4 shadow-sm bg-white card border-0 mb-3 zoom-anim">
+          <h5 class="fw-bold text-primary mb-3">{% trans "المؤهلات العلمية" %}</h5>
+          <ul class="mb-0 list-unstyled">
+            <li class="mb-2">
+              <span class="badge rounded-circle bg-primary text-white me-2 p-2">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </span>
+              {% trans "بكالوريوس الطب والجراحة – جامعة دمشق" %}
+            </li>
+            <li class="mb-2">
+              <span class="badge rounded-circle bg-primary text-white me-2 p-2">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </span>
+              {% trans "ماجستير جراحة المسالك البولية – جامعة القاهرة" %}
+            </li>
+            <li>
+              <span class="badge rounded-circle bg-primary text-white me-2 p-2">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </span>
+              {% trans "زمالة الجراحة بالمنظار – ألمانيا" %}
+            </li>
           </ul>
         </div>
 
-        <div class="p-4 rounded-4 shadow-sm bg-white card zoom-anim">
-          <!-- الخبرة العملية -->
-          <h5 class="fw-bold mt-3 mb-2">{% trans "الخبرة العملية" %}</h5>
-          <ul class="mb-3 list-unstyled">
-            <li class="mb-2"><i class="fa-solid fa-hospital-user text-success me-2"></i> 
-              {% trans "استشاري جراحة المسالك البولية في مستشفى السلام الدولي" %}</li>
-            <li class="mb-2"><i class="fa-solid fa-scalpel text-success me-2"></i> 
-              {% trans "أكثر من 2000 عملية ناجحة في جراحة الحصى بالمنظار" %}</li>
-            <li class="mb-2"><i class="fa-solid fa-user-doctor text-success me-2"></i> 
-              {% trans "خبرة في علاج العقم وأمراض الذكورة" %}</li>
+        <!-- الخبرة العملية -->
+        <div class="p-4 rounded-4 shadow-sm bg-white card border-0 zoom-anim">
+          <h5 class="fw-bold text-success mb-3">{% trans "الخبرة العملية" %}</h5>
+          <ul class="mb-0 list-unstyled">
+            <li class="mb-2">
+              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+                <i class="fa-solid fa-hospital-user"></i>
+              </span>
+              {% trans "استشاري جراحة المسالك البولية في مستشفى السلام الدولي" %}
+            </li>
+            <li class="mb-2">
+              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+                <i class="fa-solid fa-syringe"></i>
+              </span>
+              {% trans "أكثر من 2000 عملية ناجحة في جراحة الحصى بالمنظار" %}
+            </li>
+            <li>
+              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+                <i class="fa-solid fa-user-doctor"></i>
+              </span>
+              {% trans "خبرة في علاج العقم وأمراض الذكورة" %}
+            </li>
           </ul>
 
-          <!-- زر الحجز -->
+          <!-- الأزرار -->
           <div class="d-flex gap-3 mt-4 flex-wrap">
-            <a href="tel:+963980606953" class="btn btn-primary px-4 py-2">
-              {% trans "اتصال مباشر" %} <i class="fa-solid fa-phone"></i>
+            <a href="tel:+963980606953" class="btn btn-lg btn-primary px-4 shadow-sm">
+              <i class="fa-solid fa-phone"></i> {% trans "اتصال مباشر" %}
             </a>
-            <a href="https://wa.me/963980606953" target="_blank" class="btn btn-success px-4 py-2">
-              {% trans "حجز عبر واتساب" %} <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/963980606953" target="_blank" class="btn btn-lg btn-success px-4 shadow-sm">
+              <i class="fa-brands fa-whatsapp"></i> {% trans "حجز عبر واتساب" %}
             </a>
           </div>
         </div>
@@ -138,8 +164,6 @@
   </div>
 </div>
 <!-- end About Doctor -->
-
-
 
 
 <!-- Solutions -->
