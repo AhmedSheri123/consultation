@@ -1,7 +1,7 @@
 from django.db import models
 from froala_editor.fields import FroalaField
 from .libs import ICON_CHOICES
-
+from consultations.libs import remove_watermark
 
 class Shortcut(models.Model):
     title = models.CharField(max_length=50, null=True)  # مثال: "ضغط الدم مرتفع"
@@ -11,3 +11,10 @@ class Shortcut(models.Model):
 
     def __str__(self):
         return self.code
+
+    def save(self, *args, **kwargs):
+        # تنظيف المحتوى باستخدام BeautifulSoup
+        if self.content:
+            self.content = str(remove_watermark(self.content))
+
+        super().save(*args, **kwargs)

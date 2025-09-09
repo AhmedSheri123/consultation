@@ -1,6 +1,7 @@
 from django.db import models
 from froala_editor.fields import FroalaField
 import uuid
+from .libs import remove_watermark
 # Create your models here.
 
 def generate_uuid16():
@@ -30,6 +31,14 @@ class Consultation(models.Model):
 
     class Meta:
         ordering = ["-created_at"]  # 👈 الترتيب الافتراضي
+
+    def save(self, *args, **kwargs):
+        # تنظيف المحتوى باستخدام BeautifulSoup
+        if self.content:
+            self.content = str(remove_watermark(self.content))
+
+        super().save(*args, **kwargs)
+
 
 class ConsultationAttachment(models.Model):
     consultation = models.ForeignKey(Consultation, on_delete=models.CASCADE, related_name="attachments")
