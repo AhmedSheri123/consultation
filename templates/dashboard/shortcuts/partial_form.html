@@ -1,4 +1,5 @@
 {% extends "dashboard_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block sheri %}
@@ -6,6 +7,6 @@
     {% csrf_token %}
     {{ form.media }}
     {{ form|crispy }}
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
 </form>
 {% endblock %}

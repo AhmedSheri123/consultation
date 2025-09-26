@@ -4,28 +4,46 @@
 
 {% block meta %}
 <meta name="description" content="{% trans "A versatile software suite transforming businesses of all sizes by simplifying complex systems into efficient work environments." %}">
+<link rel="stylesheet" href="https://unpkg.com/sal.js/dist/sal.css">
+
 {% endblock meta %}
 
 {% block sheri %}
 <!-- header -->
-<div class="px-4 py-5 text-center">
+<div class="px-4 py-5 text-center ">
   <div class="py-4 text-body-emphasis">
-    <h1 class="display-5 fw-bold container mb-4">
-      د.  كرناوي محمد   
+
+    <!-- العنوان -->
+    <h1 class="display-5 fw-bold container mb-4"
+        data-sal="slide-up"
+        data-sal-delay="200"
+        data-sal-duration="800">
+      {% trans "Dr. Karnawi Mohamed" %}
       <br>
-      <span class="text-primary">استشاري جراحة المسالك البولية</span>
+      <span class="text-primary">{% trans "Urology Surgery Consultant" %}</span>
     </h1>
+
     <div class="col-lg-6 mx-auto">
-      <p class="fs-5 mb-4">
-        خبرة واسعة في تشخيص وعلاج أمراض الجهاز البولي والاضطرابات المرتبطة بالكلى والبروستات، مع تقديم رعاية طبية متقدمة للرجال والنساء والأطفال.
+
+      <!-- النص -->
+      <p class="fs-5 mb-4"
+         data-sal="fade"
+         data-sal-delay="400"
+         data-sal-duration="800">
+        {% trans "Extensive experience in diagnosing and treating urinary system diseases and kidney & prostate-related disorders, providing advanced medical care for men, women, and children." %}
       </p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="tel:{{ رقم_الهاتف }}" class="btn btn-primary btn-lg px-4">
-          اتصل الآن
+
+      <!-- الأزرار -->
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"
+           data-sal="zoom-in"
+           data-sal-delay="600"
+           data-sal-duration="800">
+        <a href="tel:{{ phone_number }}" class="btn btn-primary btn-lg px-4">
+          {% trans "Call Now" %}
           <i class="fa-solid fa-phone"></i>
         </a>
-        <a href="https://wa.me/{{ رقم_واتساب }}" target="_blank" class="btn btn-success btn-lg px-4">
-          احجز موعدك
+        <a href="https://wa.me/{{ whatsapp_number }}" target="_blank" class="btn btn-success btn-lg px-4">
+          {% trans "Book Your Appointment" %}
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
@@ -36,30 +54,35 @@
 
 <!-- Trusted medical partners -->
 <div class="container py-5 text-center">
-  <h2 class="py-4">{% trans "موثوق من قبل مؤسسات طبية رائدة" %}</h2>
+  <h2 class="py-4" 
+      data-sal="slide-up" 
+      data-sal-delay="100" 
+      data-sal-duration="800">
+      {% trans "Trusted by Leading Medical Institutions" %}
+  </h2>
 
   <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-4 align-items-center">
-    <div class="col">
-      <img src="{% static 'img/trusted/Saudi_Ministry_of_Health_Logo.svg.png' %}" loading="lazy" alt="وزارة الصحة" class="img-fluid" style="max-height:60px;">
-      <p class="mt-2">وزارة الصحة</p>
+    <div class="col" data-sal="zoom-in" data-sal-delay="100" data-sal-duration="700">
+      <img src="{% static 'img/trusted/Saudi_Ministry_of_Health_Logo.svg.png' %}" loading="lazy" alt="{% trans 'Ministry of Health' %}" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">{% trans "Ministry of Health" %}</p>
     </div>
-    <div class="col">
-      <img src="{% static 'img/trusted/who-ar-c-h.png' %}" loading="lazy" alt="منظمة الصحة العالمية" class="img-fluid" style="max-height:60px;">
-      <p class="mt-2">منظمة الصحة العالمية</p>
+    <div class="col" data-sal="zoom-in" data-sal-delay="200" data-sal-duration="700">
+      <img src="{% static 'img/trusted/who-ar-c-h.png' %}" loading="lazy" alt="{% trans 'World Health Organization' %}" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">{% trans "World Health Organization" %}</p>
     </div>
-    <div class="col">
-      <img src="{% static 'img/trusted/AMA_logo.svg.png' %}" loading="lazy" alt="الجمعية الطبية الأمريكية" class="img-fluid" style="max-height:60px;">
-      <p class="mt-2">الجمعية الطبية الأمريكية</p>
+    <div class="col" data-sal="zoom-in" data-sal-delay="300" data-sal-duration="700">
+      <img src="{% static 'img/trusted/AMA_logo.svg.png' %}" loading="lazy" alt="{% trans 'American Medical Association' %}" class="img-fluid" style="max-height:60px;">
+      <p class="mt-2">{% trans "American Medical Association" %}</p>
     </div>
-    <div class="col">
+    <div class="col" data-sal="zoom-in" data-sal-delay="400" data-sal-duration="700">
       <img src="{% static 'img/trusted/Pfizer_(2021).svg.png' %}" loading="lazy" alt="Pfizer" class="img-fluid" style="max-height:60px;">
       <p class="mt-2">Pfizer</p>
     </div>
-    <div class="col">
+    <div class="col" data-sal="zoom-in" data-sal-delay="500" data-sal-duration="700">
       <img src="{% static 'img/trusted/Siemens_Healthineers_logo.svg.png' %}" loading="lazy" alt="Siemens Healthineers" class="img-fluid" style="max-height:60px;">
       <p class="mt-2">Siemens</p>
     </div>
-    <div class="col">
+    <div class="col" data-sal="zoom-in" data-sal-delay="600" data-sal-duration="700">
       <img src="{% static 'img/trusted/Hoffmann-La_Roche_logo.svg.png' %}" loading="lazy" alt="Roche" class="img-fluid" style="max-height:60px;">
       <p class="mt-2">Roche</p>
     </div>
@@ -67,94 +90,105 @@
 </div>
 <!-- End Trusted medical partners -->
 
+<style>
+  #about { background:#f8f9fa; }
+</style>
 <!-- About Doctor -->
 <div class="py-5 px-2 px-md-4 bg-light" id="about">
   <div class="container">
-    <h2 class="text-center py-4 fw-bold text-primary">{% trans "عن الدكتور" %}</h2>
+    <h2 class="text-center py-4 fw-bold text-primary" 
+        data-sal="fade" 
+        data-sal-duration="800">
+        {% trans "About the Doctor" %}
+    </h2>
     <div class="row g-4 align-items-stretch">
 
-      <!-- صورة الدكتور -->
-      <div class="col-md-4">
-        <div class="card shadow-lg rounded-4 h-100 border-0 overflow-hidden zoom-anim">
+      <!-- Doctor's Image -->
+      <div class="col-md-4" data-sal="slide-right" data-sal-duration="1000">
+        <div class="card shadow-lg rounded-4 h-100 border-0 overflow-hidden">
           <div class="position-relative">
             <img src="{% static 'img/developers/Krenawi-Muhammad.png' %}" 
                  class="card-img-top rounded-top-4" 
-                 alt="صورة الدكتور"
+                 alt="{% trans "Doctor's Photo" %}"
                  style="max-height: 380px; object-fit: cover;">
-            <!-- شارة (badge) صغيرة على الصورة -->
             <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2 shadow">
-              <i class="fa-solid fa-stethoscope me-1"></i> {% trans "خبرة +15 سنة" %}
+              <i class="fa-solid fa-stethoscope me-1"></i> {% trans "15+ Years of Experience" %}
             </span>
           </div>
           <div class="card-body bg-white rounded-bottom-4 text-center">
             <h5 class="card-title fw-bold text-dark">
-              <i class="fa-solid fa-user-doctor text-primary me-2"></i>{% trans "الدكتور كرناوي محمد" %}
+              <i class="fa-solid fa-user-doctor text-primary me-2"></i>{% trans "Dr. Krenawi Muhammad" %}
             </h5>
             <p class="card-text text-muted small">
-              {% trans "استشاري جراحة المسالك البولية وأمراض الذكورة والعقم." %}
+              {% trans "Consultant in Urology and Male Infertility." %}
             </p>
           </div>
         </div>
       </div>
 
-      <!-- محتوى الدكتور -->
+      <!-- Doctor's Details -->
       <div class="col-md-8">
-        <!-- المؤهلات -->
-        <div class="p-4 rounded-4 shadow-sm bg-white card border-0 mb-3 zoom-anim">
-          <h5 class="fw-bold text-primary mb-3">{% trans "المؤهلات العلمية" %}</h5>
+        <!-- Qualifications -->
+        <div class="p-4 rounded-4 shadow-sm bg-white card border-0 mb-3" 
+             data-sal="fade" 
+             data-sal-duration="1000">
+          <h5 class="fw-bold text-primary mb-3">{% trans "Academic Qualifications" %}</h5>
           <ul class="mb-0 list-unstyled">
             <li class="mb-2">
               <span class="badge rounded-circle bg-primary text-white me-2 p-2">
                 <i class="fa-solid fa-graduation-cap"></i>
               </span>
-              {% trans "بكالوريوس الطب والجراحة – جامعة دمشق" %}
+              {% trans "Bachelor of Medicine & Surgery – Damascus University" %}
             </li>
             <li class="mb-2">
               <span class="badge rounded-circle bg-primary text-white me-2 p-2">
                 <i class="fa-solid fa-graduation-cap"></i>
               </span>
-              {% trans "ماجستير جراحة المسالك البولية – جامعة القاهرة" %}
+              {% trans "Master in Urology – Cairo University" %}
             </li>
             <li>
               <span class="badge rounded-circle bg-primary text-white me-2 p-2">
                 <i class="fa-solid fa-graduation-cap"></i>
               </span>
-              {% trans "زمالة الجراحة بالمنظار – ألمانيا" %}
+              {% trans "Fellowship in Laparoscopic Surgery – Germany" %}
             </li>
           </ul>
         </div>
 
-        <!-- الخبرة العملية -->
-        <div class="p-4 rounded-4 shadow-sm bg-white card border-0 zoom-anim">
-          <h5 class="fw-bold text-success mb-3">{% trans "الخبرة العملية" %}</h5>
+        <!-- Professional Experience -->
+        <div class="p-4 rounded-4 shadow-sm bg-white card border-0" 
+             data-sal="fade" 
+             data-sal-delay="200" 
+             data-sal-duration="1000">
+          <h5 class="fw-bold text-success mb-3">{% trans "Professional Experience" %}</h5>
           <ul class="mb-0 list-unstyled">
             <li class="mb-2">
               <span class="badge rounded-circle bg-success text-white me-2 p-2">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>
-              {% trans "استشاري جراحة المسالك البولية في مستشفى السلام الدولي" %}
+              {% trans "Consultant in Urology at Al-Salam International Hospital" %}
             </li>
             <li class="mb-2">
               <span class="badge rounded-circle bg-success text-white me-2 p-2">
                 <i class="fa-solid fa-syringe"></i>
               </span>
-              {% trans "أكثر من 2000 عملية ناجحة في جراحة الحصى بالمنظار" %}
+              {% trans "Over 2000 successful laparoscopic kidney stone surgeries" %}
             </li>
             <li>
               <span class="badge rounded-circle bg-success text-white me-2 p-2">
                 <i class="fa-solid fa-user-doctor"></i>
               </span>
-              {% trans "خبرة في علاج العقم وأمراض الذكورة" %}
+              {% trans "Expertise in treating male infertility and urological disorders" %}
             </li>
           </ul>
 
-          <!-- الأزرار -->
+          <!-- Action Buttons -->
           <div class="d-flex gap-3 mt-4 flex-wrap">
             <a href="tel:+963980606953" class="btn btn-lg btn-primary px-4 shadow-sm">
-              <i class="fa-solid fa-phone"></i> {% trans "اتصال مباشر" %}
+              <i class="fa-solid fa-phone"></i> {% trans "Call Now" %}
             </a>
             <a href="https://wa.me/963980606953" target="_blank" class="btn btn-lg btn-success px-4 shadow-sm">
-              <i class="fa-brands fa-whatsapp"></i> {% trans "حجز عبر واتساب" %}
+              <i class="fa-brands fa-whatsapp"></i> {% trans "Book via WhatsApp" %}
             </a>
           </div>
         </div>
@@ -165,83 +199,82 @@
 </div>
 <!-- end About Doctor -->
 
-
 <!-- Solutions -->
 <div class="container py-5" id="services">
   <div class="bg-black p-4 p-md-5 rounded-4 text-center">
-    <h2 class="text-white">
-      الخدمات الطبية التي <span class="text-success">نقدمها لمرضانا</span>
+    <h2 class="text-white" data-sal="fade" data-sal-duration="800">
+      {% trans "Medical Services We" %} <span class="text-success">{% trans "Provide to Our Patients" %}</span>
     </h2>
 
     <ul class="p-0 py-4 row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-2 g-lg-3 text-white" style="list-style: none;">
       
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="0" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-stethoscope fa-2x"></i>
-          <p>فحص وتشخيص أمراض المسالك البولية</p>
+          <p>{% trans "Urinary Tract Examination & Diagnosis" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="100" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-x-ray fa-2x"></i>
-          <p>علاج حصى الكلى والمثانة</p>
+          <p>{% trans "Treatment of Kidney & Bladder Stones" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="200" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-venus-mars fa-2x"></i>
-          <p>علاج تضخم والتهابات البروستات</p>
+          <p>{% trans "Treatment of Prostate Enlargement & Infections" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="300" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-baby fa-2x"></i>
-          <p>علاج مشاكل المسالك عند الأطفال</p>
+          <p>{% trans "Pediatric Urinary Problems Treatment" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="400" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-syringe fa-2x"></i>
-          <p>العمليات الجراحية بالمنظار</p>
+          <p>{% trans "Laparoscopic Surgeries" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="500" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-heart-pulse fa-2x"></i>
-          <p>علاج مشاكل العقم وضعف الخصوبة</p>
+          <p>{% trans "Infertility & Fertility Treatment" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="600" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-droplet fa-2x"></i>
-          <p>علاج التهابات المثانة والمسالك</p>
+          <p>{% trans "Treatment of Bladder & Urinary Infections" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="700" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-user-md fa-2x"></i>
-          <p>استشارات طبية متخصصة</p>
+          <p>{% trans "Specialized Medical Consultations" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="800" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-hospital fa-2x"></i>
-          <p>متابعة ما بعد العمليات</p>
+          <p>{% trans "Post-Surgery Follow-up" %}</p>
         </button>
       </li>
 
-      <li class="col">
+      <li class="col" data-sal="zoom-in" data-sal-delay="900" data-sal-duration="600">
         <button class="btn btn-outline-light p-4 w-100 h-100">
           <i class="fa-solid fa-calendar-check fa-2x"></i>
-          <p>حجز مواعيد الكتروني</p>
+          <p>{% trans "Online Appointment Booking" %}</p>
         </button>
       </li>
     </ul>
@@ -251,73 +284,77 @@
 
 
 
+
+
 <!-- Services Features -->
 <div class="container py-5">
-  <h2 class="text-center py-4">مميزات خدماتنا الطبية</h2>
+  <h2 class="text-center py-4" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+    {% trans "Our Medical Services Features" %}
+  </h2>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3">
     
-    <div class="col">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="50">
       <div class="card border d-grid border-0 h-100">
         <div class="bg-black p-5 text-start text-white rounded-4">
-          <i class="fa-solid fa-user-doctor fa-3x mb-2"></i>
-          <p class="text-success my-2">الخبرة</p>
-          <h3 class="py-3">استشاري متخصص</h3>
-          <p>خبرة طويلة في جراحة وعلاج أمراض المسالك البولية، لضمان رعاية دقيقة وفعّالة.</p>
+          <i class="fa-solid fa-user-doctor fa-3x mb-2 icon-animate"></i>
+          <p class="text-success my-2">{% trans "Expertise" %}</p>
+          <h3 class="py-3">{% trans "Specialist Consultant" %}</h3>
+          <p>{% trans "Extensive experience in urology surgery and treatments, ensuring precise and effective care." %}</p>
         </div>
       </div>
     </div>
     
-    <div class="col">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="100">
       <div class="card border d-grid border-0 h-100">
         <div class="bg-black p-5 text-start text-white rounded-4">
-          <i class="fa-solid fa-hospital-user fa-3x"></i>
-          <p class="text-success my-2">التشخيص</p>
-          <h3 class="py-3">تشخيص دقيق</h3>
-          <p>استخدام أحدث التقنيات الطبية لتشخيص أمراض الكلى والمثانة والبروستات بدقة عالية.</p>
+          <i class="fa-solid fa-hospital-user fa-3x icon-animate"></i>
+          <p class="text-success my-2">{% trans "Diagnosis" %}</p>
+          <h3 class="py-3">{% trans "Accurate Diagnosis" %}</h3>
+          <p>{% trans "Using the latest medical technologies to accurately diagnose kidney, bladder, and prostate diseases." %}</p>
         </div>
       </div>
     </div>
     
-    <div class="col">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="200">
       <div class="card border d-grid border-0 h-100">
         <div class="bg-black p-5 text-start text-white rounded-4">
-          <i class="fa-solid fa-microscope fa-3x"></i>
-          <p class="text-success my-2">التقنيات</p>
-          <h3 class="py-3">أحدث الأجهزة</h3>
-          <p>اعتماد أجهزة حديثة وطرق علاج متطورة لتقليل الألم وتسريع التعافي.</p>
+          <i class="fa-solid fa-microscope fa-3x icon-animate"></i>
+          <p class="text-success my-2">{% trans "Technology" %}</p>
+          <h3 class="py-3">{% trans "Advanced Equipment" %}</h3>
+          <p>{% trans "Relying on modern devices and advanced treatment methods to reduce pain and speed up recovery." %}</p>
         </div>
       </div>
     </div>
     
-    <div class="col">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="300">
       <div class="card border d-grid border-0 h-100">
         <div class="bg-black p-5 text-start text-white rounded-4">
-          <i class="fa-solid fa-hand-holding-medical fa-3x"></i>
-          <p class="text-success my-2">الرعاية</p>
-          <h3 class="py-3">متابعة دقيقة</h3>
-          <p>خطة علاجية متكاملة تشمل المتابعة المستمرة قبل وبعد العملية لضمان الشفاء التام.</p>
+          <i class="fa-solid fa-hand-holding-medical fa-3x icon-animate"></i>
+          <p class="text-success my-2">{% trans "Care" %}</p>
+          <h3 class="py-3">{% trans "Close Follow-up" %}</h3>
+          <p>{% trans "A comprehensive treatment plan including continuous follow-up before and after surgery to ensure complete recovery." %}</p>
         </div>
       </div>
     </div>
     
-    <div class="col">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="400">
       <div class="card border d-grid border-0 h-100">
         <div class="bg-black p-5 text-start text-white rounded-4">
-          <i class="fa-solid fa-user-shield fa-3x"></i>
-          <p class="text-success my-2">الخصوصية</p>
-          <h3 class="py-3">سرية تامة</h3>
-          <p>نلتزم بالحفاظ على سرية وخصوصية جميع بيانات المرضى الطبية.</p>
+          <i class="fa-solid fa-user-shield fa-3x icon-animate"></i>
+          <p class="text-success my-2">{% trans "Privacy" %}</p>
+          <h3 class="py-3">{% trans "Complete Confidentiality" %}</h3>
+          <p>{% trans "We are committed to maintaining the confidentiality and privacy of all patient medical data." %}</p>
         </div>
       </div>
     </div>
     
-    <div class="col">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="500">
       <div class="card border d-grid border-0 h-100">
         <div class="bg-black p-5 text-start text-white rounded-4">
-          <i class="fa-solid fa-headset fa-3x"></i>
-          <p class="text-success my-2">الدعم</p>
-          <h3 class="py-3">تواصل مستمر</h3>
-          <p>إمكانية التواصل المباشر عبر الهاتف أو الواتساب لحجز المواعيد والاستفسارات الطبية.</p>
+          <i class="fa-solid fa-headset fa-3x icon-animate"></i>
+          <p class="text-success my-2">{% trans "Support" %}</p>
+          <h3 class="py-3">{% trans "Continuous Communication" %}</h3>
+          <p>{% trans "Direct communication via phone or WhatsApp for appointment booking and medical inquiries." %}</p>
         </div>
       </div>
     </div>
@@ -326,31 +363,43 @@
 </div>
 <!-- End Services Features -->
 
+<style>
+.icon-animate {
+  animation: pulse 2s infinite;
+}
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+</style>
 <!-- Patient Reviews -->
 <div class="container py-5">
-  <h2 class="text-center py-4 border-top">آراء المرضى</h2>
+  <h2 class="text-center py-4 border-top" data-sal="slide-up" data-sal-duration="800">
+    {% trans "Patient Reviews" %}
+  </h2>
 
   <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-    
+
     <!-- Review 1 -->
-    <div class="col zoom-anim">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="100">
       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
         data-bg="{% static 'img/reviews/background-diva-26694057.webp' %}">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 class="my-4 lh-1 fw-bold">
-            {% trans "الدكتور ساعدني كثيرًا في علاج حصى الكلى. العملية كانت ناجحة والمتابعة ممتازة." %}
+            {% trans "The doctor helped me a lot in treating kidney stones. The surgery was successful and the follow-up was excellent." %}
           </h3>
           <ul class="d-flex list-unstyled mt-auto">
             <li class="me-auto">
-              <img src="{% static 'img/reviews/review-0.webp' %}" alt="reviewer 1" width="32" height="32"
+              <img src="{% static 'img/reviews/review-0.webp' %}" alt="{% trans 'reviewer 1' %}" width="32" height="32"
                 class="rounded-circle border border-white" loading="lazy">
             </li>
             <li class="d-flex align-items-center me-3">
               <svg class="bi me-2" width="1em" height="1em">
                 <use xlink:href="#geo-fill"></use>
               </svg>
-              <small>دمشق</small>
+              <small>{% trans "Damascus" %}</small>
             </li>
             <li class="d-flex align-items-center">
               <small>
@@ -367,23 +416,23 @@
     </div>
 
     <!-- Review 2 -->
-    <div class="col zoom-anim">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="200">
       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
         data-bg="{% static 'img/reviews/unsplash-photo-3.webp' %}">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 class="my-4 lh-1 fw-bold">
-            {% trans "تعامل راقٍ جدًا وشرح واضح للحالة. شعرت بالاطمئنان من أول زيارة." %}
+            {% trans "Very professional treatment and a clear explanation of my case. I felt reassured from the first visit." %}
           </h3>
           <ul class="d-flex list-unstyled mt-auto">
             <li class="me-auto">
-              <img src="{% static 'img/reviews/review-2.webp' %}" alt="reviewer 2" width="32" height="32"
+              <img src="{% static 'img/reviews/review-2.webp' %}" alt="{% trans 'reviewer 2' %}" width="32" height="32"
                 class="rounded-circle border border-white" loading="lazy">
             </li>
             <li class="d-flex align-items-center me-3">
               <svg class="bi me-2" width="1em" height="1em">
                 <use xlink:href="#geo-fill"></use>
               </svg>
-              <small>بيروت</small>
+              <small>{% trans "Beirut" %}</small>
             </li>
             <li class="d-flex align-items-center">
               <small>
@@ -400,23 +449,23 @@
     </div>
 
     <!-- Review 3 -->
-    <div class="col zoom-anim">
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="300">
       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
         data-bg="{% static 'img/reviews/background-rccbtn-61760629.webp'%}">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 class="my-4 lh-1 fw-bold">
-            {% trans "الدكتور أنقذني من مشكلة في البروستات كنت أعاني منها منذ سنوات. شكراً له من القلب." %}
+            {% trans "The doctor saved me from a prostate problem I had suffered from for years. Thanks to him from the heart." %}
           </h3>
           <ul class="d-flex list-unstyled mt-auto">
             <li class="me-auto">
-              <img src="{% static 'img/reviews/review-3.webp' %}" alt="reviewer 3" width="32" height="32"
+              <img src="{% static 'img/reviews/review-3.webp' %}" alt="{% trans 'reviewer 3' %}" width="32" height="32"
                 class="rounded-circle border border-white" loading="lazy">
             </li>
             <li class="d-flex align-items-center me-3">
               <svg class="bi me-2" width="1em" height="1em">
                 <use xlink:href="#geo-fill"></use>
               </svg>
-              <small>عمان</small>
+              <small>{% trans "Amman" %}</small>
             </li>
             <li class="d-flex align-items-center">
               <small>
@@ -435,105 +484,122 @@
   </div>
 </div>
 <!-- End Patient Reviews -->
-
-
-
-<!-- FAQ reviews -->
+<!-- FAQ reviews with SAL.js -->
 <div class="py-5 px-2 px-md-4 glass-light-dark">
-    <h2 class="text-center py-4 ">{% trans "الأسئلة الشائعة" %}</h2>
+    <h2 class="text-center py-4"
+        data-sal="fade"
+        data-sal-duration="800"
+        data-sal-delay="100">{% trans "Frequently Asked Questions" %}</h2>
     <div class="accordion accordion-flush mx-auto" id="accordionFlushExample" style="max-width: 1080px;">
         
-        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow"
+            data-sal="slide-up"
+            data-sal-duration="600"
+            data-sal-delay="100">
             <h2 class="accordion-header">
                 <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    {% trans "ما هي الحالات التي يعالجها طبيب جراحة المسالك البولية؟" %}
+                    {% trans "What conditions does a urology surgeon treat?" %}
                 </div>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    {% trans "يشمل التخصص علاج حصى الكلى، تضخم البروستاتا، التهابات الجهاز البولي، أورام الكلى والمثانة، إضافةً إلى مشكلات العقم واضطرابات الجهاز البولي عند الرجال والنساء." %}
+                    {% trans "The specialty includes treatment of kidney stones, prostate enlargement, urinary tract infections, kidney and bladder tumors, as well as infertility issues and urinary disorders in men and women." %}
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow"
+            data-sal="slide-up"
+            data-sal-duration="600"
+            data-sal-delay="200">
             <h2 class="accordion-header">
                 <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    {% trans "متى يجب زيارة طبيب جراحة المسالك البولية؟" %}
+                    {% trans "When should I visit a urology surgeon?" %}
                 </div>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    {% trans "ينصح بمراجعة الطبيب عند الشعور بألم مستمر في الكلى أو المثانة، صعوبة أو ألم أثناء التبول، وجود دم في البول، تكرار التهابات المسالك البولية أو مشاكل في الخصوبة." %}
+                    {% trans "It is recommended to consult the doctor if you experience persistent pain in the kidneys or bladder, difficulty or pain during urination, blood in urine, recurring urinary tract infections, or fertility problems." %}
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow"
+            data-sal="slide-up"
+            data-sal-duration="600"
+            data-sal-delay="300">
             <h2 class="accordion-header">
                 <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    {% trans "هل جميع مشاكل المسالك البولية تحتاج إلى جراحة؟" %}
+                    {% trans "Do all urinary tract problems require surgery?" %}
                 </div>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    {% trans "ليس بالضرورة، بعض الحالات تعالج بالأدوية أو الإجراءات البسيطة مثل المناظير، بينما بعض الأمراض تحتاج لتدخل جراحي متقدم بحسب التشخيص." %}
+                    {% trans "Not necessarily. Some cases can be treated with medications or minor procedures like endoscopy, while some conditions require advanced surgical intervention depending on the diagnosis." %}
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow"
+            data-sal="slide-up"
+            data-sal-duration="600"
+            data-sal-delay="400">
             <h2 class="accordion-header">
                 <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    {% trans "هل يمكن علاج حصى الكلى بدون جراحة؟" %}
+                    {% trans "Can kidney stones be treated without surgery?" %}
                 </div>
             </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    {% trans "في كثير من الحالات يمكن تفتيت الحصى باستخدام الموجات التصادمية أو المناظير بدون الحاجة إلى عملية جراحية مفتوحة." %}
+                    {% trans "In many cases, stones can be broken down using shock wave therapy or endoscopic procedures without the need for open surgery." %}
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow"
+            data-sal="slide-up"
+            data-sal-duration="600"
+            data-sal-delay="500">
             <h2 class="accordion-header">
                 <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    {% trans "هل تضخم البروستاتا يعني الإصابة بالسرطان؟" %}
+                    {% trans "Does an enlarged prostate mean cancer?" %}
                 </div>
             </h2>
             <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    {% trans "تضخم البروستاتا الحميد هو أمر شائع مع التقدم بالعمر ولا يعني بالضرورة وجود سرطان، لكن من المهم مراجعة الطبيب للتأكد عبر الفحوصات اللازمة." %}
+                    {% trans "Benign prostate enlargement is common with age and does not necessarily indicate cancer, but it is important to consult the doctor for proper testing." %}
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow"
+            data-sal="slide-up"
+            data-sal-duration="600"
+            data-sal-delay="600">
             <h2 class="accordion-header">
                 <div class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                    {% trans "هل يمكن حجز موعد عبر الإنترنت؟" %}
+                    {% trans "Can I book an appointment online?" %}
                 </div>
             </h2>
             <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    {% trans "نعم، يمكنكم حجز موعد بسهولة عبر الموقع الإلكتروني أو من خلال التواصل المباشر عبر الواتساب." %}
+                    {% trans "Yes, you can easily book an appointment through the website or by contacting directly via WhatsApp." %}
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="text-center my-4">
-        <a href="" class="">{% trans "عرض المزيد من الأسئلة" %}</a>
+    <div class="text-center my-4" data-sal="fade" data-sal-duration="800" data-sal-delay="700">
+        <a href="">{% trans "View More Questions" %}</a>
     </div>
 </div>
 <!-- end -->
-
 
 
 
@@ -545,7 +611,7 @@
 <div class="bg-dark py-5">
   <div class="container" style="max-width: 600px;">
     <h2 class="text-center text-light py-4">
-      {% trans "تواصل مع الدكتور كرناوي محمد لحجز استشارة طبية أو الاستفسار عن العلاج" %}
+      {% trans "Contact Dr. Krenawi Muhammad to book a medical consultation or inquire about treatment" %}
     </h2>
 
     <form method="post" action="{% url 'Contact' %}" 
@@ -553,68 +619,69 @@
           novalidate>
       {% csrf_token %}
 
-      <h5 class="mb-4 text-center fw-bold text-primary">{% trans "نموذج الاتصال" %}</h5>
+      <h5 class="mb-4 text-center fw-bold text-primary">{% trans "Contact Form" %}</h5>
 
       <p class="text-dark mb-4">
-        {% trans "املأ النموذج أدناه وسيقوم فريق الدكتور بالتواصل معك لتحديد موعد الاستشارة أو الرد على استفساراتك الطبية." %}
+        {% trans "Fill out the form below and Dr. Krenawi's team will contact you to schedule a consultation or answer your medical inquiries." %}
       </p>
 
       <div class="mb-3">
         <label for="fullName" class="form-label">
-          <i class="fa-solid fa-user"></i> {% trans "الاسم الكامل" %}
+          <i class="fa-solid fa-user"></i> {% trans "Full Name" %}
         </label>
         {{ form.full_name }}
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">
-          <i class="fa-solid fa-envelope"></i> {% trans "البريد الإلكتروني" %}
+          <i class="fa-solid fa-envelope"></i> {% trans "Email Address" %}
         </label>
         {{ form.email }}
       </div>
 
       <div class="mb-3">
         <label for="phone" class="form-label">
-          <i class="fa-solid fa-phone"></i> {% trans "رقم الهاتف" %}
+          <i class="fa-solid fa-phone"></i> {% trans "Phone Number" %}
         </label>
         {{ form.phone_number }}
       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label">
-          <i class="fa-solid fa-file-medical"></i> {% trans "الاستفسار أو وصف الحالة" %}
+          <i class="fa-solid fa-file-medical"></i> {% trans "Inquiry or Case Description" %}
         </label>
         {{ form.project_description }}
         <div class="form-text">
-          {% trans "اشرح باختصار طبيعة الاستشارة أو الأعراض التي تواجهها." %}
+          {% trans "Briefly describe the nature of your consultation or the symptoms you are experiencing." %}
         </div>
       </div>
 
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" required id="privacyCheck">
         <label class="form-check-label" for="privacyCheck">
-          {% trans "أوافق على سياسة الخصوصية عند إرسال هذا النموذج" %}
+          {% trans "I agree to the privacy policy when submitting this form" %}
         </label>
         <div class="invalid-feedback">
-          {% trans "يجب الموافقة على سياسة الخصوصية قبل الإرسال." %}
+          {% trans "You must agree to the privacy policy before submitting." %}
         </div>
       </div>
 
       <button type="submit" class="btn btn-primary w-100">
-        {% trans "إرسال" %} <i class="fa-solid fa-paper-plane"></i>
+        {% trans "Submit" %} <i class="fa-solid fa-paper-plane"></i>
       </button>
 
       <div class="d-grid gap-2 mt-3">
         <a href="tel:+963980606953" class="btn btn-outline-primary">
-          <i class="fa-solid fa-phone"></i> {% trans "اتصال مباشر" %}
+          <i class="fa-solid fa-phone"></i> {% trans "Call Now" %}
         </a>
         <a href="https://wa.me/963980606953" target="_blank" class="btn btn-success">
-          <i class="fa-brands fa-whatsapp"></i> {% trans "حجز عبر واتساب" %}
+          <i class="fa-brands fa-whatsapp"></i> {% trans "Book via WhatsApp" %}
         </a>
       </div>
     </form>
   </div>
 </div>
+
 
 <script>
 (() => {
@@ -634,5 +701,16 @@
 <!-- End Contact Doctor -->
 
 
+<script src="https://unpkg.com/sal.js/dist/sal.js"></script>
+  <script>
+    // تهيئة بعد تحميل DOM
+    document.addEventListener('DOMContentLoaded', function() {
+  sal({
+    threshold: 0.2,  // يبدأ التحريك عند ظهور 20% من العنصر
+    once: true       // الحركة مرة واحدة فقط
+  });
+    });
 
+
+  </script>
 {% endblock sheri %}

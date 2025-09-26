@@ -1,10 +1,11 @@
 {% extends "dashboard_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block sheri %}
 <div class="container py-3">
-    <h2>قائمة الاختصارات</h2>
-    <a href="{% url 'shortcut_create' %}" class="btn btn-success mb-3">إضافة Shortcut</a>
+    <h2>{% trans "Shortcuts List" %}</h2>
+    <a href="{% url 'shortcut_create' %}" class="btn btn-success mb-3">{% trans "Add Shortcut" %}</a>
 
     <div id="table-div">
         {% include "dashboard/shortcuts/partial_table.html" %}
@@ -16,7 +17,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Shortcut</h5>
+        <h5 class="modal-title">{% trans "Shortcut" %}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" id="modal-body"></div>
@@ -50,7 +51,7 @@ function loadForm(url, modalBody){
                         return $('<span><i class="fa '+state.id+'"></i> '+state.text+'</span>');
                     },
                     width: '100%',
-                    placeholder: 'Select Icon'
+                    placeholder: '{% trans "Select Icon" %}'
                 });
 
                 // افتح القائمة بعد تأخير قصير لضمان تهيئة DAL
@@ -64,10 +65,6 @@ function loadForm(url, modalBody){
         }
     });
 }
-
-
-
-
 
 function saveForm(modalBody, tableDiv){
     var form = $(modalBody).find('form');
@@ -89,17 +86,17 @@ function saveForm(modalBody, tableDiv){
 }
 
 $(function(){
-    // إضافة
+    // Add
     $('#add-btn').click(function(){
         loadForm("{% url 'shortcut_create_ajax' %}", "#modal-body");
     });
 
-    // تعديل/حذف
+    // Edit/Delete
     $('#table-div').on('click', '.edit-btn, .delete-btn', function(){
         loadForm($(this).data('url'), "#modal-body");
     });
 
-    // حفظ الفورم
+    // Save form
     $(document).on('submit', '#modal-body form', function(e){
         e.preventDefault();
         saveForm("#modal-body", "#table-div");

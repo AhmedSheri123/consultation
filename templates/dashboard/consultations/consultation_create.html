@@ -1,44 +1,45 @@
 {% extends "dashboard_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load consultations_tags %}
 
-
 {% block sheri %}
 <div class="container py-3">
-    <h2 class="mb-4">إضافة استشارة جديدة</h2>
+    <h2 class="mb-4">{% trans "Add New Consultation" %}</h2>
 
     <form method="post">
         {% csrf_token %}
-        {{ form.media }}  <!-- هذا يحمّل JS/CSS الخاص بـ CKEditor -->
+        {{ form.media }}  <!-- Loads JS/CSS for CKEditor -->
         <div class="row">
-        <div class="col-md-6">
-            {{ form.patient|as_crispy_field }}
-        </div>
-        <div class="col-md-6">
-            {{ form.status|as_crispy_field }}
-        </div>
-        </div>
-
-        <div class="mb-3">
-        {{ form.title|as_crispy_field }}
+            <div class="col-md-6">
+                {{ form.patient|as_crispy_field }}
+            </div>
+            <div class="col-md-6">
+                {{ form.status|as_crispy_field }}
+            </div>
         </div>
 
         <div class="mb-3">
-        {{ form.medical_case|as_crispy_field }}
+            {{ form.title|as_crispy_field }}
         </div>
-        <button type="submit" class="btn btn-primary mt-3">حفظ</button>
-        <a href="{% url 'consultation_list' %}" class="btn btn-secondary mt-3">إلغاء</a>
+
+        <div class="mb-3">
+            {{ form.medical_case|as_crispy_field }}
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">{% trans "Save" %}</button>
+        <a href="{% url 'consultation_list' %}" class="btn btn-secondary mt-3">{% trans "Cancel" %}</a>
     </form>
 </div>
-<script>
 
+<script>
   document.addEventListener("DOMContentLoaded", function() {
     Hideffcanvas();
   });
 </script>
+
 <style>
 .select2-selection {
-    min-height: 38px; /* مثل form-control في bootstrap */
+    min-height: 38px; /* same as bootstrap form-control */
     padding: 6px 12px;
 }
 .select2-selection span {
@@ -46,17 +47,10 @@
 }
 </style>
 
-
-
-
-
-<!-- زر ثابت على الشاشة -->
+<!-- Fixed floating button -->
 <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; text-align: center;">
 
-    <!-- الزر الرئيسي الدائري -->
-
-
-    <!-- قائمة الأزرار المخفية (دائرية أيضًا) -->
+    <!-- Hidden circular menu buttons -->
     <div id="menuDropdown" style="display:none; margin-top:10px;">
         {% get_all_shortcuts as items %}
         {% for item in items %}
@@ -64,8 +58,9 @@
             <i class="bi {{ item.ico }} text-white fs-4"></i>
         </button><br>
         {% endfor %}
-
     </div>
+
+    <!-- Main floating button -->
     <button id="menuButton" class="btn btn-primary rounded-circle" style="width:60px; height:60px; font-size:24px;">
         ☰
     </button>
@@ -74,7 +69,7 @@
 <script>
 document.getElementById('menuButton').addEventListener('click', function() {
     const menu = document.getElementById('menuDropdown');
-    // toggle القائمة
+    // toggle menu
     if(menu.style.display === 'none') {
         menu.style.display = 'block';
     } else {
@@ -83,32 +78,26 @@ document.getElementById('menuButton').addEventListener('click', function() {
 });
 </script>
 
-
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-
-    // الحصول على كل أزرار الاختصارات
+    // get all shortcut buttons
     const shortcutButtons = document.querySelectorAll('#menuDropdown button');
 
-    // افترض أن Froala مربوط بالحقل id_medical_case
-    // تحقق من اسم الـ instance في مشروعك
-    const editorInstance = new FroalaEditor('#id_medical_case'); // إذا لم تكن مثبتة مسبقًا استخدم selector الصحيح
+    // Assume Froala is attached to the field id_medical_case
+    const editorInstance = new FroalaEditor('#id_medical_case'); // adjust selector if different
 
     shortcutButtons.forEach(button => {
         button.addEventListener('click', function() {
             const code = this.dataset.code;
 
             if(editorInstance) {
-                // إدراج النص في مكان المؤشر الحالي
+                // insert text at cursor
                 editorInstance.html.insert(code + '<br>'); 
-                editorInstance.events.focus(); // يضع التركيز في المحرر
+                editorInstance.events.focus(); // focus editor
             }
         });
     });
-
 });
 </script>
-
 
 {% endblock %}

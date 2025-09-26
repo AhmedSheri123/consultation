@@ -1,25 +1,30 @@
 {% extends "dashboard_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load render_table from django_tables2 %}
 
 {% block sheri %}
 <div class="container py-3">
-    <h2 class="mb-4">قائمة الاستشارات</h2>
+    <h2 class="mb-4">{% trans "Consultations List" %}</h2>
 
-    <a href="{% url 'ConsultationCreate' %}" class="btn btn-success mb-3" id="add-consultation-btn">إضافة استشارة</a>
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">فلترة الاستشارات</button>
+    <a href="{% url 'ConsultationCreate' %}" class="btn btn-success mb-3" id="add-consultation-btn">
+        {% trans "Add Consultation" %}
+    </a>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
+        {% trans "Filter Consultations" %}
+    </button>
 
     <div id="consultation-table">
         {% include "dashboard/consultations/partial_consultation_table.html" %}
     </div>
 </div>
 
-<!-- Modal الفلترة -->
+<!-- Filter Modal -->
 <div class="modal fade" id="filterModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">فلترة الاستشارات</h5>
+        <h5 class="modal-title">{% trans "Filter Consultations" %}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" id="modal-body-filter">
@@ -29,21 +34,20 @@
   </div>
 </div>
 
-<!-- Modal إضافة/تعديل -->
+<!-- Add/Edit Modal -->
 <div class="modal fade" id="modal-consultation" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">استشارة</h5>
+        <h5 class="modal-title">{% trans "Consultation" %}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" id="modal-body-consultation"></div>
     </div>
   </div>
 </div>
+
 <script>
-
-
 var editor_licence = ""
 function loadForm(url, modalBody){
     $.ajax({
@@ -54,7 +58,7 @@ function loadForm(url, modalBody){
             $(modalBody).html(data.html_form);
             $(modalBody).closest('.modal').modal('show');
 
-            // إعادة تهيئة CKEditor 5 بعد تحميل الفورم ديناميكياً
+            // Re-init CKEditor 5 dynamically
             if ($(modalBody).find('#id_medical_case').length){
                 ClassicEditor.create(document.querySelector('#id_medical_case'), {
                                       licenseKey: null,
@@ -85,23 +89,23 @@ function saveForm(modalBody, tableDiv){
 }
 
 $(function(){
-    // إضافة
+    // Add
     $('#add-consultation-btn').click(function(){
         loadForm("{% url 'consultation_create_ajax' %}", "#modal-body-consultation");
     });
 
-    // تعديل/حذف
+    // Delete
     $('#consultation-table').on('click', '.delete-btn', function(){
         loadForm($(this).data('url'), "#modal-body-consultation");
     });
 
-    // حفظ الفورم
+    // Save form
     $(document).on('submit', '#modal-body-consultation form', function(e){
         e.preventDefault();
         saveForm("#modal-body-consultation", "#consultation-table");
     });
 
-    // فلترة AJAX
+    // Filter AJAX
     $('#modal-body-filter').on('submit', '#filter-form', function(e){
         e.preventDefault();
         $.ajax({

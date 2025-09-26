@@ -1,20 +1,20 @@
 {% extends "dashboard_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load render_table from django_tables2 %}
 
 {% block sheri %}
 <div class="container py-3">
-    <h2 class="mb-4">قائمة المرضى</h2>
+    <h2 class="mb-4">{% trans "Patients List" %}</h2>
 
-<!-- أزرار الإضافة والفلترة -->
-<button type="button" class="btn btn-success mb-3" id="add-patient-btn">
-    <i class="bi bi-person-plus-fill"></i> إضافة مريض جديد
-</button>
+    <!-- أزرار الإضافة والفلترة -->
+    <button type="button" class="btn btn-success mb-3" id="add-patient-btn">
+        <i class="bi bi-person-plus-fill"></i> {% trans "Add New Patient" %}
+    </button>
 
-<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
-    <i class="bi bi-funnel-fill"></i> فلترة المرضى
-</button>
-
+    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
+        <i class="bi bi-funnel-fill"></i> {% trans "Filter Patients" %}
+    </button>
 
     <!-- جدول المرضى -->
     <div id="patient-table">
@@ -27,7 +27,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">إضافة مريض</h5>
+                <h5 class="modal-title">{% trans "Add Patient" %}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body" id="modal-body-patient"></div>
@@ -40,7 +40,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">تعديل مريض</h5>
+                <h5 class="modal-title">{% trans "Edit Patient" %}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body" id="modal-body-edit-patient"></div>
@@ -53,7 +53,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">حذف مريض</h5>
+                <h5 class="modal-title">{% trans "Delete Patient" %}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body" id="modal-body-delete-patient"></div>
@@ -66,20 +66,21 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="filterModalLabel">فلترة المرضى</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+        <h5 class="modal-title" id="filterModalLabel">{% trans "Filter Patients" %}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{% trans 'Close' %}"></button>
       </div>
       <div class="modal-body">
         <form id="filter-form" class="row g-3 mb-3">
             {{ filter.form|crispy }}
             <div>
-                <button type="submit" class="btn btn-primary">تصفية</button>
+                <button type="submit" class="btn btn-primary">{% trans "Filter" %}</button>
             </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- AJAX Scripts -->

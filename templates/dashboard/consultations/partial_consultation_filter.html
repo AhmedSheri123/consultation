@@ -1,11 +1,9 @@
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load static %}
-
-
 
 {{ filter.form.media }}
 <form id="filter-form" method="get" class="row g-3 mb-3">
     {{ filter.form|crispy }}
-    <button type="submit" class="btn btn-primary">تصفية</button>
+    <button type="submit" class="btn btn-primary">{% trans "Filter" %}</button>
 </form>
-

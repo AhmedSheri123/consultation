@@ -1,9 +1,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Icon</th>
-            <th>Actions</th>
+            <th>{% trans "Title" %}</th>
+            <th>{% trans "Icon" %}</th>
+            <th>{% trans "Actions" %}</th>
         </tr>
     </thead>
     <tbody>
@@ -12,8 +12,8 @@
             <td>{{ sc.title }}</td>
             <td><i class="bi {{ sc.ico }} text-primary"></i> {{ sc.get_ico_display }}</td>
             <td>
-                <a href="{% url 'shortcut_edit' sc.id %}" class="btn btn-sm btn-primary edit-btn">Edit</a>
-                <button class="btn btn-sm btn-danger delete-btn" data-url="{% url 'shortcut_delete_ajax' sc.id %}">Delete</button>
+                <a href="{% url 'shortcut_edit' sc.id %}" class="btn btn-sm btn-primary edit-btn">{% trans "Edit" %}</a>
+                <button class="btn btn-sm btn-danger delete-btn" data-url="{% url 'shortcut_delete_ajax' sc.id %}">{% trans "Delete" %}</button>
             </td>
         </tr>
         {% endfor %}

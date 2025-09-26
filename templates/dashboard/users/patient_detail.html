@@ -1,26 +1,26 @@
 {% extends "dashboard_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block sheri %}
 
   <div class="card shadow-sm rounded-3">
     <div class="card-header bg-primary text-white">
-      بيانات المريض
+      {% trans "Patient Information" %}
     </div>
     <div class="card-body">
       <h5 class="card-title">{{ patient.name }}</h5>
-      <p><strong>البريد الإلكتروني:</strong> {{ patient.email|default:"-" }}</p>
-      <p><strong>رقم الهاتف:</strong> {{ patient.phone }}</p>
-      <p><strong>تاريخ الميلاد:</strong> {{ patient.birth_date|date:"Y-m-d" }}</p>
-      <p><strong>الحالة الصحية:</strong> {{ patient.health_status|default:"-" }}</p>
-      <p><strong>رقم الهوية:</strong> {{ patient.national_id }}</p>
+      <p><strong>{% trans "Email" %}:</strong> {{ patient.email|default:"-" }}</p>
+      <p><strong>{% trans "Phone" %}:</strong> {{ patient.phone }}</p>
+      <p><strong>{% trans "Birth Date" %}:</strong> {{ patient.birth_date|date:"Y-m-d" }}</p>
+      <p><strong>{% trans "Health Status" %}:</strong> {{ patient.health_status|default:"-" }}</p>
+      <p><strong>{% trans "National ID" %}:</strong> {{ patient.national_id }}</p>
     </div>
     <div class="card-footer text-end">
-      <a href="{% url 'patients_list' %}" class="btn btn-secondary btn-sm">رجوع</a>
-      <a href="{% url 'patient_edit' patient.id %}" class="btn btn-warning btn-sm">تعديل</a>
-      <a href="{% url 'patient_delete' patient.id %}" class="btn btn-danger btn-sm">حذف</a>
+      <a href="{% url 'patients_list' %}" class="btn btn-secondary btn-sm">{% trans "Back" %}</a>
+      <a href="{% url 'patient_edit' patient.id %}" class="btn btn-warning btn-sm">{% trans "Edit" %}</a>
+      <a href="{% url 'patient_delete' patient.id %}" class="btn btn-danger btn-sm">{% trans "Delete" %}</a>
     </div>
   </div>
-
 
 {% endblock sheri %}

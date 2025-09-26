@@ -1,6 +1,10 @@
 <form method="post" action="{% url 'shortcut_delete_ajax' shortcut.pk %}">
     {% csrf_token %}
-    <p>Are you sure you want to delete "{{ shortcut.code }}"?</p>
-    <button type="submit" class="btn btn-danger">Yes, delete</button>
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+    <p>
+        {% blocktrans with code=shortcut.code %}
+            Are you sure you want to delete "{{ code }}"?
+        {% endblocktrans %}
+    </p>
+    <button type="submit" class="btn btn-danger">{% trans "Yes, delete" %}</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Cancel" %}</button>
 </form>

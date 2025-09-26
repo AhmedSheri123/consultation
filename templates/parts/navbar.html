@@ -54,13 +54,13 @@
           </li> {% endcomment %}
 
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/#about">{% trans "نبذة" %}</a>
+            <a class="nav-link" aria-current="page" href="/#about">{% trans "About" %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/#services">{% trans "خدمات" %}</a>
+            <a class="nav-link" aria-current="page" href="/#services">{% trans "Services" %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/#contact-us">{% trans "حجز" %}</a>
+            <a class="nav-link" aria-current="page" href="/#contact-us">{% trans "Booking" %}</a>
           </li>
 
         </ul>
@@ -79,8 +79,7 @@
                     {% csrf_token %}
                     <li><button type="submit" name="language" value="en" class="dropdown-item">English</button></li>
                     <li><button type="submit" name="language" value="ar" class="dropdown-item">العربية</button></li>
-                    <li><button type="submit" name="language" value="ro" class="dropdown-item">română</button></li>
-                    <li><button type="submit" name="language" value="de" class="dropdown-item">Deutsch</button></li>
+                    <li><button type="submit" name="language" value="he" class="dropdown-item">עברית</button></li>
                 </form>
             </ul>
         </div>

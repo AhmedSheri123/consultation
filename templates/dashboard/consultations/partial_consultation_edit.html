@@ -1,6 +1,7 @@
+{% load i18n %}
 {% load crispy_forms_tags %}
 <form method="post" class="ajax-form">
   {% csrf_token %}
   {{ form|crispy }}
-  <button type="submit" class="btn btn-warning">تعديل</button>
+  <button type="submit" class="btn btn-warning">{% trans "Edit" %}</button>
 </form>

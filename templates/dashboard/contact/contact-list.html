@@ -1,0 +1,36 @@
+{% extends "dashboard_base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+{% block sheri %}
+<div class="container py-3">
+    <h2 class="mb-4">{% trans "Orders List" %}</h2>
+
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
+        {% trans "Filter Orders" %}
+    </button>
+
+    <div id="contact-table">
+        {% render_table table %}
+    </div>
+</div>
+
+<!-- Filter Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{% trans "Filter Orders" %}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modal-body-filter">
+        <form method="get">
+            {{ filter.form|crispy }}
+            <button type="submit" class="btn btn-success">{% trans "Filter" %}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

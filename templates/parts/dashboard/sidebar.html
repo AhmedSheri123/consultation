@@ -8,76 +8,66 @@
 
     </a>
     <ul class="nav nav-pills navbar-dark flex-column mb-auto py-5">
-<li class="nav-item">
-  <a href="{% url 'dashboard' %}" class="nav-link text-body-secondary" aria-current="page">
-      <i class="bi bi-house-door-fill me-2"></i>
-    {% trans "Home" %}
-  </a>
-</li>
+  <li class="nav-item">
+    <a href="{% url 'dashboard' %}" class="nav-link text-body-secondary" aria-current="page">
+        <i class="bi bi-house-door-fill me-2"></i>
+      {% trans "Home" %}
+    </a>
+  </li>
 
-<li class="nav-item">
-  <a href="{% url 'patients_list' %}" class="nav-link text-body-secondary">
-      <i class="bi bi-people-fill me-2"></i>
-    {% trans "المرضى" %}
-  </a>
-</li>
+  <li class="nav-item">
+    <a href="{% url 'patients_list' %}" class="nav-link text-body-secondary">
+        <i class="bi bi-people-fill me-2"></i>
+      {% trans "Patients" %}
+    </a>
+  </li>
 
-<li class="nav-item">
-  <a href="{% url 'consultation_list' %}" class="nav-link text-body-secondary">
-      <i class="bi bi-journal-medical me-2"></i>
-    {% trans "الاستشارات" %}
-  </a>
-</li>
+  <li class="nav-item">
+    <a href="{% url 'consultation_list' %}" class="nav-link text-body-secondary">
+        <i class="bi bi-journal-medical me-2"></i>
+      {% trans "Consultations" %}
+    </a>
+  </li>
 
-<li class="nav-item">
-  <a href="{% url 'shortcut_list' %}" class="nav-link text-body-secondary">
-      <i class="bi bi-lightning-charge-fill me-2"></i>
-    {% trans "الاختصارات" %}
-  </a>
-</li>
+  <li class="nav-item">
+    <a href="{% url 'shortcut_list' %}" class="nav-link text-body-secondary">
+        <i class="bi bi-lightning-charge-fill me-2"></i>
+      {% trans "Shortcuts" %}
+    </a>
+  </li>
 
-      {% comment %} <li>
-        <a href="Support" class="nav-link text-body-secondary">
-            <i class="bi bi-chat-dots-fill me-2"></i>
-          Support
-        </a>
-      </li> {% endcomment %}
-      {% comment %} <li>
-        <a href="FAQ" class="nav-link text-body-secondary disabled">
-            <i class="bi bi-patch-question-fill me-2"></i>
-          {% trans "" %}
-        </a>
-      </li> {% endcomment %}
-      <li>
-        <a class="nav-link text-body-secondary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <i class="bi bi-gear-fill me-2"></i>
-          الأعدادات
-        </a>
+  <li class="nav-item">
+    <a href="{% url 'contact-list' %}" class="nav-link text-body-secondary">
+        <i class="bi bi-calendar-check me-2"></i>
+        {% trans "Appointments" %}
+    </a>
+  </li>
 
-        <div class="collapse" id="collapseExample">
-          <div class="mt-1">
-            <ul class="list-group">
+  <li>
+    <a class="nav-link text-body-secondary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="bi bi-gear-fill me-2"></i>
+      {% trans "Settings" %}
+    </a>
 
-              <li class="list-group-item px-2 py-1">
-                <a class="nav-link text-body-secondary" href="{% url 'clinic_info' %}">
-                  <i class="bi bi-patch-question-fill me-2"></i>
-                  ملف العيادة
-                </a>
-              </li>
-              {% comment %} <li class="list-group-item px-2 py-1">
-                <a class="nav-link text-body-secondary" href="#">
-                  <i class="bi bi-patch-question-fill me-2"></i>
-                  خروج
-                </a>
-              </li> {% endcomment %}
+    <div class="collapse" id="collapseExample">
+      <div class="mt-1">
+        <ul class="list-group">
 
-            </ul>
-          </div>
-        </div>
+          <li class="list-group-item px-2 py-1">
+            <a class="nav-link text-body-secondary" href="{% url 'clinic_info' %}">
+              <i class="bi bi-patch-question-fill me-2"></i>
+              {% trans "Clinic Profile" %}
+            </a>
+          </li>
 
-      </li> 
+        </ul>
+      </div>
+    </div>
 
-    </ul>
+  </li> 
+
+</ul>
+
     <div class="bg-white p-3 rounded shadow-sm text-body-secondary">
         <div class="d-flex justify-content-between align-items-center dropdown">
             <a href="#" class="d-flex align-items-center text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
