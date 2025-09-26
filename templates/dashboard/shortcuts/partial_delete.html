@@ -1,3 +1,4 @@
+{% load i18n %}
 <form method="post" action="{% url 'shortcut_delete_ajax' shortcut.pk %}">
     {% csrf_token %}
     <p>
