@@ -1,0 +1,967 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-03 18:46+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\accounts\forms.py:13
+msgid "your name..."
+msgstr ""
+
+#: .\accounts\forms.py:14
+msgid "your last name..."
+msgstr "ваша фамилия..."
+
+#: .\accounts\forms.py:15 .\accounts\forms.py:29 .\website\forms.py:13
+msgid "name@example.com"
+msgstr "имя@пример.com"
+
+#: .\accounts\forms.py:24
+msgid "phone number"
+msgstr "номер телефона"
+
+#: .\accounts\forms.py:25
+msgid "your company name..."
+msgstr "название вашей компании..."
+
+#: .\accounts\forms.py:30 .\templates\accounts\login.html:27
+#: .\templates\accounts\signup.html:57
+msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\accounts\login.html:14 .\templates\accounts\signup.html:14
+msgid "Create an account"
+msgstr "Создать аккаунт"
+
+#: .\templates\accounts\login.html:20 .\templates\accounts\signup.html:34
+#: .\templates\pages\index.html:637
+msgid "Email Address"
+msgstr "Адрес электронной почты"
+
+#: .\templates\accounts\login.html:34 .\templates\parts\navbar.html:96
+msgid "Log in"
+msgstr "Войти"
+
+#: .\templates\accounts\profile\EditProfile.html:16
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: .\templates\accounts\profile\EditProfile.html:38
+msgid "Upload profile image"
+msgstr "Загрузить фото профиля"
+
+#: .\templates\accounts\profile\EditProfile.html:47
+msgid "First name"
+msgstr "Имя"
+
+#: .\templates\accounts\profile\EditProfile.html:51
+#: .\templates\accounts\profile\EditProfile.html:64
+#: .\templates\accounts\profile\EditProfile.html:78
+#: .\templates\accounts\profile\EditProfile.html:92
+#: .\templates\accounts\profile\EditProfile.html:105
+msgid "Looks good!"
+msgstr "Выглядит хорошо!"
+
+#: .\templates\accounts\profile\EditProfile.html:54
+msgid "Please fill your first name."
+msgstr "Пожалуйста, введите ваше имя."
+
+#: .\templates\accounts\profile\EditProfile.html:60
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\templates\accounts\profile\EditProfile.html:67
+msgid "Please fill your last name."
+msgstr "Пожалуйста, введите вашу фамилию."
+
+#: .\templates\accounts\profile\EditProfile.html:74
+#: .\templates\dashboard\consultations\share.html:40
+#: .\templates\dashboard\users\patient_detail.html:13
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\templates\accounts\profile\EditProfile.html:81
+msgid "Please fill your email."
+msgstr "Пожалуйста, введите ваш email."
+
+#: .\templates\accounts\profile\EditProfile.html:88
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: .\templates\accounts\profile\EditProfile.html:95
+msgid "Please fill your phone number."
+msgstr "Пожалуйста, введите ваш номер телефона."
+
+#: .\templates\accounts\profile\EditProfile.html:101
+msgid "Company name"
+msgstr "Название компании"
+
+#: .\templates\accounts\profile\EditProfile.html:108
+msgid "Please fill your company name."
+msgstr "Пожалуйста, введите название вашей компании."
+
+#: .\templates\accounts\profile\EditProfile.html:114
+#: .\templates\dashboard\clinic\clinic_info.html:12
+#: .\templates\dashboard\consultations\consultation_create.html:29
+#: .\templates\dashboard\consultations\consultation_form.html:14
+#: .\templates\dashboard\consultations\partial_consultation_form.html:8
+#: .\templates\dashboard\shortcuts\partial_form.html:10
+#: .\templates\dashboard\shortcuts\shortcut_form.html:23
+#: .\templates\dashboard\users\partial_patient_add.html:8
+#: .\templates\dashboard\users\partial_patient_edit.html:8
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\accounts\profile\EditProfile.html:143
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: .\templates\accounts\profile\EditProfile.html:151
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\accounts\profile\EditProfile.html:152
+#: .\templates\dashboard\users\patient_list.html:70
+msgid "Close"
+msgstr "Закрыть"
+
+#: .\templates\accounts\signup.html:19
+msgid "First Name"
+msgstr "Имя"
+
+#: .\templates\accounts\signup.html:25
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: .\templates\accounts\signup.html:41
+#: .\templates\dashboard\users\patient_detail.html:14
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\templates\accounts\signup.html:49
+msgid "Company Name"
+msgstr "Название компании"
+
+#: .\templates\accounts\signup.html:65
+msgid "Create"
+msgstr "Создать"
+
+#: .\templates\dashboard\clinic\clinic_info.html:8
+msgid "Add Clinic Data"
+msgstr "Добавить данные клиники"
+
+#: .\templates\dashboard\consultations\consultation_actions.html:3
+#: .\templates\dashboard\consultations\partial_consultation_edit.html:6
+#: .\templates\dashboard\shortcuts\partial_table.html:16
+#: .\templates\dashboard\users\patient_detail.html:21
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\templates\dashboard\consultations\consultation_actions.html:6
+msgid "Print"
+msgstr "Печать"
+
+#: .\templates\dashboard\consultations\consultation_actions.html:9
+msgid "Share"
+msgstr "Поделиться"
+
+#: .\templates\dashboard\consultations\consultation_actions.html:12
+#: .\templates\dashboard\consultations\partial_consultation_delete.html:9
+#: .\templates\dashboard\shortcuts\partial_table.html:17
+#: .\templates\dashboard\users\partial_patient_delete.html:9
+#: .\templates\dashboard\users\patient_detail.html:22
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\dashboard\consultations\consultation_create.html:8
+msgid "Add New Consultation"
+msgstr "Добавить новую консультацию"
+
+#: .\templates\dashboard\consultations\consultation_create.html:30
+#: .\templates\dashboard\consultations\partial_consultation_delete.html:10
+#: .\templates\dashboard\shortcuts\partial_delete.html:10
+#: .\templates\dashboard\shortcuts\shortcut_form.html:24
+#: .\templates\dashboard\users\partial_patient_add.html:9
+#: .\templates\dashboard\users\partial_patient_delete.html:10
+#: .\templates\dashboard\users\partial_patient_edit.html:9
+#: .\templates\dashboard\users\patient_edit.html:13
+msgid "Cancel"
+msgstr "Отмена"
+
+#: .\templates\dashboard\consultations\consultation_form.html:9
+msgid "Consultation Form"
+msgstr "Форма консультации"
+
+#: .\templates\dashboard\consultations\consultation_list.html:8
+msgid "Consultations List"
+msgstr "Список консультаций"
+
+#: .\templates\dashboard\consultations\consultation_list.html:11
+msgid "Add Consultation"
+msgstr "Добавить консультацию"
+
+#: .\templates\dashboard\consultations\consultation_list.html:14
+#: .\templates\dashboard\consultations\consultation_list.html:27
+msgid "Filter Consultations"
+msgstr "Фильтр консультаций"
+
+#: .\templates\dashboard\consultations\consultation_list.html:42
+#: .\templates\dashboard\consultations\share.html:39
+msgid "Consultation"
+msgstr "Консультация"
+
+#: .\templates\dashboard\consultations\partial_consultation_delete.html:5
+#, python-format
+msgid ""
+"\n"
+"      Are you sure you want to delete the consultation \"%(title)s\"?\n"
+"    "
+msgstr ""
+"\n"
+"      Вы уверены, что хотите удалить консультацию «%(title)s»?\n"
+"    "
+
+#: .\templates\dashboard\consultations\partial_consultation_filter.html:8
+#: .\templates\dashboard\contact\contact-list.html:30
+#: .\templates\dashboard\users\patient_list.html:76
+msgid "Filter"
+msgstr "Фильтр"
+
+#: .\templates\dashboard\consultations\partial_consultation_table.html:4
+msgid "Consultations Table"
+msgstr "Таблица консультаций"
+
+#: .\templates\dashboard\consultations\share.html:11
+msgid "Share Consultation"
+msgstr "Поделиться консультацией"
+
+#: .\templates\dashboard\consultations\share.html:17
+msgid "Sharing Process"
+msgstr "Процесс обмена"
+
+#: .\templates\dashboard\consultations\share.html:22
+#: .\templates\dashboard\home.html:87
+msgid "View"
+msgstr "Просмотр"
+
+#: .\templates\dashboard\consultations\share.html:23
+msgid "Download"
+msgstr "Скачать"
+
+#: .\templates\dashboard\consultations\share.html:27
+msgid "Consultation Share Link"
+msgstr "Ссылка для обмена консультацией"
+
+#: .\templates\dashboard\consultations\share.html:32
+#: .\templates\dashboard\consultations\share.html:66
+msgid "Copy"
+msgstr "Копировать"
+
+#: .\templates\dashboard\consultations\share.html:38
+msgid "Share the link via:"
+msgstr "Поделиться ссылкой через:"
+
+#: .\templates\dashboard\consultations\share.html:43
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: .\templates\dashboard\consultations\share.html:46
+msgid "Facebook"
+msgstr "Facebook"
+
+#: .\templates\dashboard\consultations\share.html:49
+msgid "Twitter"
+msgstr "Twitter"
+
+#: .\templates\dashboard\consultations\share.html:64
+msgid "Copied"
+msgstr "Скопировано"
+
+#: .\templates\dashboard\contact\contact-list.html:8
+msgid "Orders List"
+msgstr "Список заказов"
+
+#: .\templates\dashboard\contact\contact-list.html:11
+#: .\templates\dashboard\contact\contact-list.html:24
+msgid "Filter Orders"
+msgstr "Фильтр заказов"
+
+#: .\templates\dashboard\home.html:9
+msgid "Dashboard Overview"
+msgstr "Обзор панели управления"
+
+#: .\templates\dashboard\home.html:17
+#: .\templates\parts\dashboard\sidebar.html:21
+msgid "Patients"
+msgstr "Пациенты"
+
+#: .\templates\dashboard\home.html:27
+#: .\templates\parts\dashboard\sidebar.html:28
+msgid "Consultations"
+msgstr "Консультации"
+
+#: .\templates\dashboard\home.html:37
+msgid "Open Consultations"
+msgstr "Открытые консультации"
+
+#: .\templates\dashboard\home.html:47
+#: .\templates\parts\dashboard\sidebar.html:35
+msgid "Shortcuts"
+msgstr "Ярлыки"
+
+#: .\templates\dashboard\home.html:57
+msgid "Latest Consultations"
+msgstr "Последние консультации"
+
+#: .\templates\dashboard\home.html:63
+msgid "Patient"
+msgstr "Пациент"
+
+#: .\templates\dashboard\home.html:64
+#: .\templates\dashboard\shortcuts\partial_table.html:5
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\templates\dashboard\home.html:65
+msgid "Status"
+msgstr "Статус"
+
+#: .\templates\dashboard\home.html:66
+msgid "Created At"
+msgstr "Дата создания"
+
+#: .\templates\dashboard\home.html:67
+#: .\templates\dashboard\shortcuts\partial_table.html:7
+msgid "Actions"
+msgstr "Действия"
+
+#: .\templates\dashboard\home.html:94
+msgid "No consultations yet."
+msgstr "Консультаций пока нет."
+
+#: .\templates\dashboard\shortcuts\list.html:7
+msgid "Shortcuts List"
+msgstr "Список ярлыков"
+
+#: .\templates\dashboard\shortcuts\list.html:8
+msgid "Add Shortcut"
+msgstr "Добавить ярлык"
+
+#: .\templates\dashboard\shortcuts\list.html:20
+msgid "Shortcut"
+msgstr "Ярлык"
+
+#: .\templates\dashboard\shortcuts\list.html:54
+msgid "Select Icon"
+msgstr "Выбрать значок"
+
+#: .\templates\dashboard\shortcuts\partial_delete.html:5
+#, python-format
+msgid ""
+"\n"
+"            Are you sure you want to delete \"%(code)s\"?\n"
+"        "
+msgstr ""
+"\n"
+"            Вы уверены, что хотите удалить «%(code)s»?\n"
+"        "
+
+#: .\templates\dashboard\shortcuts\partial_delete.html:9
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: .\templates\dashboard\shortcuts\partial_table.html:6
+msgid "Icon"
+msgstr "Значок"
+
+#: .\templates\dashboard\users\partial_patient_delete.html:4
+#, python-format
+msgid ""
+"\n"
+"            Are you sure you want to delete the patient: <strong>%(name)s</"
+"strong>?\n"
+"        "
+msgstr ""
+"\n"
+"            Вы уверены, что хотите удалить пациента: <strong>%(name)s</strong>?\n"
+"        "
+
+#: .\templates\dashboard\users\patient_detail.html:9
+msgid "Patient Information"
+msgstr "Информация о пациенте"
+
+#: .\templates\dashboard\users\patient_detail.html:15
+msgid "Birth Date"
+msgstr "Дата рождения"
+
+#: .\templates\dashboard\users\patient_detail.html:16
+msgid "Health Status"
+msgstr "Состояние здоровья"
+
+#: .\templates\dashboard\users\patient_detail.html:17
+msgid "National ID"
+msgstr "Идентификационный номер"
+
+#: .\templates\dashboard\users\patient_detail.html:20
+msgid "Back"
+msgstr "Назад"
+
+
+#: .\templates\dashboard\users\patient_edit.html:7
+msgid "Edit Patient Information"
+msgstr "Редактировать информацию о пациенте"
+
+#: .\templates\dashboard\users\patient_edit.html:12
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: .\templates\dashboard\users\patient_list.html:8
+msgid "Patients List"
+msgstr "Список пациентов"
+
+#: .\templates\dashboard\users\patient_list.html:12
+msgid "Add New Patient"
+msgstr "Добавить нового пациента"
+
+#: .\templates\dashboard\users\patient_list.html:16
+#: .\templates\dashboard\users\patient_list.html:69
+msgid "Filter Patients"
+msgstr "Фильтр пациентов"
+
+#: .\templates\dashboard\users\patient_list.html:30
+msgid "Add Patient"
+msgstr "Добавить пациента"
+
+#: .\templates\dashboard\users\patient_list.html:43
+msgid "Edit Patient"
+msgstr "Редактировать пациента"
+
+#: .\templates\dashboard\users\patient_list.html:56
+msgid "Delete Patient"
+msgstr "Удалить пациента"
+
+#: .\templates\dashboard_base.html:9 .\templates\parts\navbar.html:93
+msgid "Dashboard"
+msgstr "Панель управления"
+
+#: .\templates\notifications\viewNotifications.html:19
+msgid "Administrative message"
+msgstr "Административное сообщение"
+
+#: .\templates\notifications\viewNotifications.html:22
+#: .\templates\parts\dashboard\navbar.html:24
+msgid "New alerts"
+msgstr "Новые уведомления"
+
+#: .\templates\notifications\viewNotifications.html:39
+msgid "There are no notifications at the moment."
+msgstr "В данный момент уведомлений нет."
+
+#: .\templates\pages\PrivacyPolicy.html:6
+msgid ""
+"Clear answers to the most frequently asked questions about our services to "
+"help you get information quickly and easily."
+msgstr ""
+"Четкие ответы на самые часто задаваемые вопросы о наших услугах, "
+"чтобы вы могли быстро и легко получить информацию."
+
+#: .\templates\pages\index.html:6
+msgid ""
+"A versatile software suite transforming businesses of all sizes by "
+"simplifying complex systems into efficient work environments."
+msgstr ""
+"Универсальный программный комплекс, преобразующий бизнес любого размера, "
+"упрощая сложные системы и превращая их в эффективную рабочую среду."
+
+#: .\templates\pages\index.html:21
+msgid "Dr. Karnawi Mohamed"
+msgstr "Др. Карнави Мохамед"
+
+#: .\templates\pages\index.html:23
+msgid "Urology Surgery Consultant"
+msgstr "Консультант по урологической хирургии"
+
+#: .\templates\pages\index.html:33
+msgid ""
+"Extensive experience in diagnosing and treating urinary system diseases and "
+"kidney & prostate-related disorders, providing advanced medical care for "
+"men, women, and children."
+msgstr ""
+"Обширный опыт в диагностике и лечении заболеваний мочевой системы, "
+"расстройств, связанных с почками и простатой, предоставление "
+"современной медицинской помощи мужчинам, женщинам и детям."
+
+#: .\templates\pages\index.html:42 .\templates\pages\index.html:188
+#: .\templates\pages\index.html:675
+msgid "Call Now"
+msgstr "Позвонить сейчас"
+
+#: .\templates\pages\index.html:46
+msgid "Book Your Appointment"
+msgstr "Записаться на прием"
+
+#: .\templates\pages\index.html:61
+msgid "Trusted by Leading Medical Institutions"
+msgstr "Доверие ведущих медицинских учреждений"
+
+#: .\templates\pages\index.html:66 .\templates\pages\index.html:67
+msgid "Ministry of Health"
+msgstr "Министерство здравоохранения"
+
+#: .\templates\pages\index.html:70 .\templates\pages\index.html:71
+msgid "World Health Organization"
+msgstr "Всемирная организация здравоохранения"
+
+#: .\templates\pages\index.html:74 .\templates\pages\index.html:75
+msgid "American Medical Association"
+msgstr "Американская медицинская ассоциация"
+
+#: .\templates\pages\index.html:102
+msgid "About the Doctor"
+msgstr "О докторе"
+
+#: .\templates\pages\index.html:112
+msgid "Doctor's Photo"
+msgstr "Фото доктора"
+
+#: .\templates\pages\index.html:115
+msgid "15+ Years of Experience"
+msgstr "Более 15 лет опыта"
+
+#: .\templates\pages\index.html:120
+msgid "Dr. Krenawi Muhammad"
+msgstr "Др. Кренави Мухаммад"
+
+#: .\templates\pages\index.html:123
+msgid "Consultant in Urology and Male Infertility."
+msgstr "Консультант по урологии и мужскому бесплодию."
+
+#: .\templates\pages\index.html:135
+msgid "Academic Qualifications"
+msgstr "Академическая квалификация"
+
+#: .\templates\pages\index.html:141
+msgid "Bachelor of Medicine & Surgery – Damascus University"
+msgstr "Бакалавр медицины и хирургии – Дамасский университет"
+
+#: .\templates\pages\index.html:147
+msgid "Master in Urology – Cairo University"
+msgstr "Магистр урологии – Каирский университет"
+
+#: .\templates\pages\index.html:153
+msgid "Fellowship in Laparoscopic Surgery – Germany"
+msgstr "Стажировка по лапароскопической хирургии – Германия"
+
+#: .\templates\pages\index.html:163
+msgid "Professional Experience"
+msgstr "Профессиональный опыт"
+
+#: .\templates\pages\index.html:169
+msgid "Consultant in Urology at Al-Salam International Hospital"
+msgstr "Консультант по урологии в Международной больнице Аль-Салам"
+
+#: .\templates\pages\index.html:175
+msgid "Over 2000 successful laparoscopic kidney stone surgeries"
+msgstr "Более 2000 успешных лапароскопических операций по удалению камней в почках"
+
+#: .\templates\pages\index.html:181
+msgid "Expertise in treating male infertility and urological disorders"
+msgstr "Эксперт в лечении мужского бесплодия и урологических заболеваний"
+
+#: .\templates\pages\index.html:191 .\templates\pages\index.html:678
+msgid "Book via WhatsApp"
+msgstr "Записаться через WhatsApp"
+
+#: .\templates\pages\index.html:206
+msgid "Medical Services We"
+msgstr "Медицинские услуги, которые мы"
+
+#: .\templates\pages\index.html:206
+msgid "Provide to Our Patients"
+msgstr "предоставляем нашим пациентам"
+
+#: .\templates\pages\index.html:214
+msgid "Urinary Tract Examination & Diagnosis"
+msgstr "Обследование и диагностика мочевыводящих путей"
+
+#: .\templates\pages\index.html:221
+msgid "Treatment of Kidney & Bladder Stones"
+msgstr "Лечение камней в почках и мочевом пузыре"
+
+
+#: .\templates\pages\index.html:228
+msgid "Treatment of Prostate Enlargement & Infections"
+msgstr "Лечение увеличения простаты и инфекций"
+
+#: .\templates\pages\index.html:235
+msgid "Pediatric Urinary Problems Treatment"
+msgstr "Лечение урологических проблем у детей"
+
+#: .\templates\pages\index.html:242
+msgid "Laparoscopic Surgeries"
+msgstr "Лапароскопические операции"
+
+#: .\templates\pages\index.html:249
+msgid "Infertility & Fertility Treatment"
+msgstr "Лечение бесплодия и восстановление фертильности"
+
+#: .\templates\pages\index.html:256
+msgid "Treatment of Bladder & Urinary Infections"
+msgstr "Лечение инфекций мочевого пузыря и мочевыводящих путей"
+
+#: .\templates\pages\index.html:263
+msgid "Specialized Medical Consultations"
+msgstr "Специализированные медицинские консультации"
+
+#: .\templates\pages\index.html:270
+msgid "Post-Surgery Follow-up"
+msgstr "Послеоперационное наблюдение"
+
+#: .\templates\pages\index.html:277
+msgid "Online Appointment Booking"
+msgstr "Онлайн-запись на прием"
+
+#: .\templates\pages\index.html:292
+msgid "Our Medical Services Features"
+msgstr "Особенности наших медицинских услуг"
+
+#: .\templates\pages\index.html:300
+msgid "Expertise"
+msgstr "Опыт"
+
+#: .\templates\pages\index.html:301
+msgid "Specialist Consultant"
+msgstr "Специалист-консультант"
+
+#: .\templates\pages\index.html:302
+msgid ""
+"Extensive experience in urology surgery and treatments, ensuring precise and "
+"effective care."
+msgstr "Обширный опыт в урологической хирургии и лечении, обеспечивающий точный и эффективный уход."
+
+#: .\templates\pages\index.html:311
+msgid "Diagnosis"
+msgstr "Диагностика"
+
+#: .\templates\pages\index.html:312
+msgid "Accurate Diagnosis"
+msgstr "Точная диагностика"
+
+#: .\templates\pages\index.html:313
+msgid ""
+"Using the latest medical technologies to accurately diagnose kidney, "
+"bladder, and prostate diseases."
+msgstr "Использование новейших медицинских технологий для точной диагностики заболеваний почек, мочевого пузыря и простаты."
+
+#: .\templates\pages\index.html:322
+msgid "Technology"
+msgstr "Технологии"
+
+#: .\templates\pages\index.html:323
+msgid "Advanced Equipment"
+msgstr "Современное оборудование"
+
+#: .\templates\pages\index.html:324
+msgid ""
+"Relying on modern devices and advanced treatment methods to reduce pain and "
+"speed up recovery."
+msgstr "Использование современных приборов и передовых методов лечения для снижения боли и ускорения восстановления."
+
+#: .\templates\pages\index.html:333
+msgid "Care"
+msgstr "Уход"
+
+#: .\templates\pages\index.html:334
+msgid "Close Follow-up"
+msgstr "Тщательное наблюдение"
+
+#: .\templates\pages\index.html:335
+msgid ""
+"A comprehensive treatment plan including continuous follow-up before and "
+"after surgery to ensure complete recovery."
+msgstr "Комплексный план лечения, включающий постоянное наблюдение до и после операции для обеспечения полного выздоровления."
+
+#: .\templates\pages\index.html:344
+msgid "Privacy"
+msgstr "Конфиденциальность"
+
+#: .\templates\pages\index.html:345
+msgid "Complete Confidentiality"
+msgstr "Полная конфиденциальность"
+
+#: .\templates\pages\index.html:346
+msgid ""
+"We are committed to maintaining the confidentiality and privacy of all "
+"patient medical data."
+msgstr "Мы обязуемся сохранять конфиденциальность и приватность всех медицинских данных пациентов."
+
+
+#: .\templates\pages\index.html:355
+msgid "Support"
+msgstr "Поддержка"
+
+#: .\templates\pages\index.html:356
+msgid "Continuous Communication"
+msgstr "Постоянная связь"
+
+#: .\templates\pages\index.html:357
+msgid ""
+"Direct communication via phone or WhatsApp for appointment booking and "
+"medical inquiries."
+msgstr "Прямое общение по телефону или WhatsApp для записи на приём и медицинских консультаций."
+
+#: .\templates\pages\index.html:380
+msgid "Patient Reviews"
+msgstr "Отзывы пациентов"
+
+#: .\templates\pages\index.html:391
+msgid ""
+"The doctor helped me a lot in treating kidney stones. The surgery was "
+"successful and the follow-up was excellent."
+msgstr "Доктор очень помог мне в лечении камней в почках. Операция прошла успешно, а последующее наблюдение было отличным."
+
+#: .\templates\pages\index.html:395
+msgid "reviewer 1"
+msgstr "отзыв 1"
+
+#: .\templates\pages\index.html:402
+msgid "Damascus"
+msgstr "Дамаск"
+
+#: .\templates\pages\index.html:424
+msgid ""
+"Very professional treatment and a clear explanation of my case. I felt "
+"reassured from the first visit."
+msgstr "Очень профессиональное лечение и понятное объяснение моего случая. Я почувствовал уверенность уже с первого визита."
+
+#: .\templates\pages\index.html:428
+msgid "reviewer 2"
+msgstr "отзыв 2"
+
+#: .\templates\pages\index.html:435
+msgid "Beirut"
+msgstr "Бейрут"
+
+#: .\templates\pages\index.html:457
+msgid ""
+"The doctor saved me from a prostate problem I had suffered from for years. "
+"Thanks to him from the heart."
+msgstr "Доктор избавил меня от проблемы с простатой, от которой я страдал много лет. Огромное спасибо ему от всего сердца."
+
+#: .\templates\pages\index.html:461
+msgid "reviewer 3"
+msgstr "отзыв 3"
+
+#: .\templates\pages\index.html:468
+msgid "Amman"
+msgstr "Амман"
+
+#: .\templates\pages\index.html:492
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+#: .\templates\pages\index.html:502
+msgid "What conditions does a urology surgeon treat?"
+msgstr "Какие заболевания лечит уролог-хирург?"
+
+#: .\templates\pages\index.html:507
+msgid ""
+"The specialty includes treatment of kidney stones, prostate enlargement, "
+"urinary tract infections, kidney and bladder tumors, as well as infertility "
+"issues and urinary disorders in men and women."
+msgstr "Специальность включает лечение камней в почках, увеличения простаты, инфекций мочевых путей, опухолей почек и мочевого пузыря, а также проблем с бесплодием и нарушений мочеиспускания у мужчин и женщин."
+
+#: .\templates\pages\index.html:519
+msgid "When should I visit a urology surgeon?"
+msgstr "Когда следует обратиться к урологу-хирургу?"
+
+#: .\templates\pages\index.html:524
+msgid ""
+"It is recommended to consult the doctor if you experience persistent pain in "
+"the kidneys or bladder, difficulty or pain during urination, blood in urine, "
+"recurring urinary tract infections, or fertility problems."
+msgstr "Рекомендуется обратиться к врачу, если у вас наблюдаются постоянные боли в почках или мочевом пузыре, трудности или боль при мочеиспускании, кровь в моче, повторяющиеся инфекции мочевых путей или проблемы с фертильностью."
+
+#: .\templates\pages\index.html:536
+msgid "Do all urinary tract problems require surgery?"
+msgstr "Все ли проблемы мочевых путей требуют операции?"
+
+
+#: .\templates\pages\index.html:541
+msgid ""
+"Not necessarily. Some cases can be treated with medications or minor "
+"procedures like endoscopy, while some conditions require advanced surgical "
+"intervention depending on the diagnosis."
+msgstr "Не обязательно. Некоторые случаи можно лечить с помощью медикаментов или небольших процедур, таких как эндоскопия, в то время как некоторые состояния требуют сложного хирургического вмешательства в зависимости от диагноза."
+
+#: .\templates\pages\index.html:553
+msgid "Can kidney stones be treated without surgery?"
+msgstr "Можно ли лечить камни в почках без операции?"
+
+#: .\templates\pages\index.html:558
+msgid ""
+"In many cases, stones can be broken down using shock wave therapy or "
+"endoscopic procedures without the need for open surgery."
+msgstr "Во многих случаях камни можно разрушить с помощью ударно-волновой терапии или эндоскопических процедур без необходимости открытой операции."
+
+#: .\templates\pages\index.html:570
+msgid "Does an enlarged prostate mean cancer?"
+msgstr "Означает ли увеличение простаты наличие рака?"
+
+#: .\templates\pages\index.html:575
+msgid ""
+"Benign prostate enlargement is common with age and does not necessarily "
+"indicate cancer, but it is important to consult the doctor for proper "
+"testing."
+msgstr "Доброкачественное увеличение простаты распространено с возрастом и не обязательно указывает на рак, однако важно проконсультироваться с врачом для проведения необходимых обследований."
+
+#: .\templates\pages\index.html:587
+msgid "Can I book an appointment online?"
+msgstr "Могу ли я записаться на прием онлайн?"
+
+#: .\templates\pages\index.html:592
+msgid ""
+"Yes, you can easily book an appointment through the website or by contacting "
+"directly via WhatsApp."
+msgstr "Да, вы можете легко записаться на прием через веб-сайт или связавшись напрямую через WhatsApp."
+
+#: .\templates\pages\index.html:599
+msgid "View More Questions"
+msgstr "Посмотреть больше вопросов"
+
+#: .\templates\pages\index.html:614
+msgid ""
+"Contact Dr. Krenawi Muhammad to book a medical consultation or inquire about "
+"treatment"
+msgstr "Свяжитесь с др. Кренави Мухаммад, чтобы записаться на медицинскую консультацию или задать вопросы о лечении"
+
+#: .\templates\pages\index.html:622
+msgid "Contact Form"
+msgstr "Форма обратной связи"
+
+#: .\templates\pages\index.html:625
+msgid ""
+"Fill out the form below and Dr. Krenawi's team will contact you to schedule "
+"a consultation or answer your medical inquiries."
+msgstr "Заполните форму ниже, и команда др. Кренави свяжется с вами, чтобы назначить консультацию или ответить на ваши медицинские вопросы."
+
+#: .\templates\pages\index.html:630 .\website\models.py:7
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: .\templates\pages\index.html:644
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: .\templates\pages\index.html:651
+msgid "Inquiry or Case Description"
+msgstr "Запрос или описание случая"
+
+#: .\templates\pages\index.html:655
+msgid ""
+"Briefly describe the nature of your consultation or the symptoms you are "
+"experiencing."
+msgstr "Кратко опишите характер вашей консультации или симптомы, которые вы испытываете."
+
+#: .\templates\pages\index.html:662
+msgid "I agree to the privacy policy when submitting this form"
+msgstr "Я согласен с политикой конфиденциальности при отправке этой формы"
+
+#: .\templates\pages\index.html:665
+msgid "You must agree to the privacy policy before submitting."
+msgstr "Вы должны согласиться с политикой конфиденциальности перед отправкой."
+
+#: .\templates\pages\index.html:670
+msgid "Submit"
+msgstr "Отправить"
+
+#: .\templates\parts\dashboard\sidebar.html:14 .\templates\parts\footer.html:8
+#: .\templates\parts\navbar.html:26
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\parts\dashboard\sidebar.html:42
+msgid "Appointments"
+msgstr "Приемы"
+
+#: .\templates\parts\dashboard\sidebar.html:49
+msgid "Settings"
+msgstr "Настройки"
+
+#: .\templates\parts\dashboard\sidebar.html:59
+msgid "Clinic Profile"
+msgstr "Профиль клиники"
+
+#: .\templates\parts\dashboard\sidebar.html:81
+msgid "Admin"
+msgstr "Администратор"
+
+
+#: .\templates\parts\dashboard\sidebar.html:90
+msgid "New project..."
+msgstr "Новый проект..."
+
+#: .\templates\parts\dashboard\sidebar.html:93
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\templates\parts\dashboard\sidebar.html:95
+msgid "Sign out"
+msgstr "Выйти"
+
+#: .\templates\parts\footer.html:9 .\templates\parts\navbar.html:60
+msgid "About"
+msgstr "О нас"
+
+#: .\templates\parts\footer.html:10 .\templates\parts\navbar.html:63
+msgid "Services"
+msgstr "Услуги"
+
+#: .\templates\parts\footer.html:11 .\templates\parts\navbar.html:66
+msgid "Booking"
+msgstr "Запись"
+
+#: .\templates\parts\footer.html:12
+msgid "Privacy policy"
+msgstr "Политика конфиденциальности"
+
+#: .\templates\parts\navbar.html:77
+msgid "Language"
+msgstr "Язык"
+
+#: .\templates\parts\navbar.html:92
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\website\forms.py:12
+msgid "write your name..."
+msgstr "введите ваше имя..."
+
+#: .\website\forms.py:14
+msgid "e.g., +1 234 567 890"
+msgstr "например, +1 234 567 890"
+
+#: .\website\forms.py:16
+msgid "How can our team help you?"
+msgstr "Как наша команда может вам помочь?"
+
+#: .\website\views.py:22
+msgid ""
+"Your message has been sent successfully. You will be replied after reviewing "
+"the details."
+msgstr "Ваше сообщение успешно отправлено. Вам ответят после проверки деталей."
