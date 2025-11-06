@@ -9,9 +9,9 @@ def generate_uuid16():
 
 class Consultation(models.Model):
     STATUS_CHOICES = [
-        ("new", "جديدة"),
-        ("review", "قيد المراجعة"),
-        ("done", "منتهية"),
+        ("new", "New"),
+        ("review", "Review"),
+        ("done", "Done"),
     ]
 
     patient = models.ForeignKey("users.Patient", on_delete=models.CASCADE, related_name="consultations")

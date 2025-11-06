@@ -47,7 +47,7 @@ def Login(request):
                 if user is not None:
                     login(request, user)
                     messages.success(request, 'Login Success')
-                    return redirect('DashboardHome')
+                    return redirect('dashboard')
                 else:messages.error(request, 'wrong email or password')
             else:messages.error(request, 'user dos not exists')
         else:messages.error(request, form.errors)

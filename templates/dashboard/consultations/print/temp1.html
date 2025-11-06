@@ -103,8 +103,8 @@ body {
 <div class="header">
     <div class="header-text">
         <strong>{{clinic.name}}</strong>{{clinic.clinic_info}}
-        <p><strong>العنوان:</strong> {{clinic.address}}</p>
-        <p><strong>الهاتف:</strong> {{clinic.phone}} | <strong>Email:</strong> {{clinic.email}}</p>
+        <p><strong></strong> {{clinic.address}}</p>
+        <p><strong></strong> {{clinic.phone}} | <strong></strong> {{clinic.email}}</p>
     </div>
     <div class="header-logo">
         {% if clinic.logo %}
@@ -118,10 +118,10 @@ body {
 <div class="content">
     <!-- <div class="section-title">معلومات المريض</div> -->
     <div class="detail" style="display: flex; flex-wrap: wrap; gap: 20px; padding: 10px 0px;">
-        <p><strong>اسم المريض:</strong> {{ consultation.patient.name }}</p>
-        <p><strong>الموضوع:</strong> {{ consultation.title }}</p>
-        <p><strong>الحالة:</strong> {{ consultation.get_status_display }}</p>
-        <p><strong>تاريخ الإنشاء:</strong> {{ consultation.created_at|date:"Y-m-d H:i" }}</p>
+        <p><strong>שם המטופל:</strong> {{ consultation.patient.name }}</p>
+        <p><strong>טיפול רפואי / ביטוח:</strong> {{ consultation.title }}</p>
+        <p><strong>סטטוס:</strong> {{ consultation.get_status_display }}</p>
+        <p><strong>תאריך:</strong> {{ consultation.created_at|date:"Y-m-d H:i" }}</p>
     </div>
 
 

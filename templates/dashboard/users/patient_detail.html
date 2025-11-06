@@ -13,7 +13,7 @@
       <p><strong>{% trans "Email" %}:</strong> {{ patient.email|default:"-" }}</p>
       <p><strong>{% trans "Phone" %}:</strong> {{ patient.phone }}</p>
       <p><strong>{% trans "Birth Date" %}:</strong> {{ patient.birth_date|date:"Y-m-d" }}</p>
-      <p><strong>{% trans "Health Status" %}:</strong> {{ patient.health_status|default:"-" }}</p>
+      <p><strong>{% trans "health care/insurance" %}:</strong> {{ patient.health_status|default:"-" }}</p>
       <p><strong>{% trans "National ID" %}:</strong> {{ patient.national_id }}</p>
     </div>
     <div class="card-footer text-end">
