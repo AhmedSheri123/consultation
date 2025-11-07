@@ -507,7 +507,7 @@ msgstr "דר' קרינאוי מוחמד"
 
 #: .\templates\pages\index.html:23
 msgid "Urology Surgery Consultant"
-msgstr "יועץ כירורגיית אורולוגיה"
+msgstr "מומחה בכירורגיה אורולוגיה"
 
 #: .\templates\pages\index.html:33
 msgid ""
@@ -515,9 +515,9 @@ msgid ""
 "Hasharon medical center and Urology surgeon at Assuta medical center with "
 "extensive experience in prostate and  urinary stones surgeries."
 msgstr ""
-"ראש מחלקת אורולוגיה במרכז הרפואי יוספטל, רופא בכיר במרכז הרפואי ראבין-השארון "
-"וכירורג אורולוגי במרכז הרפואי אסוטה, עם ניסיון נרחב בניתוחי ערמונית ואבנים "
-"בדרכי השתן."
+"ראש מחלקת אורולוגיה במרכז הרפואי יוספטל, רופא בכיר במרכז הרפואי  "
+"רבין-השרון וכירורג אורולוגי במרכז הרפואי אסותא, עם ניסיון נרחב בניתוחי ערמונית "
+"ואבנים בדרכי השתן."
 
 #: .\templates\pages\index.html:42 .\templates\pages\index.html:186
 #: .\templates\pages\index.html:683
@@ -576,7 +576,7 @@ msgstr "תואר שני באורולוגיה – בית החולים סורוק�
 
 #: .\templates\pages\index.html:139
 msgid "Fellowship in Endoscopic Kidney and Prostate Surgery – Rabin Hospital"
-msgstr "התמחות בכירורגיית כליה ופרוסטטה בזעיר-פולשנית – בית החולים ראבין"
+msgstr "התמחות על בניתוחי כליה וערמונית בגישה זעיר-פולשנית – בית החולים רבין"
 
 #: .\templates\pages\index.html:149
 msgid "Professional Experience"
@@ -588,15 +588,15 @@ msgstr "מנהל יחידת ניתוחי אורולוגיה בבית החולי�
 
 #: .\templates\pages\index.html:161
 msgid "Physician and surgeon at Rabin Sharon Hospital"
-msgstr "רופא וכירורג בבית החולים ראבין-שרון"
+msgstr "רופא וכירורג אורולוג בבית החולים רבין-השרון"
 
 #: .\templates\pages\index.html:167
 msgid "Physician and surgeon at Assuta Hospital in Beersheba"
-msgstr "רופא וכירורג בבית החולים אסוטה בבאר שבע"
+msgstr "רופא וכירורג אורולוג בבית החולים אסותא בבאר שבע"
 
 #: .\templates\pages\index.html:173
 msgid "Over 2000 successful Endoscopic kidney stone surgeries"
-msgstr "מעל 2000 ניתוחי אבנים בכליות בהצלחה באמצעות אנדוסקופיה"
+msgstr "מעל 5000 ניתוחי אבנים בבדרכי השתן בגישה אנדוסקופית"
 
 #: .\templates\pages\index.html:179
 msgid "Specialized expertise in treating urinary tract disorders"
@@ -628,7 +628,7 @@ msgstr "בדיקה ואבחון של מערכות השתן והרבייה"
 
 #: .\templates\pages\index.html:230
 msgid "Optilum baloon for urethral stricture"
-msgstr "בלון Optilum לטיפול בצריבת השופכה"
+msgstr "בלון  Optilum לטיפול בהצרות השופכה"
 
 #: .\templates\pages\index.html:236
 msgid "Urinary Tract Examination & Diagnosis"
@@ -644,7 +644,7 @@ msgstr "טיפול בהגדלת הערמונית וזיהומים"
 
 #: .\templates\pages\index.html:259
 msgid "Endoscopic Surgeries"
-msgstr "ניתוחים אנדוסקופיים"
+msgstr "ניתוחים אנדוסקופים"
 
 #: .\templates\pages\index.html:266
 msgid "Infertility & Fertility Treatment"
@@ -656,7 +656,7 @@ msgstr "טיפול בזיהומים בשלפוחית השתן ובמערכת ה�
 
 #: .\templates\pages\index.html:280
 msgid "Specialized Medical Consultations"
-msgstr "ייעוצים רפואיים מתמחים"
+msgstr "ייעוץ רפואי מתקדם"
 
 #: .\templates\pages\index.html:287
 msgid "Post-Surgery Follow-up"
