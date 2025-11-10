@@ -108,6 +108,103 @@
             <p class="card-text text-muted small">
               {% trans "Consultant in Urology and Male Infertility." %}
             </p>
+
+
+<style>
+  .circular-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .circular-progress svg {
+    transform: rotate(-90deg);
+  }
+
+  .circular-progress circle {
+    fill: none;
+    stroke-width: 5;
+  }
+
+  .circular-progress .bg {
+    stroke: #eee;
+  }
+
+  .circular-progress .value {
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+
+  .circular-progress .label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-align: center;
+    font-size:12px;
+  }
+</style>
+
+<div class="container my-4 d-flex gap-4 flex-wrap justify-content-center">
+
+  <!-- الاحترافية -->
+  <div class="circular-progress">
+    <svg width="100" height="100">
+      <circle class="bg" cx="50" cy="50" r="45" />
+      <circle class="value" cx="50" cy="50" r="45"
+        stroke="#28a745"
+        stroke-dasharray="282.6"
+        stroke-dashoffset="8.5" />
+    </svg>
+    <div class="label text-success">
+      9.7<br><small>{% trans "Professionalism" %}</small>
+    </div>
+  </div>
+
+  <!-- التوفر -->
+  <div class="circular-progress">
+    <svg width="100" height="100">
+      <circle class="bg" cx="50" cy="50" r="45" />
+      <circle class="value" cx="50" cy="50" r="45"
+        stroke="#007bff"
+        stroke-dasharray="282.6"
+        stroke-dashoffset="2.8" />
+    </svg>
+    <div class="label text-primary">
+      9.9<br><small>{% trans "Availability" %}</small>
+    </div>
+  </div>
+
+  <!-- اللطف -->
+  <div class="circular-progress">
+    <svg width="100" height="100">
+      <circle class="bg" cx="50" cy="50" r="45" />
+      <circle class="value" cx="50" cy="50" r="45"
+        stroke="#dc3545"
+        stroke-dasharray="282.6"
+        stroke-dashoffset="8.5" />
+    </svg>
+    <div class="label text-danger">
+      9.7<br><small>{% trans "Kindness" %}</small>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container my-4">
+    <div class="text-warning fs-4">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+    <div class="text-muted">9.8 / 10</div>
+</div>
+
+            
           </div>
         </div>
       </div>
@@ -391,6 +488,16 @@
   100% { transform: scale(1); }
 }
 </style>
+
+
+
+
+
+
+
+
+
+
 <!-- Patient Reviews -->
 <div class="container py-5">
   <h2 class="text-center py-4 border-top" data-sal="slide-up" data-sal-duration="800">
@@ -405,7 +512,7 @@
         data-bg="{% static 'img/reviews/background-diva-26694057.webp' %}">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 class="my-4 lh-1 fw-bold">
-            {% trans "The doctor helped me a lot in treating kidney stones. The surgery was successful and the follow-up was excellent." %}
+            {% trans "Many heartfelt thanks to the respectful and professional team, and a big thanks to Dr. Krenawi Muhammad – an excellent and professional doctor." %}
           </h3>
           <ul class="d-flex list-unstyled mt-auto">
 
@@ -413,7 +520,7 @@
               <svg class="bi me-2" width="1em" height="1em">
                 <use xlink:href="#geo-fill"></use>
               </svg>
-              <small>{% trans "Damascus" %}</small>
+              <small>{% trans "Anonymous" %}</small>
             </li>
             <li class="d-flex align-items-center">
               <small>
@@ -429,13 +536,14 @@
       </div>
     </div>
 
+ 
     <!-- Review 2 -->
     <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="200">
       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
         data-bg="{% static 'img/reviews/unsplash-photo-3.webp' %}">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 class="my-4 lh-1 fw-bold">
-            {% trans "Very professional treatment and a clear explanation of my case. I felt reassured from the first visit." %}
+            {% trans "A professional doctor, kind, available for questions, and pleasant. The staff as well. Many thanks to everyone for the excellent attitude." %}
           </h3>
           <ul class="d-flex list-unstyled mt-auto">
 
@@ -443,7 +551,7 @@
               <svg class="bi me-2" width="1em" height="1em">
                 <use xlink:href="#geo-fill"></use>
               </svg>
-              <small>{% trans "Beirut" %}</small>
+              <small>{% trans "Anonymous" %}</small>
             </li>
             <li class="d-flex align-items-center">
               <small>
@@ -465,7 +573,7 @@
         data-bg="{% static 'img/reviews/background-rccbtn-61760629.webp'%}">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 class="my-4 lh-1 fw-bold">
-            {% trans "The doctor saved me from a prostate problem I had suffered from for years. Thanks to him from the heart." %}
+            {% trans "A professional and reliable doctor, very kind and gentle." %}
           </h3>
           <ul class="d-flex list-unstyled mt-auto">
 
@@ -473,7 +581,102 @@
               <svg class="bi me-2" width="1em" height="1em">
                 <use xlink:href="#geo-fill"></use>
               </svg>
-              <small>{% trans "Amman" %}</small>
+              <small>Yaakov</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <small>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+   <!-- Review 4 -->
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="100">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+        data-bg="{% static 'img/reviews/background-diva-26694057.webp' %}">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="my-4 lh-1 fw-bold">
+            {% trans "The treatment was very kind and patient. Dr. Krenawi Muhammad provided professional service and warm attitude. I recommend him to everyone. Thank you very much for the help." %}
+          </h3>
+          <ul class="d-flex list-unstyled mt-auto">
+
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em">
+                <use xlink:href="#geo-fill"></use>
+              </svg>
+              <small>Rafael</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <small>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 5 -->
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="200">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+        data-bg="{% static 'img/reviews/unsplash-photo-3.webp' %}">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="my-4 lh-1 fw-bold">
+            {% trans "Regarding Dr. Muhammad – I highly recommend him. A very professional person with a kind attitude and continuous follow-up 24 hours a day. Thank you very much from the heart; he is worth all the praise." %}
+          </h3>
+          <ul class="d-flex list-unstyled mt-auto">
+
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em">
+                <use xlink:href="#geo-fill"></use>
+              </svg>
+              <small>{% trans "Anonymous" %}</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <small>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- Review 6 -->
+    <div class="col" data-sal="fade" data-sal-duration="800" data-sal-delay="300">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+        data-bg="{% static 'img/reviews/background-rccbtn-61760629.webp'%}">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="my-4 lh-1 fs-5 fw-bold">
+            {% trans "Many thanks to the entire staff of Assoua – the receptionists and nurses. I sincerely thank you for your service, care, and kindness. Many thanks to the doctors. Thank you, Dr. Krenawi Muhammad – I received from you a warm attitude, pleasant moments, and calmness until my smile returned. You are a professional, wonderful, kind, and patient doctor with full responsibility. Thank you and the entire Assoua team." %}
+          </h3>
+          <ul class="d-flex list-unstyled mt-auto">
+
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em">
+                <use xlink:href="#geo-fill"></use>
+              </svg>
+              <small>{% trans "Anonymous" %}</small>
             </li>
             <li class="d-flex align-items-center">
               <small>

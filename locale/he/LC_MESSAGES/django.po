@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-07 00:57+0300\n"
+"POT-Creation-Date: 2025-11-10 15:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,7 @@ msgid "Create an account"
 msgstr "צור חשבון"
 
 #: .\templates\accounts\login.html:20 .\templates\accounts\signup.html:34
-#: .\templates\pages\index.html:645
+#: .\templates\pages\index.html:847
 msgid "Email Address"
 msgstr "כתובת אימייל"
 
@@ -222,6 +222,7 @@ msgstr "סנן התייעצויות"
 
 #: .\templates\dashboard\consultations\consultation_list.html:42
 #: .\templates\dashboard\consultations\share.html:39
+#: .\templates\dashboard\consultations\share.html:42
 msgid "Consultation"
 msgstr "התייעצות"
 
@@ -245,23 +246,6 @@ msgstr "סנן"
 #: .\templates\dashboard\consultations\partial_consultation_table.html:4
 msgid "Consultations Table"
 msgstr "טבלת התייעצויות"
-#: .\templates\dashboard\consultations\print\temp1.html:122
-msgid "Patient name"
-msgstr "שם המטופל"
-
-#: .\templates\dashboard\consultations\print\temp1.html:123
-#: .\templates\dashboard\users\patient_detail.html:16
-msgid "health care/insurance"
-msgstr "טיפול רפואי / ביטוח"
-
-#: .\templates\dashboard\consultations\print\temp1.html:124
-msgid "status"
-msgstr "סטטוס"
-
-#: .\templates\dashboard\consultations\print\temp1.html:125
-msgid "Date"
-msgstr "תאריך"
-
 
 #: .\templates\dashboard\consultations\share.html:11
 msgid "Share Consultation"
@@ -285,7 +269,7 @@ msgid "Consultation Share Link"
 msgstr "קישור שיתוף להתייעצות"
 
 #: .\templates\dashboard\consultations\share.html:32
-#: .\templates\dashboard\consultations\share.html:66
+#: .\templates\dashboard\consultations\share.html:72
 msgid "Copy"
 msgstr "העתק"
 
@@ -293,19 +277,25 @@ msgstr "העתק"
 msgid "Share the link via:"
 msgstr "שתף את הקישור באמצעות:"
 
-#: .\templates\dashboard\consultations\share.html:43
+#: .\templates\dashboard\consultations\share.html:45
+#, fuzzy
+#| msgid "Email"
+msgid "Gmail"
+msgstr "אימייל"
+
+#: .\templates\dashboard\consultations\share.html:49
 msgid "WhatsApp"
 msgstr "וואטסאפ"
 
-#: .\templates\dashboard\consultations\share.html:46
+#: .\templates\dashboard\consultations\share.html:52
 msgid "Facebook"
 msgstr "פייסבוק"
 
-#: .\templates\dashboard\consultations\share.html:49
+#: .\templates\dashboard\consultations\share.html:55
 msgid "Twitter"
 msgstr "טוויטר"
 
-#: .\templates\dashboard\consultations\share.html:64
+#: .\templates\dashboard\consultations\share.html:70
 msgid "Copied"
 msgstr "הועתק"
 
@@ -427,6 +417,10 @@ msgstr "מידע על המטופל"
 msgid "Birth Date"
 msgstr "תאריך לידה"
 
+#: .\templates\dashboard\users\patient_detail.html:16
+msgid "health care/insurance"
+msgstr "טיפול רפואי / ביטוח"
+
 #: .\templates\dashboard\users\patient_detail.html:17
 msgid "National ID"
 msgstr "תעודת זהות"
@@ -515,12 +509,12 @@ msgid ""
 "Hasharon medical center and Urology surgeon at Assuta medical center with "
 "extensive experience in prostate and  urinary stones surgeries."
 msgstr ""
-"ראש מחלקת אורולוגיה במרכז הרפואי יוספטל, רופא בכיר במרכז הרפואי  "
-"רבין-השרון וכירורג אורולוגי במרכז הרפואי אסותא, עם ניסיון נרחב בניתוחי ערמונית "
-"ואבנים בדרכי השתן."
+"ראש מחלקת אורולוגיה במרכז הרפואי יוספטל, רופא בכיר במרכז הרפואי  רבין-השרון "
+"וכירורג אורולוגי במרכז הרפואי אסותא, עם ניסיון נרחב בניתוחי ערמונית ואבנים "
+"בדרכי השתן."
 
-#: .\templates\pages\index.html:42 .\templates\pages\index.html:186
-#: .\templates\pages\index.html:683
+#: .\templates\pages\index.html:42 .\templates\pages\index.html:282
+#: .\templates\pages\index.html:885
 msgid "Call Now"
 msgstr "התקשר עכשיו"
 
@@ -560,139 +554,152 @@ msgstr "מעל 12 שנות ניסיון"
 msgid "Consultant in Urology and Male Infertility."
 msgstr "יועץ לאורולוגיה ולעקרות אצל גברים"
 
-#: .\templates\pages\index.html:121
+#: .\templates\pages\index.html:160
+msgid "Professionalism"
+msgstr "ניסיון מקצועי"
+
+#: .\templates\pages\index.html:174
+msgid "Availability"
+msgstr "זמינות"
+
+#: .\templates\pages\index.html:188
+msgid "Kindness"
+msgstr "אדיבות"
+
+
+#: .\templates\pages\index.html:217
 msgid "Academic Qualifications"
 msgstr "הכשרה אקדמית"
 
-#: .\templates\pages\index.html:127
+#: .\templates\pages\index.html:223
 msgid ""
 "Bachelor of Medicine and Surgery – Jordan University of Science and "
 "Technology"
 msgstr "תואר ראשון ברפואה וכירורגיה – אוניברסיטת מדע וטכנולוגיה ירדנית"
 
-#: .\templates\pages\index.html:133
+#: .\templates\pages\index.html:229
 msgid "Master's Degree in Urology – Soroka Hospital"
 msgstr "תואר שני באורולוגיה – בית החולים סורוקה"
 
-#: .\templates\pages\index.html:139
+#: .\templates\pages\index.html:235
 msgid "Fellowship in Endoscopic Kidney and Prostate Surgery – Rabin Hospital"
 msgstr "התמחות על בניתוחי כליה וערמונית בגישה זעיר-פולשנית – בית החולים רבין"
 
-#: .\templates\pages\index.html:149
+#: .\templates\pages\index.html:245
 msgid "Professional Experience"
 msgstr "ניסיון מקצועי"
 
-#: .\templates\pages\index.html:155
+#: .\templates\pages\index.html:251
 msgid "Director of the Urology Surgery Unit at Yousuftal Hospital"
 msgstr "מנהל יחידת ניתוחי אורולוגיה בבית החולים יוספטל"
 
-#: .\templates\pages\index.html:161
+#: .\templates\pages\index.html:257
 msgid "Physician and surgeon at Rabin Sharon Hospital"
 msgstr "רופא וכירורג אורולוג בבית החולים רבין-השרון"
 
-#: .\templates\pages\index.html:167
+#: .\templates\pages\index.html:263
 msgid "Physician and surgeon at Assuta Hospital in Beersheba"
 msgstr "רופא וכירורג אורולוג בבית החולים אסותא בבאר שבע"
 
-#: .\templates\pages\index.html:173
+#: .\templates\pages\index.html:269
 msgid "Over 2000 successful Endoscopic kidney stone surgeries"
 msgstr "מעל 5000 ניתוחי אבנים בבדרכי השתן בגישה אנדוסקופית"
 
-#: .\templates\pages\index.html:179
+#: .\templates\pages\index.html:275
 msgid "Specialized expertise in treating urinary tract disorders"
 msgstr "מומחיות מתקדמת בטיפול בהפרעות בדרכי השתן"
 
-#: .\templates\pages\index.html:189 .\templates\pages\index.html:686
+#: .\templates\pages\index.html:285 .\templates\pages\index.html:888
 msgid "Book via WhatsApp"
 msgstr "קבע תור דרך WhatsApp"
 
-#: .\templates\pages\index.html:204
+#: .\templates\pages\index.html:300
 msgid "Medical Services We"
 msgstr "שירותים רפואיים שאנו"
 
-#: .\templates\pages\index.html:204
+#: .\templates\pages\index.html:300
 msgid "Provide to Our Patients"
 msgstr "מספקים למטופלינו"
 
-#: .\templates\pages\index.html:212
+#: .\templates\pages\index.html:308
 msgid "HoLEP- LASER"
 msgstr "ניתוח HoLEP בלייזר"
 
-#: .\templates\pages\index.html:218
+#: .\templates\pages\index.html:314
 msgid "MiLEP-LASER"
 msgstr "ניתוח MiLEP בלייזר"
 
-#: .\templates\pages\index.html:224
+#: .\templates\pages\index.html:320
 msgid "Examination and diagnosis of the urinary and reproductive systems"
 msgstr "בדיקה ואבחון של מערכות השתן והרבייה"
 
-#: .\templates\pages\index.html:230
+#: .\templates\pages\index.html:326
 msgid "Optilum baloon for urethral stricture"
 msgstr "בלון  Optilum לטיפול בהצרות השופכה"
 
-#: .\templates\pages\index.html:236
+#: .\templates\pages\index.html:332
 msgid "Urinary Tract Examination & Diagnosis"
 msgstr "בדיקות ואבחון מערכת השתן"
 
-#: .\templates\pages\index.html:243
+#: .\templates\pages\index.html:339
 msgid "Treatment of Kidney & Bladder Stones"
 msgstr "טיפול באבנים בכליות ובשלפוחית השתן"
 
-#: .\templates\pages\index.html:250
+#: .\templates\pages\index.html:346
 msgid "Treatment of Prostate Enlargement & Infections"
 msgstr "טיפול בהגדלת הערמונית וזיהומים"
 
-#: .\templates\pages\index.html:259
+#: .\templates\pages\index.html:355
 msgid "Endoscopic Surgeries"
 msgstr "ניתוחים אנדוסקופים"
 
-#: .\templates\pages\index.html:266
+#: .\templates\pages\index.html:362
 msgid "Infertility & Fertility Treatment"
 msgstr "טיפול בעקרות ופוריות"
 
-#: .\templates\pages\index.html:273
+#: .\templates\pages\index.html:369
 msgid "Treatment of Bladder & Urinary Infections"
 msgstr "טיפול בזיהומים בשלפוחית השתן ובמערכת השתן"
 
-#: .\templates\pages\index.html:280
+#: .\templates\pages\index.html:376
 msgid "Specialized Medical Consultations"
 msgstr "ייעוץ רפואי מתקדם"
 
-#: .\templates\pages\index.html:287
+#: .\templates\pages\index.html:383
 msgid "Post-Surgery Follow-up"
 msgstr "מעקב לאחר ניתוח"
 
-#: .\templates\pages\index.html:294
+#: .\templates\pages\index.html:390
 msgid "Online Appointment Booking"
 msgstr "קביעת תורים אונליין"
 
-#: .\templates\pages\index.html:309
+#: .\templates\pages\index.html:405
 msgid "Our Medical Services Features"
 msgstr "מאפייני השירותים הרפואיים שלנו"
 
-#: .\templates\pages\index.html:317
+#: .\templates\pages\index.html:413
 msgid "Expertise"
 msgstr "מומחיות"
 
-#: .\templates\pages\index.html:318
+#: .\templates\pages\index.html:414
 msgid "Specialist Consultant"
 msgstr "יועץ מומחה"
 
-#: .\templates\pages\index.html:319
+#: .\templates\pages\index.html:415
 msgid ""
 "Extensive experience in urology surgery and treatments, ensuring precise and "
 "effective care."
 msgstr "ניסיון רחב בניתוחים ובטיפולים אורולוגיים, המבטיח טיפול מדויק ויעיל"
 
-#: .\templates\pages\index.html:328
+#: .\templates\pages\index.html:424
 msgid "Diagnosis"
 msgstr "אבחון"
 
-#: .\templates\pages\index.html:329
+#: .\templates\pages\index.html:425
 msgid "Accurate Diagnosis"
 msgstr "אבחון מדויק"
 
-#: .\templates\pages\index.html:330
+#: .\templates\pages\index.html:426
 msgid ""
 "Using the latest medical technologies to accurately diagnose kidney, "
 "bladder, and prostate diseases."
@@ -700,107 +707,133 @@ msgstr ""
 "שימוש בטכנולוגיות הרפואיות המתקדמות ביותר לאבחון מדויק של מחלות כליה, "
 "שלפוחית השתן והערמונית"
 
-#: .\templates\pages\index.html:339
+#: .\templates\pages\index.html:435
 msgid "Technology"
 msgstr "טכנולוגיה"
 
-#: .\templates\pages\index.html:340
+#: .\templates\pages\index.html:436
 msgid "Advanced Equipment"
 msgstr "ציוד מתקדם"
 
-#: .\templates\pages\index.html:341
+#: .\templates\pages\index.html:437
 msgid ""
 "Relying on modern devices and advanced treatment methods to reduce pain and "
 "speed up recovery."
 msgstr "תלוי במכשירים מודרניים ושיטות טיפול מתקדמות להפחתת כאב ולהאצת ההחלמה"
 
-#: .\templates\pages\index.html:350
+#: .\templates\pages\index.html:446
 msgid "Care"
 msgstr "טיפול"
 
-#: .\templates\pages\index.html:351
+#: .\templates\pages\index.html:447
 msgid "Close Follow-up"
 msgstr "מעקב צמוד"
 
-#: .\templates\pages\index.html:352
+#: .\templates\pages\index.html:448
 msgid ""
 "A comprehensive treatment plan including continuous follow-up before and "
 "after surgery to ensure complete recovery."
 msgstr ""
 "תוכנית טיפול מקיפה הכוללת מעקב רציף לפני ואחרי הניתוח להבטחת החלמה מלאה"
 
-#: .\templates\pages\index.html:361
+#: .\templates\pages\index.html:457
 msgid "Privacy"
 msgstr "פרטיות"
 
-#: .\templates\pages\index.html:362
+#: .\templates\pages\index.html:458
 msgid "Complete Confidentiality"
 msgstr "סודיות מלאה"
 
-#: .\templates\pages\index.html:363
+#: .\templates\pages\index.html:459
 msgid ""
 "We are committed to maintaining the confidentiality and privacy of all "
 "patient medical data."
 msgstr "אנו מחויבים לשמירה על סודיות ופרטיות כל הנתונים הרפואיים של המטופלים"
 
-#: .\templates\pages\index.html:372
+#: .\templates\pages\index.html:468
 msgid "Support"
 msgstr "תמיכה"
 
-#: .\templates\pages\index.html:373
+#: .\templates\pages\index.html:469
 msgid "Continuous Communication"
 msgstr "תקשורת רציפה"
 
-#: .\templates\pages\index.html:374
+#: .\templates\pages\index.html:470
 msgid ""
 "Direct communication via phone or WhatsApp for appointment booking and "
 "medical inquiries."
 msgstr "תקשורת ישירה בטלפון או WhatsApp לקביעת תורים ושאלות רפואיות"
 
-#: .\templates\pages\index.html:397
+#: .\templates\pages\index.html:503
 msgid "Patient Reviews"
 msgstr "ביקורות מטופלים"
 
-#: .\templates\pages\index.html:408
+#: .\templates\pages\index.html:514
 msgid ""
-"The doctor helped me a lot in treating kidney stones. The surgery was "
-"successful and the follow-up was excellent."
-msgstr "הד\"ר עזר לי מאוד בטיפול באבני כליה. הניתוח הצליח והמעקב היה מצוין"
-
-#: .\templates\pages\index.html:416
-msgid "Damascus"
-msgstr "דמשק"
-
-#: .\templates\pages\index.html:438
-msgid ""
-"Very professional treatment and a clear explanation of my case. I felt "
-"reassured from the first visit."
+"Many heartfelt thanks to the respectful and professional team, and a big "
+"thanks to Dr. Krenawi Muhammad – an excellent and professional doctor."
 msgstr ""
-"טיפול מקצועי מאוד והסבר ברור של המקרה שלי. הרגשתי ביטחון כבר מהביקור הראשון"
+"תודה רבה מכל הלב לצוות הנכבד המקצועי ותודה גדולה לד\"ר מוחמד אלקרינאוי אחלה "
+"רופא מקצועי"
 
-#: .\templates\pages\index.html:446
-msgid "Beirut"
-msgstr "ביירות"
+#: .\templates\pages\index.html:522 .\templates\pages\index.html:553
+#: .\templates\pages\index.html:645 .\templates\pages\index.html:678
+msgid "Anonymous"
+msgstr "אנונימי"
 
-#: .\templates\pages\index.html:468
+#: .\templates\pages\index.html:545
 msgid ""
-"The doctor saved me from a prostate problem I had suffered from for years. "
-"Thanks to him from the heart."
-msgstr "הד\"ר הציל אותי מבעיית ערמונית שסבלתי ממנה במשך שנים. תודה לו מכל הלב"
+"A professional doctor, kind, available for questions, and pleasant. The "
+"staff as well. Many thanks to everyone for the excellent attitude."
+msgstr ""
+"רופא מקצועי. אדיב. זמין לשאלות. נחמד. והצוות גם כן. תודה רבה לכולם על היחס "
+"המצוין"
 
-#: .\templates\pages\index.html:476
-msgid "Amman"
-msgstr "עמאן"
+#: .\templates\pages\index.html:575
+msgid "A professional and reliable doctor, very kind and gentle."
+msgstr "רופא מקצועי ואמין, מאד אדיב ועדין"
 
-#: .\templates\pages\index.html:500
+#: .\templates\pages\index.html:607
+msgid ""
+"The treatment was very kind and patient. Dr. Krenawi Muhammad provided "
+"professional service and warm attitude. I recommend him to everyone. Thank "
+"you very much for the help."
+msgstr ""
+"היה טיפול סו אדיב וסבלני במיוחד ד״ר מוחמד קרינאוי שרות מקצועי יחס חם ממליץ "
+"לכל אחד עלין תודה רבה על העזרה"
+
+#: .\templates\pages\index.html:637
+msgid ""
+"Regarding Dr. Muhammad – I highly recommend him. A very professional person "
+"with a kind attitude and continuous follow-up 24 hours a day. Thank you very "
+"much from the heart; he is worth all the praise."
+msgstr ""
+"לגבי ד\"ר מוחמד ממליץ עליו בחום בן אדם מקצועי ויחס יפה מאוד ועוקב במשך 24 "
+"שעות תודה רבה מכל הלב ושווה את כל התשוקה"
+
+#: .\templates\pages\index.html:670
+msgid ""
+"Many thanks to the entire staff of Assoua – the receptionists and nurses. I "
+"sincerely thank you for your service, care, and kindness. Many thanks to the "
+"doctors. Thank you, Dr. Krenawi Muhammad – I received from you a warm "
+"attitude, pleasant moments, and calmness until my smile returned. You are a "
+"professional, wonderful, kind, and patient doctor with full responsibility. "
+"Thank you and the entire Assoua team."
+msgstr ""
+"תודה רבה לכל הצוות של אסואא הפנים האחיות ואחיות אני בקביעות אני מודה לכם מכל "
+"הלב על השירות והטיפול והאדיבות שהענקתם לי. תודה רבה לרופאים. תודה לך ד״ר "
+"מוחמד קרינאוי – קיבלתי ממך יחס חם, רגע נעימות ושקט עד להחזרת החיוך שלי. הינך "
+"רופא מקצועי ונפלא אדיב וסבלני עם אחריות מלאה. תודה לך ולכל הצוות של אסואא."
+
+#: .\templates\pages\index.html:702
 msgid "Frequently Asked Questions"
 msgstr "שאלות נפוצות"
 
-#: .\templates\pages\index.html:510
+#: .\templates\pages\index.html:712
 msgid "What conditions does a urology surgeon treat?"
 msgstr "באילו מצבים מטפל מנתח אורולוגי?"
 
-#: .\templates\pages\index.html:515
+#: .\templates\pages\index.html:717
 msgid ""
 "The specialty includes treatment of kidney stones, prostate enlargement, "
 "urinary tract infections, kidney and bladder tumors, as well as infertility "
@@ -809,11 +842,11 @@ msgstr ""
 "המומחיות כוללת טיפול באבני כליה, הגדלת ערמונית, זיהומים בדרכי השתן, גידולים "
 "בכליה ובשלפוחית, בעיות פוריות והפרעות במערכת השתן אצל גברים ונשים"
 
-#: .\templates\pages\index.html:527
+#: .\templates\pages\index.html:729
 msgid "When should I visit a urology surgeon?"
 msgstr "מתי כדאי לפנות למנתח אורולוגי?"
 
-#: .\templates\pages\index.html:532
+#: .\templates\pages\index.html:734
 msgid ""
 "It is recommended to consult the doctor if you experience persistent pain in "
 "the kidneys or bladder, difficulty or pain during urination, blood in urine, "
@@ -822,11 +855,11 @@ msgstr ""
 "מומלץ להתייעץ עם הרופא אם אתם סובלים מכאב מתמשך בכליות או בשלפוחית, קושי או "
 "כאב בעת השתנה, דם בשתן, זיהומים חוזרים בדרכי השתן או בעיות פוריות"
 
-#: .\templates\pages\index.html:544
+#: .\templates\pages\index.html:746
 msgid "Do all urinary tract problems require surgery?"
 msgstr "האם כל בעיות בדרכי השתן דורשות ניתוח?"
 
-#: .\templates\pages\index.html:549
+#: .\templates\pages\index.html:751
 msgid ""
 "Not necessarily. Some cases can be treated with medications or minor "
 "procedures like endoscopy, while some conditions require advanced surgical "
@@ -835,11 +868,11 @@ msgstr ""
 "לא בהכרח. חלק מהמקרים ניתנים לטיפול באמצעות תרופות או הליכים מינוריים כמו "
 "אנדוסקופיה, בעוד שחלק דורשים התערבות כירורגית מתקדמת בהתאם לאבחון"
 
-#: .\templates\pages\index.html:561
+#: .\templates\pages\index.html:763
 msgid "Can kidney stones be treated without surgery?"
 msgstr "האם ניתן לטפל באבני כליה ללא ניתוח?"
 
-#: .\templates\pages\index.html:566
+#: .\templates\pages\index.html:768
 msgid ""
 "In many cases, stones can be broken down using shock wave therapy or "
 "endoscopic procedures without the need for open surgery."
@@ -847,11 +880,11 @@ msgstr ""
 "במקרים רבים ניתן לפרק אבנים באמצעות טיפול בגלי הלם או הליכים אנדוסקופיים ללא "
 "צורך בניתוח פתוח"
 
-#: .\templates\pages\index.html:578
+#: .\templates\pages\index.html:780
 msgid "Does an enlarged prostate mean cancer?"
 msgstr "האם הגדלת ערמונית מציינת סרטן?"
 
-#: .\templates\pages\index.html:583
+#: .\templates\pages\index.html:785
 msgid ""
 "Benign prostate enlargement is common with age and does not necessarily "
 "indicate cancer, but it is important to consult the doctor for proper "
@@ -860,31 +893,31 @@ msgstr ""
 "הגדלת ערמונית שפירה נפוצה עם הגיל ואינה בהכרח מצביעה על סרטן, אך חשוב "
 "להתייעץ עם הרופא לבדיקות נכונות"
 
-#: .\templates\pages\index.html:595
+#: .\templates\pages\index.html:797
 msgid "Can I book an appointment online?"
 msgstr "האם ניתן לקבוע תור אונליין?"
 
-#: .\templates\pages\index.html:600
+#: .\templates\pages\index.html:802
 msgid ""
 "Yes, you can easily book an appointment through the website or by contacting "
 "directly via WhatsApp."
 msgstr "כן, ניתן לקבוע תור בקלות דרך האתר או באמצעות פנייה ישירה בוואטסאפ"
 
-#: .\templates\pages\index.html:607
+#: .\templates\pages\index.html:809
 msgid "View More Questions"
 msgstr "צפה בשאלות נוספות"
 
-#: .\templates\pages\index.html:622
+#: .\templates\pages\index.html:824
 msgid ""
 "Contact Dr. Krenawi Muhammad to book a medical consultation or inquire about "
 "treatment"
 msgstr "צור קשר עם דר' קרינאוי מוחמד כדי לקבוע ייעוץ רפואי או לשאול על טיפול"
 
-#: .\templates\pages\index.html:630
+#: .\templates\pages\index.html:832
 msgid "Contact Form"
 msgstr "טופס יצירת קשר"
 
-#: .\templates\pages\index.html:633
+#: .\templates\pages\index.html:835
 msgid ""
 "Fill out the form below and Dr. Krenawi's team will contact you to schedule "
 "a consultation or answer your medical inquiries."
@@ -892,33 +925,33 @@ msgstr ""
 "מלא את הטופס למטה וצוות ד\"ר קרנאוי ייצור קשר כדי לקבוע פגישה או לענות על "
 "שאלותיך הרפואיות"
 
-#: .\templates\pages\index.html:638 .\website\models.py:7
+#: .\templates\pages\index.html:840 .\website\models.py:7
 msgid "Full Name"
 msgstr "שם מלא"
 
-#: .\templates\pages\index.html:652
+#: .\templates\pages\index.html:854
 msgid "Phone Number"
 msgstr "מספר טלפון"
 
-#: .\templates\pages\index.html:659
+#: .\templates\pages\index.html:861
 msgid "Inquiry or Case Description"
 msgstr "תיאור הפניה או המקרה"
 
-#: .\templates\pages\index.html:663
+#: .\templates\pages\index.html:865
 msgid ""
 "Briefly describe the nature of your consultation or the symptoms you are "
 "experiencing."
 msgstr "תאר בקצרה את אופי הפניה או את התסמינים שאתה חווה"
 
-#: .\templates\pages\index.html:670
+#: .\templates\pages\index.html:872
 msgid "I agree to the privacy policy when submitting this form"
 msgstr "אני מסכים למדיניות הפרטיות בעת שליחת הטופס"
 
-#: .\templates\pages\index.html:673
+#: .\templates\pages\index.html:875
 msgid "You must agree to the privacy policy before submitting."
 msgstr "עליך להסכים למדיניות הפרטיות לפני השליחה"
 
-#: .\templates\pages\index.html:678
+#: .\templates\pages\index.html:880
 msgid "Submit"
 msgstr "שלח"
 
@@ -1002,12 +1035,47 @@ msgstr "לדוגמה: +1 234 567 890"
 msgid "How can our team help you?"
 msgstr "איך הצוות שלנו יכול לעזור לך?"
 
-
 #: .\website\views.py:22
 msgid ""
 "Your message has been sent successfully. You will be replied after reviewing "
 "the details."
 msgstr "ההודעה שלך נשלחה בהצלחה. תקבל מענה לאחר בדיקת הפרטים."
+
+#~ msgid "Patient name"
+#~ msgstr "שם המטופל"
+
+#~ msgid "status"
+#~ msgstr "סטטוס"
+
+#~ msgid "Date"
+#~ msgstr "תאריך"
+
+#~ msgid ""
+#~ "The doctor helped me a lot in treating kidney stones. The surgery was "
+#~ "successful and the follow-up was excellent."
+#~ msgstr "הד\"ר עזר לי מאוד בטיפול באבני כליה. הניתוח הצליח והמעקב היה מצוין"
+
+#~ msgid "Damascus"
+#~ msgstr "דמשק"
+
+#~ msgid ""
+#~ "Very professional treatment and a clear explanation of my case. I felt "
+#~ "reassured from the first visit."
+#~ msgstr ""
+#~ "טיפול מקצועי מאוד והסבר ברור של המקרה שלי. הרגשתי ביטחון כבר מהביקור "
+#~ "הראשון"
+
+#~ msgid "Beirut"
+#~ msgstr "ביירות"
+
+#~ msgid ""
+#~ "The doctor saved me from a prostate problem I had suffered from for "
+#~ "years. Thanks to him from the heart."
+#~ msgstr ""
+#~ "הד\"ר הציל אותי מבעיית ערמונית שסבלתי ממנה במשך שנים. תודה לו מכל הלב"
+
+#~ msgid "Amman"
+#~ msgstr "עמאן"
 
 #~ msgid "Health Status"
 #~ msgstr "מצב בריאות"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-07 00:57+0300\n"
+"POT-Creation-Date: 2025-11-10 15:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgid "Create an account"
 msgstr ""
 
 #: .\templates\accounts\login.html:20 .\templates\accounts\signup.html:34
-#: .\templates\pages\index.html:645
+#: .\templates\pages\index.html:847
 msgid "Email Address"
 msgstr ""
 
@@ -221,6 +221,7 @@ msgstr ""
 
 #: .\templates\dashboard\consultations\consultation_list.html:42
 #: .\templates\dashboard\consultations\share.html:39
+#: .\templates\dashboard\consultations\share.html:42
 msgid "Consultation"
 msgstr ""
 
@@ -240,23 +241,6 @@ msgstr ""
 
 #: .\templates\dashboard\consultations\partial_consultation_table.html:4
 msgid "Consultations Table"
-msgstr ""
-
-#: .\templates\dashboard\consultations\print\temp1.html:122
-msgid "Patient name"
-msgstr ""
-
-#: .\templates\dashboard\consultations\print\temp1.html:123
-#: .\templates\dashboard\users\patient_detail.html:16
-msgid "health care/insurance"
-msgstr ""
-
-#: .\templates\dashboard\consultations\print\temp1.html:124
-msgid "status"
-msgstr ""
-
-#: .\templates\dashboard\consultations\print\temp1.html:125
-msgid "Date"
 msgstr ""
 
 #: .\templates\dashboard\consultations\share.html:11
@@ -281,7 +265,7 @@ msgid "Consultation Share Link"
 msgstr ""
 
 #: .\templates\dashboard\consultations\share.html:32
-#: .\templates\dashboard\consultations\share.html:66
+#: .\templates\dashboard\consultations\share.html:72
 msgid "Copy"
 msgstr ""
 
@@ -289,19 +273,23 @@ msgstr ""
 msgid "Share the link via:"
 msgstr ""
 
-#: .\templates\dashboard\consultations\share.html:43
-msgid "WhatsApp"
-msgstr ""
-
-#: .\templates\dashboard\consultations\share.html:46
-msgid "Facebook"
+#: .\templates\dashboard\consultations\share.html:45
+msgid "Gmail"
 msgstr ""
 
 #: .\templates\dashboard\consultations\share.html:49
+msgid "WhatsApp"
+msgstr ""
+
+#: .\templates\dashboard\consultations\share.html:52
+msgid "Facebook"
+msgstr ""
+
+#: .\templates\dashboard\consultations\share.html:55
 msgid "Twitter"
 msgstr ""
 
-#: .\templates\dashboard\consultations\share.html:64
+#: .\templates\dashboard\consultations\share.html:70
 msgid "Copied"
 msgstr ""
 
@@ -416,6 +404,10 @@ msgstr ""
 msgid "Birth Date"
 msgstr ""
 
+#: .\templates\dashboard\users\patient_detail.html:16
+msgid "health care/insurance"
+msgstr ""
+
 #: .\templates\dashboard\users\patient_detail.html:17
 msgid "National ID"
 msgstr ""
@@ -501,8 +493,8 @@ msgid ""
 "extensive experience in prostate and  urinary stones surgeries."
 msgstr ""
 
-#: .\templates\pages\index.html:42 .\templates\pages\index.html:186
-#: .\templates\pages\index.html:683
+#: .\templates\pages\index.html:42 .\templates\pages\index.html:282
+#: .\templates\pages\index.html:885
 msgid "Call Now"
 msgstr ""
 
@@ -542,349 +534,376 @@ msgstr ""
 msgid "Consultant in Urology and Male Infertility."
 msgstr ""
 
-#: .\templates\pages\index.html:121
+#: .\templates\pages\index.html:160
+msgid "Professionalism"
+msgstr ""
+
+#: .\templates\pages\index.html:174
+msgid "Availability"
+msgstr ""
+
+#: .\templates\pages\index.html:188
+msgid "Kindness"
+msgstr ""
+
+#: .\templates\pages\index.html:217
 msgid "Academic Qualifications"
 msgstr ""
 
-#: .\templates\pages\index.html:127
+#: .\templates\pages\index.html:223
 msgid ""
 "Bachelor of Medicine and Surgery – Jordan University of Science and "
 "Technology"
 msgstr ""
 
-#: .\templates\pages\index.html:133
+#: .\templates\pages\index.html:229
 msgid "Master's Degree in Urology – Soroka Hospital"
 msgstr ""
 
-#: .\templates\pages\index.html:139
+#: .\templates\pages\index.html:235
 msgid "Fellowship in Endoscopic Kidney and Prostate Surgery – Rabin Hospital"
 msgstr ""
 
-#: .\templates\pages\index.html:149
+#: .\templates\pages\index.html:245
 msgid "Professional Experience"
 msgstr ""
 
-#: .\templates\pages\index.html:155
+#: .\templates\pages\index.html:251
 msgid "Director of the Urology Surgery Unit at Yousuftal Hospital"
 msgstr ""
 
-#: .\templates\pages\index.html:161
+#: .\templates\pages\index.html:257
 msgid "Physician and surgeon at Rabin Sharon Hospital"
 msgstr ""
 
-#: .\templates\pages\index.html:167
+#: .\templates\pages\index.html:263
 msgid "Physician and surgeon at Assuta Hospital in Beersheba"
 msgstr ""
 
-#: .\templates\pages\index.html:173
+#: .\templates\pages\index.html:269
 msgid "Over 2000 successful Endoscopic kidney stone surgeries"
 msgstr ""
 
-#: .\templates\pages\index.html:179
+#: .\templates\pages\index.html:275
 msgid "Specialized expertise in treating urinary tract disorders"
 msgstr ""
 
-#: .\templates\pages\index.html:189 .\templates\pages\index.html:686
+#: .\templates\pages\index.html:285 .\templates\pages\index.html:888
 msgid "Book via WhatsApp"
 msgstr ""
 
-#: .\templates\pages\index.html:204
+#: .\templates\pages\index.html:300
 msgid "Medical Services We"
 msgstr ""
 
-#: .\templates\pages\index.html:204
+#: .\templates\pages\index.html:300
 msgid "Provide to Our Patients"
 msgstr ""
 
-#: .\templates\pages\index.html:212
+#: .\templates\pages\index.html:308
 msgid "HoLEP- LASER"
 msgstr ""
 
-#: .\templates\pages\index.html:218
+#: .\templates\pages\index.html:314
 msgid "MiLEP-LASER"
 msgstr ""
 
-#: .\templates\pages\index.html:224
+#: .\templates\pages\index.html:320
 msgid "Examination and diagnosis of the urinary and reproductive systems"
 msgstr ""
 
-#: .\templates\pages\index.html:230
+#: .\templates\pages\index.html:326
 msgid "Optilum baloon for urethral stricture"
 msgstr ""
 
-#: .\templates\pages\index.html:236
+#: .\templates\pages\index.html:332
 msgid "Urinary Tract Examination & Diagnosis"
 msgstr ""
 
-#: .\templates\pages\index.html:243
+#: .\templates\pages\index.html:339
 msgid "Treatment of Kidney & Bladder Stones"
 msgstr ""
 
-#: .\templates\pages\index.html:250
+#: .\templates\pages\index.html:346
 msgid "Treatment of Prostate Enlargement & Infections"
 msgstr ""
 
-#: .\templates\pages\index.html:259
+#: .\templates\pages\index.html:355
 msgid "Endoscopic Surgeries"
 msgstr ""
 
-#: .\templates\pages\index.html:266
+#: .\templates\pages\index.html:362
 msgid "Infertility & Fertility Treatment"
 msgstr ""
 
-#: .\templates\pages\index.html:273
+#: .\templates\pages\index.html:369
 msgid "Treatment of Bladder & Urinary Infections"
 msgstr ""
 
-#: .\templates\pages\index.html:280
+#: .\templates\pages\index.html:376
 msgid "Specialized Medical Consultations"
 msgstr ""
 
-#: .\templates\pages\index.html:287
+#: .\templates\pages\index.html:383
 msgid "Post-Surgery Follow-up"
 msgstr ""
 
-#: .\templates\pages\index.html:294
+#: .\templates\pages\index.html:390
 msgid "Online Appointment Booking"
 msgstr ""
 
-#: .\templates\pages\index.html:309
+#: .\templates\pages\index.html:405
 msgid "Our Medical Services Features"
 msgstr ""
 
-#: .\templates\pages\index.html:317
+#: .\templates\pages\index.html:413
 msgid "Expertise"
 msgstr ""
 
-#: .\templates\pages\index.html:318
+#: .\templates\pages\index.html:414
 msgid "Specialist Consultant"
 msgstr ""
 
-#: .\templates\pages\index.html:319
+#: .\templates\pages\index.html:415
 msgid ""
 "Extensive experience in urology surgery and treatments, ensuring precise and "
 "effective care."
 msgstr ""
 
-#: .\templates\pages\index.html:328
+#: .\templates\pages\index.html:424
 msgid "Diagnosis"
 msgstr ""
 
-#: .\templates\pages\index.html:329
+#: .\templates\pages\index.html:425
 msgid "Accurate Diagnosis"
 msgstr ""
 
-#: .\templates\pages\index.html:330
+#: .\templates\pages\index.html:426
 msgid ""
 "Using the latest medical technologies to accurately diagnose kidney, "
 "bladder, and prostate diseases."
 msgstr ""
 
-#: .\templates\pages\index.html:339
+#: .\templates\pages\index.html:435
 msgid "Technology"
 msgstr ""
 
-#: .\templates\pages\index.html:340
+#: .\templates\pages\index.html:436
 msgid "Advanced Equipment"
 msgstr ""
 
-#: .\templates\pages\index.html:341
+#: .\templates\pages\index.html:437
 msgid ""
 "Relying on modern devices and advanced treatment methods to reduce pain and "
 "speed up recovery."
 msgstr ""
 
-#: .\templates\pages\index.html:350
+#: .\templates\pages\index.html:446
 msgid "Care"
 msgstr ""
 
-#: .\templates\pages\index.html:351
+#: .\templates\pages\index.html:447
 msgid "Close Follow-up"
 msgstr ""
 
-#: .\templates\pages\index.html:352
+#: .\templates\pages\index.html:448
 msgid ""
 "A comprehensive treatment plan including continuous follow-up before and "
 "after surgery to ensure complete recovery."
 msgstr ""
 
-#: .\templates\pages\index.html:361
+#: .\templates\pages\index.html:457
 msgid "Privacy"
 msgstr ""
 
-#: .\templates\pages\index.html:362
+#: .\templates\pages\index.html:458
 msgid "Complete Confidentiality"
 msgstr ""
 
-#: .\templates\pages\index.html:363
+#: .\templates\pages\index.html:459
 msgid ""
 "We are committed to maintaining the confidentiality and privacy of all "
 "patient medical data."
 msgstr ""
 
-#: .\templates\pages\index.html:372
+#: .\templates\pages\index.html:468
 msgid "Support"
 msgstr ""
 
-#: .\templates\pages\index.html:373
+#: .\templates\pages\index.html:469
 msgid "Continuous Communication"
 msgstr ""
 
-#: .\templates\pages\index.html:374
+#: .\templates\pages\index.html:470
 msgid ""
 "Direct communication via phone or WhatsApp for appointment booking and "
 "medical inquiries."
 msgstr ""
 
-#: .\templates\pages\index.html:397
+#: .\templates\pages\index.html:503
 msgid "Patient Reviews"
 msgstr ""
 
-#: .\templates\pages\index.html:408
+#: .\templates\pages\index.html:514
 msgid ""
-"The doctor helped me a lot in treating kidney stones. The surgery was "
-"successful and the follow-up was excellent."
+"Many heartfelt thanks to the respectful and professional team, and a big "
+"thanks to Dr. Krenawi Muhammad – an excellent and professional doctor."
 msgstr ""
 
-#: .\templates\pages\index.html:416
-msgid "Damascus"
+#: .\templates\pages\index.html:522 .\templates\pages\index.html:553
+#: .\templates\pages\index.html:645 .\templates\pages\index.html:678
+msgid "Anonymous"
 msgstr ""
 
-#: .\templates\pages\index.html:438
+#: .\templates\pages\index.html:545
 msgid ""
-"Very professional treatment and a clear explanation of my case. I felt "
-"reassured from the first visit."
+"A professional doctor, kind, available for questions, and pleasant. The "
+"staff as well. Many thanks to everyone for the excellent attitude."
 msgstr ""
 
-#: .\templates\pages\index.html:446
-msgid "Beirut"
+#: .\templates\pages\index.html:575
+msgid "A professional and reliable doctor, very kind and gentle."
 msgstr ""
 
-#: .\templates\pages\index.html:468
+#: .\templates\pages\index.html:607
 msgid ""
-"The doctor saved me from a prostate problem I had suffered from for years. "
-"Thanks to him from the heart."
+"The treatment was very kind and patient. Dr. Krenawi Muhammad provided "
+"professional service and warm attitude. I recommend him to everyone. Thank "
+"you very much for the help."
 msgstr ""
 
-#: .\templates\pages\index.html:476
-msgid "Amman"
+#: .\templates\pages\index.html:637
+msgid ""
+"Regarding Dr. Muhammad – I highly recommend him. A very professional person "
+"with a kind attitude and continuous follow-up 24 hours a day. Thank you very "
+"much from the heart; he is worth all the praise."
 msgstr ""
 
-#: .\templates\pages\index.html:500
+#: .\templates\pages\index.html:670
+msgid ""
+"Many thanks to the entire staff of Assoua – the receptionists and nurses. I "
+"sincerely thank you for your service, care, and kindness. Many thanks to the "
+"doctors. Thank you, Dr. Krenawi Muhammad – I received from you a warm "
+"attitude, pleasant moments, and calmness until my smile returned. You are a "
+"professional, wonderful, kind, and patient doctor with full responsibility. "
+"Thank you and the entire Assoua team."
+msgstr ""
+
+#: .\templates\pages\index.html:702
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: .\templates\pages\index.html:510
+#: .\templates\pages\index.html:712
 msgid "What conditions does a urology surgeon treat?"
 msgstr ""
 
-#: .\templates\pages\index.html:515
+#: .\templates\pages\index.html:717
 msgid ""
 "The specialty includes treatment of kidney stones, prostate enlargement, "
 "urinary tract infections, kidney and bladder tumors, as well as infertility "
 "issues and urinary disorders in men and women."
 msgstr ""
 
-#: .\templates\pages\index.html:527
+#: .\templates\pages\index.html:729
 msgid "When should I visit a urology surgeon?"
 msgstr ""
 
-#: .\templates\pages\index.html:532
+#: .\templates\pages\index.html:734
 msgid ""
 "It is recommended to consult the doctor if you experience persistent pain in "
 "the kidneys or bladder, difficulty or pain during urination, blood in urine, "
 "recurring urinary tract infections, or fertility problems."
 msgstr ""
 
-#: .\templates\pages\index.html:544
+#: .\templates\pages\index.html:746
 msgid "Do all urinary tract problems require surgery?"
 msgstr ""
 
-#: .\templates\pages\index.html:549
+#: .\templates\pages\index.html:751
 msgid ""
 "Not necessarily. Some cases can be treated with medications or minor "
 "procedures like endoscopy, while some conditions require advanced surgical "
 "intervention depending on the diagnosis."
 msgstr ""
 
-#: .\templates\pages\index.html:561
+#: .\templates\pages\index.html:763
 msgid "Can kidney stones be treated without surgery?"
 msgstr ""
 
-#: .\templates\pages\index.html:566
+#: .\templates\pages\index.html:768
 msgid ""
 "In many cases, stones can be broken down using shock wave therapy or "
 "endoscopic procedures without the need for open surgery."
 msgstr ""
 
-#: .\templates\pages\index.html:578
+#: .\templates\pages\index.html:780
 msgid "Does an enlarged prostate mean cancer?"
 msgstr ""
 
-#: .\templates\pages\index.html:583
+#: .\templates\pages\index.html:785
 msgid ""
 "Benign prostate enlargement is common with age and does not necessarily "
 "indicate cancer, but it is important to consult the doctor for proper "
 "testing."
 msgstr ""
 
-#: .\templates\pages\index.html:595
+#: .\templates\pages\index.html:797
 msgid "Can I book an appointment online?"
 msgstr ""
 
-#: .\templates\pages\index.html:600
+#: .\templates\pages\index.html:802
 msgid ""
 "Yes, you can easily book an appointment through the website or by contacting "
 "directly via WhatsApp."
 msgstr ""
 
-#: .\templates\pages\index.html:607
+#: .\templates\pages\index.html:809
 msgid "View More Questions"
 msgstr ""
 
-#: .\templates\pages\index.html:622
+#: .\templates\pages\index.html:824
 msgid ""
 "Contact Dr. Krenawi Muhammad to book a medical consultation or inquire about "
 "treatment"
 msgstr ""
 
-#: .\templates\pages\index.html:630
+#: .\templates\pages\index.html:832
 msgid "Contact Form"
 msgstr ""
 
-#: .\templates\pages\index.html:633
+#: .\templates\pages\index.html:835
 msgid ""
 "Fill out the form below and Dr. Krenawi's team will contact you to schedule "
 "a consultation or answer your medical inquiries."
 msgstr ""
 
-#: .\templates\pages\index.html:638 .\website\models.py:7
+#: .\templates\pages\index.html:840 .\website\models.py:7
 msgid "Full Name"
 msgstr ""
 
-#: .\templates\pages\index.html:652
+#: .\templates\pages\index.html:854
 msgid "Phone Number"
 msgstr ""
 
-#: .\templates\pages\index.html:659
+#: .\templates\pages\index.html:861
 msgid "Inquiry or Case Description"
 msgstr ""
 
-#: .\templates\pages\index.html:663
+#: .\templates\pages\index.html:865
 msgid ""
 "Briefly describe the nature of your consultation or the symptoms you are "
 "experiencing."
 msgstr ""
 
-#: .\templates\pages\index.html:670
+#: .\templates\pages\index.html:872
 msgid "I agree to the privacy policy when submitting this form"
 msgstr ""
 
-#: .\templates\pages\index.html:673
+#: .\templates\pages\index.html:875
 msgid "You must agree to the privacy policy before submitting."
 msgstr ""
 
-#: .\templates\pages\index.html:678
+#: .\templates\pages\index.html:880
 msgid "Submit"
 msgstr ""
 

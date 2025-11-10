@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-07 00:57+0300\n"
+"POT-Creation-Date: 2025-11-10 15:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,7 @@ msgid "Create an account"
 msgstr "Создать аккаунт"
 
 #: .\templates\accounts\login.html:20 .\templates\accounts\signup.html:34
-#: .\templates\pages\index.html:645
+#: .\templates\pages\index.html:847
 msgid "Email Address"
 msgstr "Адрес электронной почты"
 
@@ -223,6 +223,7 @@ msgstr "Фильтр консультаций"
 
 #: .\templates\dashboard\consultations\consultation_list.html:42
 #: .\templates\dashboard\consultations\share.html:39
+#: .\templates\dashboard\consultations\share.html:42
 msgid "Consultation"
 msgstr "Консультация"
 
@@ -247,24 +248,6 @@ msgstr "Фильтр"
 msgid "Consultations Table"
 msgstr "Таблица консультаций"
 
-#: .\templates\dashboard\consultations\print\temp1.html:122
-msgid "Patient name"
-msgstr "Имя пациента"
-
-#: .\templates\dashboard\consultations\print\temp1.html:123
-#: .\templates\dashboard\users\patient_detail.html:16
-msgid "health care/insurance"
-msgstr "Медицинское обслуживание / страхование"
-
-#: .\templates\dashboard\consultations\print\temp1.html:124
-msgid "status"
-msgstr "Статус"
-
-#: .\templates\dashboard\consultations\print\temp1.html:125
-msgid "Date"
-msgstr "Дата"
-
-
 #: .\templates\dashboard\consultations\share.html:11
 msgid "Share Consultation"
 msgstr "Поделиться консультацией"
@@ -287,7 +270,7 @@ msgid "Consultation Share Link"
 msgstr "Ссылка для обмена консультацией"
 
 #: .\templates\dashboard\consultations\share.html:32
-#: .\templates\dashboard\consultations\share.html:66
+#: .\templates\dashboard\consultations\share.html:72
 msgid "Copy"
 msgstr "Копировать"
 
@@ -295,19 +278,25 @@ msgstr "Копировать"
 msgid "Share the link via:"
 msgstr "Поделиться ссылкой через:"
 
-#: .\templates\dashboard\consultations\share.html:43
+#: .\templates\dashboard\consultations\share.html:45
+#, fuzzy
+#| msgid "Email"
+msgid "Gmail"
+msgstr "Электронная почта"
+
+#: .\templates\dashboard\consultations\share.html:49
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: .\templates\dashboard\consultations\share.html:46
+#: .\templates\dashboard\consultations\share.html:52
 msgid "Facebook"
 msgstr "Facebook"
 
-#: .\templates\dashboard\consultations\share.html:49
+#: .\templates\dashboard\consultations\share.html:55
 msgid "Twitter"
 msgstr "Twitter"
 
-#: .\templates\dashboard\consultations\share.html:64
+#: .\templates\dashboard\consultations\share.html:70
 msgid "Copied"
 msgstr "Скопировано"
 
@@ -429,6 +418,10 @@ msgstr "Информация о пациенте"
 msgid "Birth Date"
 msgstr "Дата рождения"
 
+#: .\templates\dashboard\users\patient_detail.html:16
+msgid "health care/insurance"
+msgstr "Медицинское обслуживание / страхование"
+
 #: .\templates\dashboard\users\patient_detail.html:17
 msgid "National ID"
 msgstr "Идентификационный номер"
@@ -522,8 +515,8 @@ msgstr ""
 "Ассута с обширным опытом операций на предстательной железе и камнях мочевых "
 "путей."
 
-#: .\templates\pages\index.html:42 .\templates\pages\index.html:186
-#: .\templates\pages\index.html:683
+#: .\templates\pages\index.html:42 .\templates\pages\index.html:282
+#: .\templates\pages\index.html:885
 msgid "Call Now"
 msgstr "Позвонить сейчас"
 
@@ -563,130 +556,142 @@ msgstr "Более 12 лет опыта"
 msgid "Consultant in Urology and Male Infertility."
 msgstr "Консультант по урологии и мужскому бесплодию."
 
-#: .\templates\pages\index.html:121
+#: .\templates\pages\index.html:160
+msgid "Professionalism"
+msgstr "Профессионализм"
+
+#: .\templates\pages\index.html:174
+msgid "Availability"
+msgstr "Доступность"
+
+#: .\templates\pages\index.html:188
+msgid "Kindness"
+msgstr "Доброта"
+
+#: .\templates\pages\index.html:217
 msgid "Academic Qualifications"
 msgstr "Академическая квалификация"
 
-#: .\templates\pages\index.html:127
+#: .\templates\pages\index.html:223
 msgid ""
 "Bachelor of Medicine and Surgery – Jordan University of Science and "
 "Technology"
 msgstr ""
 "Бакалавр медицины и хирургии – Иорданский университет науки и технологий"
 
-#: .\templates\pages\index.html:133
+#: .\templates\pages\index.html:229
 msgid "Master's Degree in Urology – Soroka Hospital"
 msgstr "Магистр урологии – Больница Сорока"
 
-#: .\templates\pages\index.html:139
+#: .\templates\pages\index.html:235
 msgid "Fellowship in Endoscopic Kidney and Prostate Surgery – Rabin Hospital"
 msgstr ""
 "Стажировка по эндоскопической хирургии почек и предстательной железы – "
 "Больница Рабин"
 
-#: .\templates\pages\index.html:149
+#: .\templates\pages\index.html:245
 msgid "Professional Experience"
 msgstr "Профессиональный опыт"
 
-#: .\templates\pages\index.html:155
+#: .\templates\pages\index.html:251
 msgid "Director of the Urology Surgery Unit at Yousuftal Hospital"
 msgstr "Директор отделения урологической хирургии в больнице Йосефтал"
 
-#: .\templates\pages\index.html:161
+#: .\templates\pages\index.html:257
 msgid "Physician and surgeon at Rabin Sharon Hospital"
 msgstr "Врач и хирург в больнице Рабин-Шарон"
 
-#: .\templates\pages\index.html:167
+#: .\templates\pages\index.html:263
 msgid "Physician and surgeon at Assuta Hospital in Beersheba"
 msgstr "Врач и хирург в больнице Ассута в Беэр-Шеве"
 
-#: .\templates\pages\index.html:173
+#: .\templates\pages\index.html:269
 msgid "Over 2000 successful Endoscopic kidney stone surgeries"
 msgstr ""
 "Более 2000 успешных эндоскопических операций по удалению камней в почках"
 
-#: .\templates\pages\index.html:179
+#: .\templates\pages\index.html:275
 msgid "Specialized expertise in treating urinary tract disorders"
 msgstr ""
 "Специализированная экспертиза в лечении заболеваний мочевыводящих путей"
 
-#: .\templates\pages\index.html:189 .\templates\pages\index.html:686
+#: .\templates\pages\index.html:285 .\templates\pages\index.html:888
 msgid "Book via WhatsApp"
 msgstr "Записаться через WhatsApp"
 
-#: .\templates\pages\index.html:204
+#: .\templates\pages\index.html:300
 msgid "Medical Services We"
 msgstr "Медицинские услуги, которые мы"
 
-#: .\templates\pages\index.html:204
+#: .\templates\pages\index.html:300
 msgid "Provide to Our Patients"
 msgstr "предоставляем нашим пациентам"
 
-#: .\templates\pages\index.html:212
+#: .\templates\pages\index.html:308
 msgid "HoLEP- LASER"
 msgstr "Операция HoLEP с лазером"
 
-#: .\templates\pages\index.html:218
+#: .\templates\pages\index.html:314
 msgid "MiLEP-LASER"
 msgstr "Операция MiLEP с лазером"
 
-#: .\templates\pages\index.html:224
+#: .\templates\pages\index.html:320
 msgid "Examination and diagnosis of the urinary and reproductive systems"
 msgstr "Обследование и диагностика мочеполовой системы"
 
-#: .\templates\pages\index.html:230
+#: .\templates\pages\index.html:326
 msgid "Optilum baloon for urethral stricture"
 msgstr "Баллон Optilum для лечения стриктуры уретры"
 
-#: .\templates\pages\index.html:236
+#: .\templates\pages\index.html:332
 msgid "Urinary Tract Examination & Diagnosis"
 msgstr "Обследование и диагностика мочевыводящих путей"
 
-#: .\templates\pages\index.html:243
+#: .\templates\pages\index.html:339
 msgid "Treatment of Kidney & Bladder Stones"
 msgstr "Лечение камней в почках и мочевом пузыре"
 
-#: .\templates\pages\index.html:250
+#: .\templates\pages\index.html:346
 msgid "Treatment of Prostate Enlargement & Infections"
 msgstr "Лечение увеличения простаты и инфекций"
 
-#: .\templates\pages\index.html:259
+#: .\templates\pages\index.html:355
 msgid "Endoscopic Surgeries"
 msgstr "Эндоскопические операции"
 
-#: .\templates\pages\index.html:266
+#: .\templates\pages\index.html:362
 msgid "Infertility & Fertility Treatment"
 msgstr "Лечение бесплодия и восстановление фертильности"
 
-#: .\templates\pages\index.html:273
+#: .\templates\pages\index.html:369
 msgid "Treatment of Bladder & Urinary Infections"
 msgstr "Лечение инфекций мочевого пузыря и мочевыводящих путей"
 
-#: .\templates\pages\index.html:280
+#: .\templates\pages\index.html:376
 msgid "Specialized Medical Consultations"
 msgstr "Специализированные медицинские консультации"
 
-#: .\templates\pages\index.html:287
+#: .\templates\pages\index.html:383
 msgid "Post-Surgery Follow-up"
 msgstr "Послеоперационное наблюдение"
 
-#: .\templates\pages\index.html:294
+#: .\templates\pages\index.html:390
 msgid "Online Appointment Booking"
 msgstr "Онлайн-запись на прием"
 
-#: .\templates\pages\index.html:309
+#: .\templates\pages\index.html:405
 msgid "Our Medical Services Features"
 msgstr "Особенности наших медицинских услуг"
 
-#: .\templates\pages\index.html:317
+#: .\templates\pages\index.html:413
 msgid "Expertise"
 msgstr "Опыт"
 
-#: .\templates\pages\index.html:318
+#: .\templates\pages\index.html:414
 msgid "Specialist Consultant"
 msgstr "Специалист-консультант"
 
-#: .\templates\pages\index.html:319
+#: .\templates\pages\index.html:415
 msgid ""
 "Extensive experience in urology surgery and treatments, ensuring precise and "
 "effective care."
@@ -694,15 +699,15 @@ msgstr ""
 "Обширный опыт в урологической хирургии и лечении, обеспечивающий точный и "
 "эффективный уход."
 
-#: .\templates\pages\index.html:328
+#: .\templates\pages\index.html:424
 msgid "Diagnosis"
 msgstr "Диагностика"
 
-#: .\templates\pages\index.html:329
+#: .\templates\pages\index.html:425
 msgid "Accurate Diagnosis"
 msgstr "Точная диагностика"
 
-#: .\templates\pages\index.html:330
+#: .\templates\pages\index.html:426
 msgid ""
 "Using the latest medical technologies to accurately diagnose kidney, "
 "bladder, and prostate diseases."
@@ -710,15 +715,15 @@ msgstr ""
 "Использование новейших медицинских технологий для точной диагностики "
 "заболеваний почек, мочевого пузыря и простаты."
 
-#: .\templates\pages\index.html:339
+#: .\templates\pages\index.html:435
 msgid "Technology"
 msgstr "Технологии"
 
-#: .\templates\pages\index.html:340
+#: .\templates\pages\index.html:436
 msgid "Advanced Equipment"
 msgstr "Современное оборудование"
 
-#: .\templates\pages\index.html:341
+#: .\templates\pages\index.html:437
 msgid ""
 "Relying on modern devices and advanced treatment methods to reduce pain and "
 "speed up recovery."
@@ -726,15 +731,15 @@ msgstr ""
 "Использование современных приборов и передовых методов лечения для снижения "
 "боли и ускорения восстановления."
 
-#: .\templates\pages\index.html:350
+#: .\templates\pages\index.html:446
 msgid "Care"
 msgstr "Уход"
 
-#: .\templates\pages\index.html:351
+#: .\templates\pages\index.html:447
 msgid "Close Follow-up"
 msgstr "Тщательное наблюдение"
 
-#: .\templates\pages\index.html:352
+#: .\templates\pages\index.html:448
 msgid ""
 "A comprehensive treatment plan including continuous follow-up before and "
 "after surgery to ensure complete recovery."
@@ -742,15 +747,15 @@ msgstr ""
 "Комплексный план лечения, включающий постоянное наблюдение до и после "
 "операции для обеспечения полного выздоровления."
 
-#: .\templates\pages\index.html:361
+#: .\templates\pages\index.html:457
 msgid "Privacy"
 msgstr "Конфиденциальность"
 
-#: .\templates\pages\index.html:362
+#: .\templates\pages\index.html:458
 msgid "Complete Confidentiality"
 msgstr "Полная конфиденциальность"
 
-#: .\templates\pages\index.html:363
+#: .\templates\pages\index.html:459
 msgid ""
 "We are committed to maintaining the confidentiality and privacy of all "
 "patient medical data."
@@ -758,15 +763,15 @@ msgstr ""
 "Мы обязуемся сохранять конфиденциальность и приватность всех медицинских "
 "данных пациентов."
 
-#: .\templates\pages\index.html:372
+#: .\templates\pages\index.html:468
 msgid "Support"
 msgstr "Поддержка"
 
-#: .\templates\pages\index.html:373
+#: .\templates\pages\index.html:469
 msgid "Continuous Communication"
 msgstr "Постоянная связь"
 
-#: .\templates\pages\index.html:374
+#: .\templates\pages\index.html:470
 msgid ""
 "Direct communication via phone or WhatsApp for appointment booking and "
 "medical inquiries."
@@ -774,55 +779,82 @@ msgstr ""
 "Прямое общение по телефону или WhatsApp для записи на приём и медицинских "
 "консультаций."
 
-#: .\templates\pages\index.html:397
+#: .\templates\pages\index.html:503
 msgid "Patient Reviews"
 msgstr "Отзывы пациентов"
 
-#: .\templates\pages\index.html:408
+#: .\templates\pages\index.html:514
 msgid ""
-"The doctor helped me a lot in treating kidney stones. The surgery was "
-"successful and the follow-up was excellent."
+"Many heartfelt thanks to the respectful and professional team, and a big "
+"thanks to Dr. Krenawi Muhammad – an excellent and professional doctor."
 msgstr ""
-"Доктор очень помог мне в лечении камней в почках. Операция прошла успешно, а "
-"последующее наблюдение было отличным."
+"Большое сердечное спасибо уважаемой и профессиональной команде, и отдельная "
+"благодарность доктору Мухаммаду Каринауи – отличному и профессиональному "
+"врачу."
 
-#: .\templates\pages\index.html:416
-msgid "Damascus"
-msgstr "Дамаск"
+#: .\templates\pages\index.html:522 .\templates\pages\index.html:553
+#: .\templates\pages\index.html:645 .\templates\pages\index.html:678
+msgid "Anonymous"
+msgstr "Анонимно"
 
-#: .\templates\pages\index.html:438
+#: .\templates\pages\index.html:545
 msgid ""
-"Very professional treatment and a clear explanation of my case. I felt "
-"reassured from the first visit."
+"A professional doctor, kind, available for questions, and pleasant. The "
+"staff as well. Many thanks to everyone for the excellent attitude."
 msgstr ""
-"Очень профессиональное лечение и понятное объяснение моего случая. Я "
-"почувствовал уверенность уже с первого визита."
+"Профессиональный врач, доброжелательный, всегда готов ответить на вопросы, "
+"очень приятный. Персонал тоже отличный. Большое спасибо всем за прекрасное "
+"отношение."
 
-#: .\templates\pages\index.html:446
-msgid "Beirut"
-msgstr "Бейрут"
+#: .\templates\pages\index.html:575
+msgid "A professional and reliable doctor, very kind and gentle."
+msgstr "Профессиональный и надёжный врач, очень добрый и внимательный."
 
-#: .\templates\pages\index.html:468
+#: .\templates\pages\index.html:607
 msgid ""
-"The doctor saved me from a prostate problem I had suffered from for years. "
-"Thanks to him from the heart."
+"The treatment was very kind and patient. Dr. Krenawi Muhammad provided "
+"professional service and warm attitude. I recommend him to everyone. Thank "
+"you very much for the help."
 msgstr ""
-"Доктор избавил меня от проблемы с простатой, от которой я страдал много лет. "
-"Огромное спасибо ему от всего сердца."
+"Лечение было очень внимательным и терпеливым. Доктор Мухаммад Каринауи "
+"оказал профессиональное обслуживание и проявил тёплое отношение. Рекомендую "
+"всем. Большое спасибо за помощь."
 
-#: .\templates\pages\index.html:476
-msgid "Amman"
-msgstr "Амман"
+#: .\templates\pages\index.html:637
+msgid ""
+"Regarding Dr. Muhammad – I highly recommend him. A very professional person "
+"with a kind attitude and continuous follow-up 24 hours a day. Thank you very "
+"much from the heart; he is worth all the praise."
+msgstr ""
+"Относительно доктора Мухаммада – настоятельно рекомендую. Очень "
+"профессиональный человек с добрым отношением, постоянно следит за пациентом "
+"24 часа в сутки. Огромное спасибо от всего сердца, он достоин всяких похвал."
 
-#: .\templates\pages\index.html:500
+#: .\templates\pages\index.html:670
+msgid ""
+"Many thanks to the entire staff of Assoua – the receptionists and nurses. I "
+"sincerely thank you for your service, care, and kindness. Many thanks to the "
+"doctors. Thank you, Dr. Krenawi Muhammad – I received from you a warm "
+"attitude, pleasant moments, and calmness until my smile returned. You are a "
+"professional, wonderful, kind, and patient doctor with full responsibility. "
+"Thank you and the entire Assoua team."
+msgstr ""
+"Большое спасибо всему персоналу Ассуа – администраторам и медсёстрам. "
+"Искренне благодарю вас за ваше обслуживание, заботу и доброту. Отдельная "
+"благодарность врачам. Спасибо вам, доктор Мухаммад Каринауи – от вас я "
+"получил тёплое отношение, приятные моменты и спокойствие, пока не вернулась "
+"моя улыбка. Вы профессиональный, замечательный, добрый и терпеливый врач, "
+"полностью ответственный. Спасибо вам и всей команде Ассуа."
+
+#: .\templates\pages\index.html:702
 msgid "Frequently Asked Questions"
 msgstr "Часто задаваемые вопросы"
 
-#: .\templates\pages\index.html:510
+#: .\templates\pages\index.html:712
 msgid "What conditions does a urology surgeon treat?"
 msgstr "Какие заболевания лечит уролог-хирург?"
 
-#: .\templates\pages\index.html:515
+#: .\templates\pages\index.html:717
 msgid ""
 "The specialty includes treatment of kidney stones, prostate enlargement, "
 "urinary tract infections, kidney and bladder tumors, as well as infertility "
@@ -832,11 +864,11 @@ msgstr ""
 "инфекций мочевых путей, опухолей почек и мочевого пузыря, а также проблем с "
 "бесплодием и нарушений мочеиспускания у мужчин и женщин."
 
-#: .\templates\pages\index.html:527
+#: .\templates\pages\index.html:729
 msgid "When should I visit a urology surgeon?"
 msgstr "Когда следует обратиться к урологу-хирургу?"
 
-#: .\templates\pages\index.html:532
+#: .\templates\pages\index.html:734
 msgid ""
 "It is recommended to consult the doctor if you experience persistent pain in "
 "the kidneys or bladder, difficulty or pain during urination, blood in urine, "
@@ -846,11 +878,11 @@ msgstr ""
 "почках или мочевом пузыре, трудности или боль при мочеиспускании, кровь в "
 "моче, повторяющиеся инфекции мочевых путей или проблемы с фертильностью."
 
-#: .\templates\pages\index.html:544
+#: .\templates\pages\index.html:746
 msgid "Do all urinary tract problems require surgery?"
 msgstr "Все ли проблемы мочевых путей требуют операции?"
 
-#: .\templates\pages\index.html:549
+#: .\templates\pages\index.html:751
 msgid ""
 "Not necessarily. Some cases can be treated with medications or minor "
 "procedures like endoscopy, while some conditions require advanced surgical "
@@ -860,11 +892,11 @@ msgstr ""
 "небольших процедур, таких как эндоскопия, в то время как некоторые состояния "
 "требуют сложного хирургического вмешательства в зависимости от диагноза."
 
-#: .\templates\pages\index.html:561
+#: .\templates\pages\index.html:763
 msgid "Can kidney stones be treated without surgery?"
 msgstr "Можно ли лечить камни в почках без операции?"
 
-#: .\templates\pages\index.html:566
+#: .\templates\pages\index.html:768
 msgid ""
 "In many cases, stones can be broken down using shock wave therapy or "
 "endoscopic procedures without the need for open surgery."
@@ -872,11 +904,11 @@ msgstr ""
 "Во многих случаях камни можно разрушить с помощью ударно-волновой терапии "
 "или эндоскопических процедур без необходимости открытой операции."
 
-#: .\templates\pages\index.html:578
+#: .\templates\pages\index.html:780
 msgid "Does an enlarged prostate mean cancer?"
 msgstr "Означает ли увеличение простаты наличие рака?"
 
-#: .\templates\pages\index.html:583
+#: .\templates\pages\index.html:785
 msgid ""
 "Benign prostate enlargement is common with age and does not necessarily "
 "indicate cancer, but it is important to consult the doctor for proper "
@@ -886,11 +918,11 @@ msgstr ""
 "обязательно указывает на рак, однако важно проконсультироваться с врачом для "
 "проведения необходимых обследований."
 
-#: .\templates\pages\index.html:595
+#: .\templates\pages\index.html:797
 msgid "Can I book an appointment online?"
 msgstr "Могу ли я записаться на прием онлайн?"
 
-#: .\templates\pages\index.html:600
+#: .\templates\pages\index.html:802
 msgid ""
 "Yes, you can easily book an appointment through the website or by contacting "
 "directly via WhatsApp."
@@ -898,11 +930,11 @@ msgstr ""
 "Да, вы можете легко записаться на прием через веб-сайт или связавшись "
 "напрямую через WhatsApp."
 
-#: .\templates\pages\index.html:607
+#: .\templates\pages\index.html:809
 msgid "View More Questions"
 msgstr "Посмотреть больше вопросов"
 
-#: .\templates\pages\index.html:622
+#: .\templates\pages\index.html:824
 msgid ""
 "Contact Dr. Krenawi Muhammad to book a medical consultation or inquire about "
 "treatment"
@@ -910,11 +942,11 @@ msgstr ""
 "Свяжитесь с др. Кренави Мухаммад, чтобы записаться на медицинскую "
 "консультацию или задать вопросы о лечении"
 
-#: .\templates\pages\index.html:630
+#: .\templates\pages\index.html:832
 msgid "Contact Form"
 msgstr "Форма обратной связи"
 
-#: .\templates\pages\index.html:633
+#: .\templates\pages\index.html:835
 msgid ""
 "Fill out the form below and Dr. Krenawi's team will contact you to schedule "
 "a consultation or answer your medical inquiries."
@@ -922,19 +954,19 @@ msgstr ""
 "Заполните форму ниже, и команда др. Кренави свяжется с вами, чтобы назначить "
 "консультацию или ответить на ваши медицинские вопросы."
 
-#: .\templates\pages\index.html:638 .\website\models.py:7
+#: .\templates\pages\index.html:840 .\website\models.py:7
 msgid "Full Name"
 msgstr "Полное имя"
 
-#: .\templates\pages\index.html:652
+#: .\templates\pages\index.html:854
 msgid "Phone Number"
 msgstr "Номер телефона"
 
-#: .\templates\pages\index.html:659
+#: .\templates\pages\index.html:861
 msgid "Inquiry or Case Description"
 msgstr "Запрос или описание случая"
 
-#: .\templates\pages\index.html:663
+#: .\templates\pages\index.html:865
 msgid ""
 "Briefly describe the nature of your consultation or the symptoms you are "
 "experiencing."
@@ -942,15 +974,15 @@ msgstr ""
 "Кратко опишите характер вашей консультации или симптомы, которые вы "
 "испытываете."
 
-#: .\templates\pages\index.html:670
+#: .\templates\pages\index.html:872
 msgid "I agree to the privacy policy when submitting this form"
 msgstr "Я согласен с политикой конфиденциальности при отправке этой формы"
 
-#: .\templates\pages\index.html:673
+#: .\templates\pages\index.html:875
 msgid "You must agree to the privacy policy before submitting."
 msgstr "Вы должны согласиться с политикой конфиденциальности перед отправкой."
 
-#: .\templates\pages\index.html:678
+#: .\templates\pages\index.html:880
 msgid "Submit"
 msgstr "Отправить"
 
@@ -1040,6 +1072,45 @@ msgid ""
 "Your message has been sent successfully. You will be replied after reviewing "
 "the details."
 msgstr "Ваше сообщение успешно отправлено. Вам ответят после проверки деталей."
+
+#~ msgid "Patient name"
+#~ msgstr "Имя пациента"
+
+#~ msgid "status"
+#~ msgstr "Статус"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid ""
+#~ "The doctor helped me a lot in treating kidney stones. The surgery was "
+#~ "successful and the follow-up was excellent."
+#~ msgstr ""
+#~ "Доктор очень помог мне в лечении камней в почках. Операция прошла "
+#~ "успешно, а последующее наблюдение было отличным."
+
+#~ msgid "Damascus"
+#~ msgstr "Дамаск"
+
+#~ msgid ""
+#~ "Very professional treatment and a clear explanation of my case. I felt "
+#~ "reassured from the first visit."
+#~ msgstr ""
+#~ "Очень профессиональное лечение и понятное объяснение моего случая. Я "
+#~ "почувствовал уверенность уже с первого визита."
+
+#~ msgid "Beirut"
+#~ msgstr "Бейрут"
+
+#~ msgid ""
+#~ "The doctor saved me from a prostate problem I had suffered from for "
+#~ "years. Thanks to him from the heart."
+#~ msgstr ""
+#~ "Доктор избавил меня от проблемы с простатой, от которой я страдал много "
+#~ "лет. Огромное спасибо ему от всего сердца."
+
+#~ msgid "Amman"
+#~ msgstr "Амман"
 
 #~ msgid "Health Status"
 #~ msgstr "Состояние здоровья"
