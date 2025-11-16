@@ -36,22 +36,22 @@
 
                 <div class="mb-3">
                     <span>{% trans "Share the link via:" %}</span>
-                    <a href="mailto:?subject={% trans 'Consultation' %}&body={{ request.build_absolute_uri }}" class="btn btn-outline-primary btn-sm me-1">
+                    <a href="mailto:?subject={% trans 'Consultation' %}&body={{ consultation_pdf_url }}" class="btn btn-outline-primary btn-sm me-1">
                         <i class="bi bi-envelope-fill"></i> {% trans "Email" %}
                     </a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=&su={% trans 'Consultation' %}&body={{ request.build_absolute_uri }}" 
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=&su={% trans 'Consultation' %}&body={{consultation_pdf_url}}" 
                     target="_blank" 
                     class="btn btn-outline-primary btn-sm me-1">
                         <i class="bi bi-envelope-fill"></i> {% trans "Gmail" %}
                     </a>
 
-                    <a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-success btn-sm me-1">
+                    <a href="https://wa.me/?text={{ consultation_pdf_url }}" target="_blank" class="btn btn-outline-success btn-sm me-1">
                         <i class="bi bi-whatsapp"></i> {% trans "WhatsApp" %}
                     </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-primary btn-sm me-1">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ consultation_pdf_url }}" target="_blank" class="btn btn-outline-primary btn-sm me-1">
                         <i class="bi bi-facebook"></i> {% trans "Facebook" %}
                     </a>
-                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-info btn-sm me-1">
+                    <a href="https://twitter.com/intent/tweet?url={{ consultation_pdf_url }}" target="_blank" class="btn btn-outline-info btn-sm me-1">
                         <i class="bi bi-twitter"></i> {% trans "Twitter" %}
                     </a>
                 </div>

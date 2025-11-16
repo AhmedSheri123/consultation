@@ -5,6 +5,7 @@ import weasyprint
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from django.urls import reverse
 from django.template.loader import render_to_string
 from .models import Consultation
 from clinic.models import ClinicInfo
@@ -161,7 +162,13 @@ def consultation_pdf(request, share_id):
 
 def share_doc(request, share_id):
     consultation = Consultation.objects.get(share_id=share_id)
-    return render(request, 'dashboard/consultations/share.html', {'consultation':consultation})
+    relative_url = reverse('consultation_pdf', kwargs={'share_id': share_id})
+    consultation_pdf_url = request.build_absolute_uri(relative_url)
+    return render(request, 'dashboard/consultations/share.html', {
+        'consultation': consultation,
+        'share_id': share_id,
+        'consultation_pdf_url': consultation_pdf_url
+    })
 
 
 class PatientAutocomplete(autocomplete.Select2QuerySetView):
