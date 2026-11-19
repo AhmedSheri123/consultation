@@ -911,41 +911,43 @@
           novalidate>
       {% csrf_token %}
 
-      <h5 class="mb-4 text-center fw-bold text-primary">{% trans "Contact Form" %}</h5>
+      {% comment %} <h5 class="mb-4 text-center fw-bold text-primary">{% trans "Contact Form" %}</h5> {% endcomment %}
 
-      <p class="text-dark mb-4">
+      {% comment %} <p class="text-dark mb-4">
         {% trans "Fill out the form below and Dr. Krenawi's team will contact you to schedule a consultation or answer your medical inquiries." %}
-      </p>
+      </p> {% endcomment %}
 
       <div class="mb-3">
-        <label for="fullName" class="form-label">
+        {% comment %} <label for="fullName" class="form-label">
           <i class="fa-solid fa-user"></i> {% trans "Full Name" %}
-        </label>
+        </label> {% endcomment %}
         {{ form.full_name }}
       </div>
 
-      <div class="mb-3">
-        <label for="email" class="form-label">
-          <i class="fa-solid fa-envelope"></i> {% trans "Email Address" %}
+      <div class="mb-3 d-flex align-items-center">
+         <label for="email" class="form-label">
+          <i class="fa-solid fa-envelope m-2"></i>
+           {% comment %} {% trans "Email Address" %} {% endcomment %}
         </label>
         {{ form.email }}
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3 d-flex align-items-center">
         <label for="phone" class="form-label">
-          <i class="fa-solid fa-phone"></i> {% trans "Phone Number" %}
-        </label>
+          <i class="fa-solid fa-phone m-2"></i> 
+          {% comment %} {% trans "Phone Number" %} {% endcomment %}
+        </label> 
         {{ form.phone_number }}
       </div>
 
       <div class="mb-3">
-        <label for="description" class="form-label">
+        {% comment %} <label for="description" class="form-label">
           <i class="fa-solid fa-file-medical"></i> {% trans "Inquiry or Case Description" %}
-        </label>
+        </label> {% endcomment %}
         {{ form.project_description }}
-        <div class="form-text">
+        {% comment %} <div class="form-text">
           {% trans "Briefly describe the nature of your consultation or the symptoms you are experiencing." %}
-        </div>
+        </div> {% endcomment %}
       </div>
 
       <div class="mb-3 form-check">
@@ -961,9 +963,9 @@
       <button type="submit" class="btn btn-primary w-100">
         {% trans "Submit" %} <i class="fa-solid fa-paper-plane"></i>
       </button>
-
+      <hr>
       <div class="d-grid gap-2 mt-3">
-        <a href="tel:+972534299777" class="btn btn-outline-primary">
+        <a href="tel:+972534299777" class="btn btn-primary">
           <i class="fa-solid fa-phone"></i> {% trans "Call Now" %}
         </a>
         <a href="https://wa.me/972534299777" target="_blank" class="btn btn-success">
