@@ -24,6 +24,45 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.navbar .container-fluid {
+    align-items: center;
+    gap: .5rem;
+}
+
+.site-nav-control {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    padding: .25rem !important;
+    border-radius: 14px;
+}
+
+.site-nav-control img {
+    display: block;
+    width: 100%;
+    max-width: 38px;
+    max-height: 38px;
+    object-fit: contain;
+}
+
+.site-nav-control .navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.userway-nav-trigger {
+    color: #0b4f8a;
+}
+
+.userway-nav-trigger i {
+    font-size: 1.5rem;
+}
+
 .zoom-anim, .zoom-anim-small {
     transition: transform .2s; /* Animation */
 

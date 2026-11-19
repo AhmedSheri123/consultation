@@ -9,6 +9,69 @@
 {% endblock meta %}
 
 {% block sheri %}
+<style>
+  .hero-actions {
+    align-items: stretch;
+  }
+
+  .hero-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    min-width: 12rem;
+    min-height: 3.5rem;
+    padding: .65rem 1.25rem !important;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    font-weight: 700;
+    box-shadow: 0 .6rem 1.4rem rgba(17, 37, 67, .16);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  }
+
+  .hero-action-call {
+    background: linear-gradient(135deg, #1678ed, #0b5ed7);
+  }
+
+  .hero-action-book {
+    background: linear-gradient(135deg, #20b866, #14834b);
+  }
+
+  .hero-action-icon {
+    display: inline-grid;
+    flex: 0 0 2.1rem;
+    place-items: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .18);
+  }
+
+  .hero-action-icon i {
+    font-size: 1.05rem;
+  }
+
+  .hero-action:hover {
+    filter: brightness(.96);
+    transform: translateY(-2px);
+    box-shadow: 0 .85rem 1.7rem rgba(17, 37, 67, .2);
+  }
+
+  .hero-action:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, .35);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-action {
+      transition: none;
+    }
+
+    .hero-action:hover {
+      transform: none;
+    }
+  }
+</style>
 <!-- header -->
 <div class="px-4 py-5 text-center ">
   <div class="py-4 text-body-emphasis">
@@ -34,17 +97,17 @@
       </p>
 
       <!-- الأزرار -->
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"
+      <div class="hero-actions d-grid gap-2 d-sm-flex justify-content-sm-center"
            data-sal="zoom-in"
            data-sal-delay="600"
            data-sal-duration="800">
-        <a href="tel:+972534299777" class="btn btn-primary btn-lg px-4">
-          {% trans "Call Now" %}
-          <i class="fa-solid fa-phone"></i>
+        <a href="tel:+972534299777" class="hero-action hero-action-call btn btn-primary btn-lg">
+          <span>{% trans "Call Now" %}</span>
+          <span class="hero-action-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
         </a>
-        <a href="https://wa.me/972534299777" target="_blank" class="btn btn-success btn-lg px-4">
-          {% trans "Book Your Appointment" %}
-          <i class="fa-brands fa-whatsapp"></i>
+        <a href="https://wa.me/972534299777" target="_blank" rel="noopener noreferrer" class="hero-action hero-action-book btn btn-success btn-lg">
+          <span>{% trans "Book Your Appointment" %}</span>
+          <span class="hero-action-icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
         </a>
       </div>
     </div>
@@ -90,6 +153,12 @@
 
 <style>
   #about { background:#f8f9fa; }
+
+  @media (max-width: 767.98px) {
+    #about .col-md-4[data-sal="slide-right"] {
+      transform: none !important;
+    }
+  }
 </style>
 <!-- About Doctor -->
 <div class="py-5 px-2 px-md-4 bg-light" id="about">
@@ -109,7 +178,7 @@
                  class="card-img-top rounded-top-4" 
                  alt="{% trans "Doctor's Photo" %}"
                  style="max-height: 380px; object-fit: cover;">
-            <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2 shadow">
+            <span class="badge bg-primary position-absolute bottom-0 start-0 m-3 px-3 py-2 shadow">
               <i class="fa-solid fa-stethoscope me-1"></i> {% trans "12+ Years of Experience" %}
             </span>
           </div>

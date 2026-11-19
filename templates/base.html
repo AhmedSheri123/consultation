@@ -65,7 +65,16 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/pages/base.js' %}"></script>
-    <script src="https://cdn.userway.org/widget.js" data-account="Ch6qGGA2hd"></script>
+    <script>
+      (function (d) {
+        var userwayScript = d.createElement("script");
+        userwayScript.setAttribute("data-account", "Ch6qGGA2hd");
+        userwayScript.setAttribute("data-size", "small");
+        userwayScript.setAttribute("data-trigger", "userway-navbar-trigger");
+        userwayScript.setAttribute("src", "https://cdn.userway.org/widget.js");
+        (d.body || d.head).appendChild(userwayScript);
+      })(document);
+    </script>
     
     <script>
 

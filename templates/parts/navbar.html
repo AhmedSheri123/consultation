@@ -13,11 +13,14 @@
       </div>
       {% endif %} {% endcomment %}
 
-      <a class="navbar-brand glass-eff p-2" href="{% url 'index' %}">
-        <img width="75" src="{% static 'img/softmsg-logo.webp' %}" alt="website logo">
+      <a class="navbar-brand glass-eff p-2 site-nav-control" href="{% url 'index' %}">
+        <img src="{% static 'img/softmsg-logo.webp' %}" alt="website logo">
       </a>
-      <button class="navbar-toggler glass-eff" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler glass-eff site-nav-control" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+      </button>
+      <button id="userway-navbar-trigger" class="btn glass-eff site-nav-control userway-nav-trigger" type="button" aria-label="{% trans 'Accessibility options' %}" title="{% trans 'Accessibility options' %}">
+        <i class="fa-solid fa-universal-access text-primary" aria-hidden="true"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto p-2 my-3 my-lg-0 ps-4 glass-eff">
@@ -69,7 +72,7 @@
         <div class="d-flex justify-content-center" role="search">
           <div class="dropdown me-2">
             <!-- زر تغيير اللغة -->
-            <button class="btn btn-light dropdown-toggle rounded-4" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-primary text-white dropdown-toggle rounded-4" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-globe" aria-hidden="true"></i> 
                 {% trans "Language" %}
             </button>
