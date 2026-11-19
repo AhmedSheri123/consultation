@@ -57,17 +57,131 @@
     box-shadow: 0 .85rem 1.7rem rgba(17, 37, 67, .2);
   }
 
+  .qualification-heading-icon,
+  .qualification-item-icon {
+    display: inline-flex;
+    flex: 0 0 2.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #0d6efd;
+    background: #eaf2ff;
+  }
+
+  .qualification-item-icon {
+    border: 1px solid #d6e5ff;
+    font-size: 1rem;
+  }
+
+  .qualification-heading-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-basis: 2.75rem;
+    font-size: 1.1rem;
+  }
+
+  .qualification-icon-svg {
+    display: block;
+    flex: 0 0 auto;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .qualification-list {
+    display: grid;
+    gap: .75rem;
+  }
+
+  .qualification-list > li {
+    display: flex;
+    align-items: flex-start;
+    gap: .85rem;
+    padding: 1rem;
+    margin: 0 !important;
+    border: 1px solid #e4ebf5;
+    border-inline-start: 3px solid #0d6efd;
+    border-radius: .9rem;
+    background: #f8faff;
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  }
+
+  .qualification-list > li:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    box-shadow: 0 .5rem 1.25rem rgba(23, 54, 94, .1);
+  }
+
+  .experience-heading-icon,
+  .experience-item-icon {
+    display: inline-flex;
+    flex: 0 0 2.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #198754;
+    background: #e9f7ef;
+  }
+
+  .experience-item-icon {
+    border: 1px solid #cfe9d8;
+    font-size: 1rem;
+  }
+
+  .experience-heading-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-basis: 2.75rem;
+    font-size: 1.1rem;
+  }
+
+  .experience-list {
+    display: grid;
+    gap: .65rem;
+  }
+
+  .experience-list > li {
+    display: flex;
+    align-items: flex-start;
+    gap: .85rem;
+    padding: .85rem 1rem;
+    margin: 0 !important;
+    border: 1px solid #e0eee5;
+    border-inline-start: 3px solid #198754;
+    border-radius: .9rem;
+    background: #f8fcf9;
+    line-height: 1.65;
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  }
+
+  .experience-list > li:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    box-shadow: 0 .5rem 1.25rem rgba(25, 135, 84, .1);
+  }
+
+  .experience-text {
+    min-width: 0;
+  }
+
   .hero-action:focus-visible {
     outline: 3px solid rgba(13, 110, 253, .35);
     outline-offset: 3px;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-action {
+    .hero-action,
+    .qualification-list > li,
+    .experience-list > li {
       transition: none;
     }
 
-    .hero-action:hover {
+    .hero-action:hover,
+    .qualification-list > li:hover,
+    .experience-list > li:hover {
       transform: none;
     }
   }
@@ -293,26 +407,38 @@
       <!-- Doctor's Details -->
       <div class="col-md-8">
         <!-- Qualifications -->
-        <div class="p-4 rounded-4 shadow-sm bg-white card border-0 mb-3" 
+        <div class="qualification-card p-4 rounded-4 shadow-sm bg-white card border-0 mb-3" 
              data-sal="fade" 
              data-sal-duration="1000">
-          <h5 class="fw-bold text-primary mb-3">{% trans "Academic Qualifications" %}</h5>
-          <ul class="mb-0 list-unstyled">
+          <div class="d-flex align-items-center gap-3 mb-4">
+
+            <h5 class="fw-bold text-primary mb-0">{% trans "Academic Qualifications" %}</h5>
+          </div>
+          <ul class="qualification-list mb-0 list-unstyled">
             <li class="mb-2">
-              <span class="badge rounded-circle bg-primary text-white me-2 p-2">
-                <i class="fa-solid fa-graduation-cap"></i>
+              <span class="qualification-item-icon" aria-hidden="true">
+                <svg class="qualification-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 8.5 12 3l9.5 5.5L12 14 2.5 8.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 11v5c3.4 2.6 7.6 2.6 11 0v-5M21.5 8.5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </span>
               {% trans "Bachelor of Medicine and Surgery – Jordan University of Science and Technology" %}
             </li>
             <li class="mb-2">
-              <span class="badge rounded-circle bg-primary text-white me-2 p-2">
-                <i class="fa-solid fa-graduation-cap"></i>
+              <span class="qualification-item-icon" aria-hidden="true">
+                <svg class="qualification-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 8.5 12 3l9.5 5.5L12 14 2.5 8.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 11v5c3.4 2.6 7.6 2.6 11 0v-5M21.5 8.5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </span>
               {% trans "Master's Degree in Urology – Soroka Hospital" %}
             </li>
             <li>
-              <span class="badge rounded-circle bg-primary text-white me-2 p-2">
-                <i class="fa-solid fa-graduation-cap"></i>
+              <span class="qualification-item-icon" aria-hidden="true">
+                <svg class="qualification-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 8.5 12 3l9.5 5.5L12 14 2.5 8.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.5 11v5c3.4 2.6 7.6 2.6 11 0v-5M21.5 8.5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </span>
               {% trans "Fellowship in Endoscopic Kidney and Prostate Surgery – Rabin Hospital" %}
             </li>
@@ -320,41 +446,46 @@
         </div>
 
         <!-- Professional Experience -->
-        <div class="p-4 rounded-4 shadow-sm bg-white card border-0" 
+        <div class="experience-card p-4 rounded-4 shadow-sm bg-white card border-0" 
              data-sal="fade" 
              data-sal-delay="200" 
              data-sal-duration="1000">
-          <h5 class="fw-bold text-success mb-3">{% trans "Professional Experience" %}</h5>
-          <ul class="mb-0 list-unstyled">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <span class="experience-heading-icon" aria-hidden="true">
+              <i class="fa-solid fa-stethoscope"></i>
+            </span>
+            <h5 class="fw-bold text-success mb-0">{% trans "Professional Experience" %}</h5>
+          </div>
+          <ul class="experience-list mb-0 list-unstyled">
             <li class="mb-2">
-              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+              <span class="experience-item-icon" aria-hidden="true">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>
-              {% trans "Director of the Urology Surgery Unit at Yousuftal Hospital" %}
+              <span class="experience-text">{% trans "Director of the Urology Surgery Unit at Yousuftal Hospital" %}</span>
             </li>
             <li class="mb-2">
-              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+              <span class="experience-item-icon" aria-hidden="true">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>
-              {% trans "Physician and surgeon at Rabin Sharon Hospital" %}
+              <span class="experience-text">{% trans "Physician and surgeon at Rabin Sharon Hospital" %}</span>
             </li>
             <li class="mb-2">
-              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+              <span class="experience-item-icon" aria-hidden="true">
                 <i class="fa-solid fa-hospital-user"></i>
               </span>
-              {% trans "Physician and surgeon at Assuta Hospital in Beersheba" %}
+              <span class="experience-text">{% trans "Physician and surgeon at Assuta Hospital in Beersheba" %}</span>
             </li>
             <li class="mb-2">
-              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+              <span class="experience-item-icon" aria-hidden="true">
                 <i class="fa-solid fa-syringe"></i>
               </span>
-              {% trans "Over 2000 successful Endoscopic kidney stone surgeries" %}
+              <span class="experience-text">{% trans "Over 2000 successful Endoscopic kidney stone surgeries" %}</span>
             </li>
             <li>
-              <span class="badge rounded-circle bg-success text-white me-2 p-2">
+              <span class="experience-item-icon" aria-hidden="true">
                 <i class="fa-solid fa-user-doctor"></i>
               </span>
-              {% trans "Specialized expertise in treating urinary tract disorders" %}
+              <span class="experience-text">{% trans "Specialized expertise in treating urinary tract disorders" %}</span>
             </li>
           </ul>
 

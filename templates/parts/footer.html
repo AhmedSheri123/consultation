@@ -4,7 +4,7 @@
 {% get_clinic_info as clinic_info %}
 <footer class="py-3 border-top py-5 px-3 px-lg-5">
   <div class="row row-cols-1 row-cols-md-2">
-    <ul class="nav justify-content-start pb-3 mb-3">
+    <ul class="nav justify-content-start ">
       <li class="nav-item"><a href="{% url 'index' %}" class="nav-link px-2 text-body-secondary">{% trans "Home" %}</a></li>
       <li class="nav-item"><a href="/{{LANGUAGE_CODE}}/#about" class="nav-link px-2 text-body-secondary">{% trans "About" %}</a></li>
       <li class="nav-item"><a href="/{{LANGUAGE_CODE}}/#services" class="nav-link px-2 text-body-secondary">{% trans "Services" %}</a></li>
@@ -14,18 +14,20 @@
   </div>
 
   <div class="d-flex flex-wrap justify-content-between align-items-center">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        <img width="100" src="{% static 'img/softmsg-logo.webp' %}" alt="website logo" loading="lazy">
-      </a>
-      <span class="mb-3 mb-md-0 text-body-secondary">© 2025 SOFTmsg</span>
-    </div>
-
     <!-- قسم معلومات التواصل -->
-    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+    <div class="col-md-6  mt-3 mt-md-0 pb-3 mb-3">
       <p class="mb-1"><i class="fa fa-phone me-2"></i> +972534515307 {% trans "Urology center" %}</p>
       <p class="mb-1"><i class="fa fa-envelope me-2"></i> {{clinic_info.email}}</p>
       {% comment %} <p class="mb-0"><i class="fa fa-map-marker-alt me-2"></i>{% trans "Assuta Specialist Clinics B.S. - Doctor Karinawi Muhammad Beer Sheva Haim Yahil 7th Floor" %}</p> {% endcomment %}
     </div>
+
+    <div class="col-md-4 d-flex align-items-center m-auto m-md-0">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <img width="50" src="{% static 'img/softmsg-logo.webp' %}" alt="website logo" loading="lazy">
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2025 SOFTmsg</span>
+    </div>
+
+
   </div>
 </footer>
